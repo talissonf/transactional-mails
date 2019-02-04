@@ -1,0 +1,687 @@
+  {
+  "order": {
+      "_id": "5bf554717f2ea911aecb8f4c",
+      "checkout_link": "https://www.sampleshop.com.br/checkout?_id=5bc2e0147594185af433f692",
+      "status_link": "https://www.sampleshop.com.br/order/status?_id=5bc2e0147594185af433f692",
+      "checkout_mobile_link": "https://www.e-com.club",
+      "status_mobile_link": "https://g1.globo.com/",
+      "utm": {
+          "source": "newsletter",
+          "medium": "mail",
+          "campaign": "blackFriday",
+          "term": "",
+          "content": "this is a black ftiday campaign"
+      },
+      "referring_site": "https://alyma.com.br",
+      "affiliate_code": "affiliate_alyma",
+      "source_name": "ecommerce",
+      "browser_ip": "192.0.2.1",
+      "channel_id": 789456123,
+      "domain": "www.sampleshop.com.br",
+      "channel_type": "mobile",
+      "opened_at": "2008-11-19T13:10:00.612Z",
+      "closed_at": "2011-10-12T20:11:11.612Z",
+      "cancelled_at": "2015-11-12T20:11:11.612Z",
+      "cancel_reason": "customer",
+      "seller_status": "pending",
+      "financial_status": {
+          "updated_at": "2017-11-19T13:10:00.612Z",
+          "current": "in_dispute"
+      },
+      "fulfillment_status": {
+          "updated_at": "2015-10-12T20:11:11.612Z",
+          "current": "returned"
+      },
+      "amount": {
+          "total": 326.50,
+          "subtotal": 300,
+          "freight": 46.5,
+          "tax": 0,
+          "extra": 0,
+          "discount": 20.888
+      },
+      "buyers": [
+          {
+              "_id": "3ab0000000000000000010e1",
+              "locale": "en_us",
+              "main_email": "pblto@mail.com",
+              "display_name": "pedrinho",
+              "name": {
+                  "family_name": "augusto",
+                  "given_name": "pedro",
+                  "middle_name": "papai"
+              },
+              "gender": "m",
+              "phones": [
+                  {
+                      "country_code": 55,
+                      "number": "3999889988",
+                      "type": "personal"
+                  },
+                  {
+                      "country_code": 55,
+                      "number": "31993324093",
+                      "type": "other"
+                  },
+                  {
+                      "country_code": 55,
+                      "number": "110300455000",
+                      "type": "work"
+                  }
+              ],
+              "registry_type": "j",
+              "doc_country": "US",
+              "doc_number": "78963214"
+          }
+      ],
+      "shipping_lines": [
+          {
+              "_id": "3ab0090000000000000010e1",
+              "tracking_codes": [
+                 {
+                   "code": "TR4CK1N_C0D3",
+                   "link": "https://www.linguee.com.br/ingles-portugues/traducao/tracking+code.htmls"
+                 }
+                ],
+              "invoices": {
+                "number": "dfvghb7451",
+                "link": "https://www.remessaonline.com.br/blog/o-que-e-invoice-e-para-que-serve/",
+                "access_key": "stedyrtfvgjbkj",
+                "link_danfe": "e-com.club"
+              },
+              "from": {
+                  "zip": "10111222",
+                  "street": "Ruaaaaaar",
+                  "number": 100,
+                  "complement": "bloco6",
+                  "near_to": "edifício jk",
+                  "line_address": "street, number and borough",
+                  "borough": "Bairro00000",
+                  "city": "bolsoznt",
+                  "province": "MG",
+                  "province_code": "SP",
+                  "country": "brasil",
+                  "country_code": "BR",
+                  "name": "mim",
+                  "last_name": "Rocha",
+                  "phone": {
+                      "country_code": 1,
+                      "number": "78963211111"
+                  }
+              },
+              "to": {
+                  "zip": "30111222",
+                  "street": "Rua helena",
+                  "number": 70,
+                  "complement": "ap7",
+                  "borough": "bairrão",
+                  "near_to": "cemig",
+                  "line_address": "Rua helena 70 app7, bairrão, Belo Horizonte, MG",
+                  "city": "Belo Horizonte",
+                  "country": "Brasil",
+                  "country_code": "BR",
+                  "province": "Minas Gerais",
+                  "province_code": "MG",
+                  "name": "menuno",
+                  "last_name": "Baaa",
+                  "phone": {
+                      "country_code": 55,
+                      "number": "318999889988"
+                  }
+              },
+              "package": {
+                  "dimensions": {
+                      "width": {
+                          "value": 150,
+                          "unit": "cm"
+                      },
+                      "height": {
+                          "value": 600,
+                          "unit": "cm"
+                      },
+                      "length": {
+                          "value": 800,
+                          "unit": "cm"
+                      }
+                  },
+                  "weight": {
+                      "value": 9007,
+                      "unit": "g"
+                  }
+              },
+              "app": {
+                  "_id": "77f006000000000001000001",
+                  "label": "JADLOG",
+                  "carrier": "transpo1",
+                  "service_name": "jadlogtransp",
+                  "service_code": "44010",
+                  "tracking_url": "http://www.jadlog.com.br/sitedpd/",
+                  "icon": "https://imgur.com/A4LqR1n.png"
+              },
+              "price": 8,
+              "declared_value": 42.9,
+              "declared_value_price": 0.15,
+              "total_price": 5.15,
+              "own_hand": true,
+              "discount": 8.888,
+              "receipt": false
+          }
+      ],
+      "transactions": [
+          {
+              "_id": "3ab00000000000000f0010e1",
+              "created_at": "2015-11-12T20:11:11.612Z",
+              "payment_method": {
+                  "code": "credit_card",
+                  "name": "Wirecard"
+              },
+              "payment_link": "https://app.mailjet.com",
+              "payer": {
+                  "fullname": "Vitor Rocha",
+                  "birth_date": {
+                      "day": 26,
+                      "month": 3,
+                      "year": 1995
+                  },
+                  "registry_type": "p",
+                  "doc_number": "15693225"
+              },
+              "billing_address": {
+                  "zip": "30111222",
+                  "street": "Rua Augusta",
+                  "number": 92200,
+                  "complement": "Apto. 200",
+                  "borough": "Jardins",
+                  "near_to": "Supermercado Exemplifica",
+                  "line_address": "Rua Augusta 922200 Apto. 200, Jardins, Belo Horizonte, MG",
+                  "city": "Belo Horizonte",
+                  "country": "Brasil",
+                  "country_code": "BR",
+                  "province": "Minas Gerais",
+                  "province_code": "MG",
+                  "name": "Fulano",
+                  "last_name": "Beltrano",
+                  "phone": {
+                      "country_code": 55,
+                      "number": "31999889988"
+                  }
+              },
+              "app": {
+                  "_id": "3ab0000000000000009910e1",
+                  "label": "PayPal",
+                  "icon": "https://www.paypal-brasil.com.br/logocenter/util/img/selo_aceitacao_horizontal.png",
+                  "payment_url": "https://www.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=1abc"
+              },
+              "intermediator": {
+                  "transaction_id": "wertyhjk78563a",
+                  "transaction_code": "zsxdycfgvhbjn",
+                  "transaction_reference": "as523",
+                  "payment_method": {
+                      "code": "banking_billet",
+                      "name": "Moip"
+                  }
+              },
+              "credit_card": {
+                  "holder_name": "josé el holder",
+                  "avs_result_code": "A",
+                  "cvv_result_code": "C",
+                  "bin": 7852,
+                  "company": "VISA",
+                  "last_digits": "7895",
+                  "token": "zstxdfcgvhbjnk87645132sfdx",
+                  "error_code": "incorrect_cvc"
+              },
+              "banking_billet": {
+                  "code": "detrfubhnjidcfv",
+                  "valid_thru": "2015-11-12T20:11:11.612Z"
+              },
+              "amount": 400,
+              "installments": {
+                  "number": 2,
+                  "value": 300,
+                  "total": 600,
+                  "tax": false
+              },
+              "creditor_fees": {
+                  "operational": 200
+              },
+              "status": {
+                  "updated_at": "2017-11-19T13:10:00.612Z",
+                  "current": "pending"
+              },
+              "type": "payment"
+          }
+      ],
+      "payments_history": [
+          {
+              "_id": "4ab0000000000000000000f1",
+              "transaction_id": "3ab00000000000000f0010e1",
+              "date_time": "2018-11-19T13:10:00.612Z",
+              "status": "paid",
+              "notification_code": "1abc1e",
+              "customer_notified": true
+          },
+          {
+              "_id": "4ab0000000000000000000f4",
+              "transaction_id": "3ab00000000000000f0010e1",
+              "date_time": "2018-11-30T13:10:00.612Z",
+              "status": "pending",
+              "notification_code": "1abcde",
+              "customer_notified": false
+          }
+      ],
+      "items": [
+          {
+              "_id": "3120000000000000000000a1",
+              "product_id": "5bbbb3ea2707d825d174c0c5",
+              "sku": "xdrcf56",
+              "name": "produto um",
+              "price": 452.9,
+              "quantity": 2,
+              "picture": {
+                  "small": {
+                      "url": "https://cdn.awsli.com.br/400x400/4/4061/produto/15783133/ce353ab871.jpg"
+                  }
+              }
+          },
+          {
+              "_id": "3120000000000000000000a2",
+              "product_id": "5bc12c8a2707d825d174cb21",
+              "sku": "xdrcaa6",
+              "name": "camiseta",
+              "price": 92.9,
+              "quantity": 1,
+              "picture": {
+                  "small": {
+                      "url": "https://http2.mlstatic.com/nova-camisa-flamengo-2019-vermelha-imperdivel--D_NQ_NP_679660-MLB27459458378_052018-F.jpg"
+                  }
+              }
+          },
+          {
+              "_id": "3120000000000000000000a3",
+              "product_id": "5bca149b7594185af433f787",
+              "price": 48.9,
+              "final_price": 74.6,
+              "sku": "xdrasddd6",
+              "name": "calça jeans",
+              "quantity": 5,
+              "picture": {
+                  "small": {
+                      "url": "http://d26lpennugtm8s.cloudfront.net/stores/485/028/products/foto_vitrine_camisa01211-70f536f6951e99bd9c15119479504105-640-0.jpg"
+                  }
+              }
+          }
+      ],
+      "notes": "Sample order notes by customer",
+      "status": "closed",
+      "currency_id": "BRL",
+      "currency_symbol": "R$",
+      "budget_only": false,
+      "store_id": 1011,
+      "created_at": "2018-11-21T12:49:53.025Z",
+      "number": 5428
+  },
+  "cart": {
+      "_id": "5bf554717f2ea911aecb8f4c",
+      "permalink": "https://www.sampleshop.com.br/checkout?_id=5bc2e0147594185af433f692",
+      "status_link": "https://www.sampleshop.com.br/order/status?_id=5bc2e0147594185af433f692",
+      "checkout_mobile_link": "https://www.e-com.club",
+      "status_mobile_link": "https://g1.globo.com/",
+      "utm": {
+          "source": "newsletter",
+          "medium": "mail",
+          "campaign": "blackFriday",
+          "term": "",
+          "content": "this is a black ftiday campaign"
+      },
+      "referring_site": "https://alyma.com.br",
+      "affiliate_code": "affiliate_alyma",
+      "source_name": "ecommerce",
+      "browser_ip": "192.0.2.1",
+      "channel_id": 789456123,
+      "domain": "www.sampleshop.com.br",
+      "channel_type": "mobile",
+      "opened_at": "2008-11-19T13:10:00.612Z",
+      "closed_at": "2011-10-12T20:11:11.612Z",
+      "cancelled_at": "2015-11-12T20:11:11.612Z",
+      "cancel_reason": "customer",
+      "seller_status": "pending",
+      "financial_status": {
+          "updated_at": "2017-11-19T13:10:00.612Z",
+          "current": "in_dispute"
+      },
+      "fulfillment_status": {
+          "updated_at": "2015-10-12T20:11:11.612Z",
+          "current": "returned"
+      },
+      "amount": {
+          "total": 326.50,
+          "subtotal": 300,
+          "freight": 46.5,
+          "tax": 0,
+          "extra": 0,
+          "discount": 20.888
+      },
+      "buyers": [
+          {
+              "_id": "3ab0000000000000000010e1",
+              "locale": "en_us",
+              "main_email": "pblto@mail.com",
+              "display_name": "pedrinho",
+              "name": {
+                  "family_name": "augusto",
+                  "given_name": "pedro",
+                  "middle_name": "papai"
+              },
+              "gender": "m",
+              "phones": [
+                  {
+                      "country_code": 55,
+                      "number": "3999889988",
+                      "type": "personal"
+                  },
+                  {
+                      "country_code": 55,
+                      "number": "31993324093",
+                      "type": "other"
+                  },
+                  {
+                      "country_code": 55,
+                      "number": "110300455000",
+                      "type": "work"
+                  }
+              ],
+              "registry_type": "j",
+              "doc_country": "US",
+              "doc_number": "78963214"
+          }
+      ],
+      "shipping_lines": [
+          {
+              "_id": "3ab0090000000000000010e1",
+              "tracking_codes": [
+                 {
+                   "code": "TR4CK1N_C0D3",
+                   "link": "https://www.linguee.com.br/ingles-portugues/traducao/tracking+code.htmls"
+                 }
+                ],
+              "invoices": {
+                "number": "dfvghb7451",
+                "link": "https://www.remessaonline.com.br/blog/o-que-e-invoice-e-para-que-serve/",
+                "access_key": "stedyrtfvgjbkj",
+                "link_danfe": "e-com.club"
+              },
+              "from": {
+                  "zip": "10111222",
+                  "street": "Ruaaaaaar",
+                  "number": 100,
+                  "complement": "bloco6",
+                  "near_to": "edifício jk",
+                  "line_address": "street, number and borough",
+                  "borough": "Bairro00000",
+                  "city": "bolsoznt",
+                  "province": "MG",
+                  "province_code": "SP",
+                  "country": "brasil",
+                  "country_code": "BR",
+                  "name": "mim",
+                  "last_name": "Rocha",
+                  "phone": {
+                      "country_code": 1,
+                      "number": "78963211111"
+                  }
+              },
+              "to": {
+                  "zip": "30111222",
+                  "street": "Rua helena",
+                  "number": 70,
+                  "complement": "ap7",
+                  "borough": "bairrão",
+                  "near_to": "cemig",
+                  "line_address": "Rua helena 70 app7, bairrão, Belo Horizonte, MG",
+                  "city": "Belo Horizonte",
+                  "country": "Brasil",
+                  "country_code": "BR",
+                  "province": "Minas Gerais",
+                  "province_code": "MG",
+                  "name": "menuno",
+                  "last_name": "Baaa",
+                  "phone": {
+                      "country_code": 55,
+                      "number": "318999889988"
+                  }
+              },
+              "package": {
+                  "dimensions": {
+                      "width": {
+                          "value": 150,
+                          "unit": "cm"
+                      },
+                      "height": {
+                          "value": 600,
+                          "unit": "cm"
+                      },
+                      "length": {
+                          "value": 800,
+                          "unit": "cm"
+                      }
+                  },
+                  "weight": {
+                      "value": 9007,
+                      "unit": "g"
+                  }
+              },
+              "app": {
+                  "_id": "77f006000000000001000001",
+                  "label": "JADLOG",
+                  "carrier": "transpo1",
+                  "service_name": "jadlogtransp",
+                  "service_code": "44010",
+                  "tracking_url": "http://www.jadlog.com.br/sitedpd/",
+                  "icon": "https://imgur.com/A4LqR1n.png"
+              },
+              "price": 8,
+              "declared_value": 42.9,
+              "declared_value_price": 0.15,
+              "total_price": 5.15,
+              "own_hand": true,
+              "discount": 8.888,
+              "receipt": false
+          }
+      ],
+      "transactions": [
+          {
+              "_id": "3ab00000000000000f0010e1",
+              "created_at": "2015-11-12T20:11:11.612Z",
+              "payment_method": {
+                  "code": "credit_card",
+                  "name": "Wirecard"
+              },
+              "payment_link": "https://app.mailjet.com",
+              "payer": {
+                  "fullname": "Vitor Rocha",
+                  "birth_date": {
+                      "day": 26,
+                      "month": 3,
+                      "year": 1995
+                  },
+                  "registry_type": "p",
+                  "doc_number": "15693225"
+              },
+              "billing_address": {
+                  "zip": "30111222",
+                  "street": "Rua Augusta",
+                  "number": 92200,
+                  "complement": "Apto. 200",
+                  "borough": "Jardins",
+                  "near_to": "Supermercado Exemplifica",
+                  "line_address": "Rua Augusta 922200 Apto. 200, Jardins, Belo Horizonte, MG",
+                  "city": "Belo Horizonte",
+                  "country": "Brasil",
+                  "country_code": "BR",
+                  "province": "Minas Gerais",
+                  "province_code": "MG",
+                  "name": "Fulano",
+                  "last_name": "Beltrano",
+                  "phone": {
+                      "country_code": 55,
+                      "number": "31999889988"
+                  }
+              },
+              "app": {
+                  "_id": "3ab0000000000000009910e1",
+                  "label": "PayPal",
+                  "icon": "https://www.paypal-brasil.com.br/logocenter/util/img/selo_aceitacao_horizontal.png",
+                  "payment_url": "https://www.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=1abc"
+              },
+              "intermediator": {
+                  "transaction_id": "wertyhjk78563a",
+                  "transaction_code": "zsxdycfgvhbjn",
+                  "transaction_reference": "as523",
+                  "payment_method": {
+                      "code": "banking_billet",
+                      "name": "Moip"
+                  }
+              },
+              "credit_card": {
+                  "holder_name": "josé el holder",
+                  "avs_result_code": "A",
+                  "cvv_result_code": "C",
+                  "bin": 7852,
+                  "company": "VISA",
+                  "last_digits": "7895",
+                  "token": "zstxdfcgvhbjnk87645132sfdx",
+                  "error_code": "incorrect_cvc"
+              },
+              "banking_billet": {
+                  "code": "detrfubhnjidcfv",
+                  "valid_thru": "2015-11-12T20:11:11.612Z"
+              },
+              "amount": 400,
+              "installments": {
+                  "number": 2,
+                  "value": 300,
+                  "total": 600,
+                  "tax": false
+              },
+              "creditor_fees": {
+                  "operational": 200
+              },
+              "status": {
+                  "updated_at": "2017-11-19T13:10:00.612Z",
+                  "current": "pending"
+              },
+              "type": "payment"
+          }
+      ],
+      "payments_history": [
+          {
+              "_id": "4ab0000000000000000000f1",
+              "transaction_id": "3ab00000000000000f0010e1",
+              "date_time": "2018-11-19T13:10:00.612Z",
+              "status": "paid",
+              "notification_code": "1abc1e",
+              "customer_notified": true
+          },
+          {
+              "_id": "4ab0000000000000000000f4",
+              "transaction_id": "3ab00000000000000f0010e1",
+              "date_time": "2018-11-30T13:10:00.612Z",
+              "status": "pending",
+              "notification_code": "1abcde",
+              "customer_notified": false
+          }
+      ],
+      "items": [
+          {
+              "_id": "3120000000000000000000a1",
+              "product_id": "5bbbb3ea2707d825d174c0c5",
+              "sku": "xdrcf56",
+              "name": "produto um",
+              "price": 452.9,
+              "quantity": 2,
+              "picture": {
+                  "small": {
+                      "url": "https://cdn.awsli.com.br/400x400/4/4061/produto/15783133/ce353ab871.jpg"
+                  }
+              }
+          },
+          {
+              "_id": "3120000000000000000000a2",
+              "product_id": "5bc12c8a2707d825d174cb21",
+              "sku": "xdrcaa6",
+              "name": "camiseta",
+              "price": 92.9,
+              "quantity": 1,
+              "picture": {
+                  "small": {
+                      "url": "https://http2.mlstatic.com/nova-camisa-flamengo-2019-vermelha-imperdivel--D_NQ_NP_679660-MLB27459458378_052018-F.jpg"
+                  }
+              }
+          },
+          {
+              "_id": "3120000000000000000000a3",
+              "product_id": "5bca149b7594185af433f787",
+              "price": 48.9,
+              "final_price": 74.6,
+              "sku": "xdrasddd6",
+              "name": "calça jeans",
+              "quantity": 5,
+              "picture": {
+                  "small": {
+                      "url": "http://d26lpennugtm8s.cloudfront.net/stores/485/028/products/foto_vitrine_camisa01211-70f536f6951e99bd9c15119479504105-640-0.jpg"
+                  }
+              }
+          }
+      ],
+      "notes": "Sample order notes by customer",
+      "status": "closed",
+      "currency_id": "BRL",
+      "currency_symbol": "R$",
+      "budget_only": false,
+      "store_id": 1011,
+      "created_at": "2018-11-21T12:49:53.025Z",
+      "number": 5428
+  },
+    "store": {
+      "_id": "5b1abe30a4d4531b8fe40725",
+      "address": "Av Amazonas, 78, Belo Horizonte, MG",
+      "name": "Loja Modelo",
+      "segment_id": 23,
+      "doc_type": "CPF",
+      "doc_number": "11835602657",
+      "corporate_name": "Loja Modelo Inc",
+      "financial_email": "vitor@e-com.club",
+      "store_id": 1011,
+      "created_at": "2018-06-08T17:34:40.294Z",
+      "resources": {},
+      "logo": {
+          "url": "https://i.imgur.com/J4HzO5k.png"
+      },
+      "updated_at": "2018-10-02T20:10:18.452Z",
+      "description": "A E-Com Club é uma plataforma de lojas virtuais versátil, completa e intuitiva, destinada a médias e pequenas empresas.",
+      "contact_email": "email@contato.com",
+      "$main": {
+          "id": 1011,
+          "store_object_id": "5b1abe30a4d4531b8fe40725",
+          "status": "active",
+          "total_moved": "0",
+          "total_billed": "0",
+          "creation_date": "2018-06-08T17:34:40.000Z",
+          "counted_logins": 0,
+          "credits": 0,
+          "renewal_day": 1,
+          "plan": 1,
+          "plan_value": 59,
+          "products_limit": 300,
+          "remaining_products": 0,
+          "users_limit": 1,
+          "remaining_users": 0,
+          "orders_limit": 100,
+          "remaining_orders": 0,
+          "additional_channels": 0,
+          "additional_channels_cost": 29,
+          "extra_costs": 0
+      }
+    }
+  }

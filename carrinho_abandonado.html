@@ -311,7 +311,7 @@
         <table cellspacing="0" cellpadding="0" width="600" class="w320">
           <tr>
             <td class="header-lg">
-              Você esqueceu alguns produtos no carrinho!
+                Olá {{#each order.buyers }}{{name.given_name}},{{/each}} você esqueceu alguns produtos no carrinho!
             </td>
           </tr>
           <tr>

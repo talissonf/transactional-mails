@@ -316,7 +316,7 @@
           </tr>
           <tr>
             <td class="free-text">
-              Olá {{#each order.buyers }} {{name.given_name}},{{/each}} passamos aqui só para avisar que a nota fiscal do seu pedido  <a href="{{ order.status_link }}">#{{ order.number }}</a> foi emitida, e seu pacote será entregue dentro de {{#each order.shipping_lines}} {{math posting_deadline.days "+" delivery_time.days }}{{/each}} dias úteis.
+              Olá {{#each order.buyers }}{{name.given_name}},{{/each}} passamos aqui só para avisar que a nota fiscal do seu pedido  <a href="{{ order.status_link }}">#{{ order.number }}</a> foi emitida, e seu pacote será entregue dentro de {{#each order.shipping_lines}} {{math posting_deadline.days "+" delivery_time.days }}{{/each}} dias úteis.
             </td>
           </tr>
           <tr>
@@ -408,19 +408,19 @@
                     </td>
                     <td class="item-col price" style="text-align: left; border-top: 1px solid #cccccc;">
                       {{#if order.amount.subtotal }}
-                      <span class="total-space">R$ {{  order.amount.subtotal  }}</span> <br />
+                      <span class="total-space">R$ {{numberFormat  order.amount.subtotal thousandsSep="." decimalSep="," }}</span> <br />
                       {{/if}}
                       {{#if order.amount.freight }}
-                      <span class="total-space">R$ {{  order.amount.freight  }}</span>  <br />
+                      <span class="total-space">R$ {{numberFormat  order.amount.freight  thousandsSep="." decimalSep="," }}</span>  <br />
                       {{/if}}
                       {{#if order.amount.discount }}
-                      <span class="total-space">R$ {{  order.amount.discount  }}</span>  <br />
+                      <span class="total-space">R$ {{numberFormat order.amount.discount thousandsSep="." decimalSep="," }}</span>  <br />
                       {{/if}}
                       {{#if order.amount.tax }}
-                      <span class="total-space">R$ {{  order.amount.tax  }}</span>  <br />
+                      <span class="total-space">R$ {{numberFormat  order.amount.tax  thousandsSep="." decimalSep="," }}</span>  <br />
                       {{/if}}
                       {{#if order.amount.extra }}
-                      <span class="total-space">R$ {{  order.amount.extra  }}</span>  <br />
+                      <span class="total-space">R$ {{numberFormat  order.amount.extra  thousandsSep="." decimalSep="," }}</span>  <br />
                       {{/if}}
                       <span class="total-space" style="font-weight:bold; color: #4d4d4d">R$ 15.77</span>
                     </td>

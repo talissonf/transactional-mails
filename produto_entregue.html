@@ -316,7 +316,7 @@
           </tr>
           <tr>
             <td class="free-text">
-              Olá {{#each order.buyers }} {{name.given_name}},{{/each}} seu pacote referente ao pedido <a href="{{ order.status_link }}">#{{ order.number }}</a> foi entregue no devido endereço. Agradecemos por comprar em nossa loja e esperamos que aproveite nossos produtos!
+              Olá {{#each order.buyers }}{{name.given_name}},{{/each}} seu pacote referente ao pedido <a href="{{ order.status_link }}">#{{ order.number }}</a> foi entregue no devido endereço. Agradecemos por comprar em nossa loja e esperamos que aproveite nossos produtos!
             </td>
           </tr>
           <tr>
@@ -458,19 +458,19 @@
                     </td>
                     <td class="item-col price" style="text-align: left; border-top: 1px solid #cccccc;">
                       {{#if order.amount.subtotal }}
-                      <span class="total-space">R$ {{  order.amount.subtotal  }}</span> <br />
+                      <span class="total-space">R$ {{numberFormat  order.amount.subtotal thousandsSep="." decimalSep="," }}</span> <br />
                       {{/if}}
                       {{#if order.amount.freight }}
-                      <span class="total-space">R$ {{  order.amount.freight  }}</span>  <br />
+                      <span class="total-space">R$ {{numberFormat  order.amount.freight  thousandsSep="." decimalSep="," }}</span>  <br />
                       {{/if}}
                       {{#if order.amount.discount }}
-                      <span class="total-space">R$ {{  order.amount.discount  }}</span>  <br />
+                      <span class="total-space">R$ {{numberFormat order.amount.discount thousandsSep="." decimalSep="," }}</span>  <br />
                       {{/if}}
                       {{#if order.amount.tax }}
-                      <span class="total-space">R$ {{  order.amount.tax  }}</span>  <br />
+                      <span class="total-space">R$ {{numberFormat  order.amount.tax  thousandsSep="." decimalSep="," }}</span>  <br />
                       {{/if}}
                       {{#if order.amount.extra }}
-                      <span class="total-space">R$ {{  order.amount.extra  }}</span>  <br />
+                      <span class="total-space">R$ {{numberFormat  order.amount.extra  thousandsSep="." decimalSep="," }}</span>  <br />
                       {{/if}}
                       <span class="total-space" style="font-weight:bold; color: #4d4d4d">R$ 15.77</span>
                     </td>
@@ -483,6 +483,7 @@
       </center>
     </td>
   </tr>
+  
   <tr>
     <td align="center" valign="top" width="100%" style="background-color: #f7f7f7; height: 100px;">
       <center>
