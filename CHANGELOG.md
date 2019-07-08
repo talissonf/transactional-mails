@@ -2,6 +2,27 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.3.0](https://github.com/ecomclub/transactional-mails/compare/v0.2.0...v0.3.0) (2019-07-08)
+
+
+### Bug Fixes
+
+* **welcome:** fix 'welcome' method params ([872e123](https://github.com/ecomclub/transactional-mails/commit/872e123))
+
+
+### Features
+
+* **render:** complete template params with 'themeColor' and 'ecomUtils' ([0996181](https://github.com/ecomclub/transactional-mails/commit/0996181))
+
+
+### Tests
+
+* **server:** handle route by route, load sample json data ([bb0f319](https://github.com/ecomclub/transactional-mails/commit/bb0f319))
+* **view:** testing 'ecomUtils' on welcome EJS view ([f669d64](https://github.com/ecomclub/transactional-mails/commit/f669d64))
+* **view:** testing json data on EJS view ([a9a1816](https://github.com/ecomclub/transactional-mails/commit/a9a1816))
+
+
+
 ## [0.2.0](https://github.com/ecomclub/transactional-mails/compare/v0.1.0...v0.2.0) (2019-07-08)
 
 
