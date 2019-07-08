@@ -43,7 +43,7 @@ npm i
 npm run serve
 ```
 
-4. Add or edit templates on folders `views`/`scss`
+4. Add or edit templates on folders `views` / `scss`
 and dictionary on `i18n` folder;
 
 5. New templates must also be added to `src/index` as
