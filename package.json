@@ -4,7 +4,8 @@
   "description": "Default transactional email templates for E-Com Plus stores",
   "main": "main.js",
   "scripts": {
-    "doc": "rm -rf ./docs/*; jsdoc src -r README.md -d ./docs -t ./node_modules/docdash",
+    "serve": "node ./server.js",
+    "doc": "rm -rf ./docs/*; jsdoc ./main.js -r README.md -d ./docs -t ./node_modules/docdash",
     "release": "standard-version"
   },
   "repository": {
