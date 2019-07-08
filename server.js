@@ -1,6 +1,6 @@
 'use strict'
 
-const render = require('./main')
+const render = require('./src/main')
 // setup dev server with BrowserSync
 const browserSync = require('browser-sync').create()
 

@@ -13,7 +13,7 @@ const sass = require('node-sass')
 module.exports = (template = 'index', data = {}, lang = 'en_us', themeColor = '#6c757d') => {
   return new Promise((resolve, reject) => {
     // setup dictionary object first
-    const i18n = path.join(process.cwd(), `i18n/${lang}.json`)
+    const i18n = path.join(__dirname, `i18n/${lang}.json`)
     fs.readFile(i18n, 'utf8', (err, contents) => {
       if (err) {
         return reject(err)
@@ -27,7 +27,7 @@ module.exports = (template = 'index', data = {}, lang = 'en_us', themeColor = '#
       }
 
       // render Sass to CSS with theme color
-      const scss = path.join(process.cwd(), `scss/${template}.scss`)
+      const scss = path.join(__dirname, `scss/${template}.scss`)
       fs.readFile(scss, 'utf8', (err, contents) => {
         if (err) {
           return reject(err)
@@ -47,7 +47,7 @@ module.exports = (template = 'index', data = {}, lang = 'en_us', themeColor = '#
           data.themeColor = themeColor
 
           // render EJS file to HTML
-          const view = path.join(process.cwd(), `views/${template}.ejs`)
+          const view = path.join(__dirname, `views/${template}.ejs`)
           ejs.renderFile(view, data, null, (err, html) => {
             if (err) {
               reject(err)
