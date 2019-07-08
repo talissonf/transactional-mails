@@ -23,14 +23,15 @@ module.exports = {
    * @method
    * @memberof transactionalMails
    * @description Returns HTML markup for customer welcome email.
+   * @param {object} store - Store body object
    * @param {object} customer - Customer body object
    * @param {string} [lang='en_us'] - Snake case language code, eg.: 'en_us', 'pt_br'
    * @param {string} [themeColor] - RGB color string
    * @returns {Promise}
    */
 
-  welcome (customer, lang, themeColor) {
-    const data = { customer }
+  welcome (store, customer, lang, themeColor) {
+    const data = { store, customer }
     return render('welcome', data, lang, themeColor)
   }
 
