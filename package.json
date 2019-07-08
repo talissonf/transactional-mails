@@ -2,7 +2,7 @@
   "name": "@ecomplus/transactional-mails",
   "version": "0.0.1",
   "description": "Default transactional email templates for E-Com Plus stores",
-  "main": "src/index.js",
+  "main": "main.js",
   "scripts": {
     "doc": "rm -rf ./docs/*; jsdoc src -r README.md -d ./docs -t ./node_modules/docdash",
     "release": "standard-version"
@@ -23,10 +23,16 @@
     "url": "https://github.com/ecomclub/transactional-mails/issues"
   },
   "homepage": "https://github.com/ecomclub/transactional-mails#readme",
+  "dependencies": {
+    "ejs": "^2.6.2",
+    "node-sass": "^4.12.0"
+  },
   "devDependencies": {
     "@commitlint/cli": "^8.0.0",
     "@commitlint/config-conventional": "^8.0.0",
+    "browser-sync": "^2.26.7",
     "docdash": "^1.1.1",
+    "gulp": "^4.0.2",
     "husky": "^3.0.0",
     "jsdoc": "^3.6.2",
     "standard": "^12.0.1",
