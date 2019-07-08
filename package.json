@@ -4,7 +4,7 @@
   "description": "Default transactional email templates for E-Com Plus stores",
   "main": "src/index.js",
   "scripts": {
-    "serve": "node ./server.js",
+    "serve": "node ./test/server.js",
     "doc": "rm -rf ./docs/*; jsdoc ./src -r ./README.md -d ./docs -t ./node_modules/docdash",
     "release": "standard-version"
   },
@@ -25,7 +25,7 @@
   },
   "homepage": "https://github.com/ecomclub/transactional-mails#readme",
   "dependencies": {
-    "@ecomplus/utils": "^0.5.1",
+    "@ecomplus/utils": "^0.5.2",
     "ejs": "^2.6.2",
     "node-sass": "^4.12.0"
   },
