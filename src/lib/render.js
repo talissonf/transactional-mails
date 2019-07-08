@@ -9,6 +9,9 @@ const ejs = require('ejs')
 // compile Sass to CSS
 // https://github.com/sass/node-sass
 const sass = require('node-sass')
+// E-Com Plus utility methods
+// https://developers.e-com.plus/ecomplus-utils/
+const ecomUtils = require('@ecomplus/utils')
 
 module.exports = (template, data = {}, lang = 'en_us', themeColor = '#6c757d') => {
   return new Promise((resolve, reject) => {
@@ -44,7 +47,8 @@ module.exports = (template, data = {}, lang = 'en_us', themeColor = '#6c757d') =
 
           // save CSS on template data
           data.css = result.css.toString()
-          data.themeColor = themeColor
+          // complete template params with `themeColor` and `ecomUtils`
+          Object.assign(data, { themeColor, ecomUtils })
 
           // render EJS file to HTML
           const view = path.join(process.cwd(), `views/${template}.ejs`)
