@@ -2,6 +2,8 @@
 
 # Documentation
 /docs
+# Test files
+/test
 
 # Logs
 logs
