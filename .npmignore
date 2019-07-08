@@ -1,5 +1,8 @@
 /deprecated
 
+# Documentation
+/docs
+
 # Logs
 logs
 *.log
