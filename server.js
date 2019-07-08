@@ -9,7 +9,7 @@ browserSync.init({
   middleware: [
     (req, res, next) => {
       const template = req.url.replace('/', '')
-      if (template) {
+      if (template && template.indexOf('.') === -1) {
         render(template)
           .then(html => res.end(html))
           .catch(err => console.error(err))
