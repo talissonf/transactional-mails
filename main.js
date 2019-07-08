@@ -27,22 +27,37 @@ module.exports = (template = 'index', data = {}, lang = 'en_us', themeColor = '#
       }
 
       // render Sass to CSS with theme color
-      data.renderSass = filename => sass.renderSync({
-        data: `$theme-color: ${themeColor};`,
-        file: path.resolve(process.cwd(), `scss/${filename}.scss`)
-      })
-      data.themeColor = themeColor
-
-      // render EJS file to HTML
-      const view = path.join(process.cwd(), `views/${template}.ejs`)
-      ejs.renderFile(view, data, null, (err, html) => {
+      const scss = path.join(process.cwd(), `scss/${template}.scss`)
+      fs.readFile(scss, 'utf8', (err, contents) => {
         if (err) {
-          reject(err)
-        } else {
-          // all done
-          // resolve promise with HTML string
-          resolve(html)
+          return reject(err)
         }
+
+        // merge SCSS file content with theme color variable
+        const scssString = `$theme-color: ${themeColor};\n${contents}`
+        // render Sass
+        sass.render({ data: scssString }, (err, result) => {
+          if (err) {
+            // SCSS error
+            return reject(err)
+          }
+
+          // save CSS on template data
+          data.css = result.css.toString()
+          data.themeColor = themeColor
+
+          // render EJS file to HTML
+          const view = path.join(process.cwd(), `views/${template}.ejs`)
+          ejs.renderFile(view, data, null, (err, html) => {
+            if (err) {
+              reject(err)
+            } else {
+              // all done
+              // resolve promise with HTML string
+              resolve(html)
+            }
+          })
+        })
       })
     })
   })
