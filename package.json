@@ -1,6 +1,6 @@
 {
   "name": "@ecomplus/transactional-mails",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Default transactional email templates for E-Com Plus stores",
   "main": "main.js",
   "scripts": {
