@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/ecomclub/transactional-mails#readme",
   "dependencies": {
+    "@ecomplus/utils": "^0.5.1",
     "ejs": "^2.6.2",
     "node-sass": "^4.12.0"
   },
