@@ -1,0 +1,3 @@
+{
+  "boas_vindas": "Boas vindas <%= customer.name.given_name %>!"
+}
