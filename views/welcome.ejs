@@ -1,12 +1,12 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt">
   <head>
     <meta charset="utf-8"/>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
     <meta theme-color="<%= themeColor %>"/>
 
-    <title><%= i18n.hello_world %></title>
+    <title><%= i18n.boas_vindas %></title>
 
     <style type="text/css">
       <%= css %>
@@ -14,8 +14,114 @@
   </head>
 
   <body>
-    <h1><%= i18n.hello_world %></h1>
-    <h2><%= store.name %></h2>
-    <div><%= ecomUtils.formatMoney(10) %></div>
+  <center class="wrapper" data-link-color="#1188E6" data-body-style="font-size: 14px; font-family: arial; color: #000000; background-color: #ebebeb;">
+    <div class="webkit">
+      <table cellpadding="0" cellspacing="0" border="0" width="100%" class="wrapper" bgcolor="#ebebeb">
+        <tr>
+          <td valign="top" bgcolor="#ebebeb" width="100%">
+            <table width="100%" role="content-container" class="outer" align="center" cellpadding="0" cellspacing="0" border="0">
+              <tr>
+                <td width="100%">
+                  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                    <tr>
+                      <td>
+                        <center>
+                        <table><tr><td width="600">
+                        <table width="100%" cellpadding="0" cellspacing="0" border="0" style="width: 100%; max-width:600px;" align="center">
+                          <tr>
+                            <td role="modules-container" style="padding: 0px 0px 0px 0px; color: #000000; text-align: left;" bgcolor="#ffffff" width="100%" align="left">
+
+  <table class="module preheader preheader-hide" role="module" data-type="preheader" border="0" cellpadding="0" cellspacing="0" width="100%"
+         style="display: none !important; mso-hide: all; visibility: hidden; opacity: 0; color: transparent; height: 0; width: 0;">
+    <tr>
+      <td role="module-content">
+        <p></p>
+      </td>
+    </tr>
+  </table>
+  <%# comment %>
+  <table border="0" cellpadding="0" cellspacing="0" class="module" data-role="module-button" data-type="button" role="module" style="table-layout:fixed" width="100%"><tbody><tr><td align="center" class="outer-td" style="padding:0px 0px 45px 0px"><table border="0" cellpadding="0" cellspacing="0" class="button-css__deep-table___2OZyb wrapper-mobile" style="text-align:center"><tbody><tr><td align="center" bgcolor="#FFFFFF" class="inner-td" style="border-radius:6px;font-size:16px;text-align:center;background-color:inherit">
+  <img class="max-width" border="0" style="display:block;color:#000000;text-decoration:none;font-family:Helvetica, arial, sans-serif;font-size:16px;max-width:100% !important;width:100%;height:auto !important;" src="<%= store.logo.url %>" alt="" width="200">
+  </td></tr></tbody></table></td></tr></tbody></table>
+
+
+  <table class="module" role="module" data-type="text" border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;">
+      <tbody><tr>
+        <td style="padding:25px 20px 0px 20px;line-height:20px;text-align:center;" height="100%" valign="top" bgcolor="">
+            <h2><span style="color:#333333;">Boas vindas <%= customer.name.given_name %>!</span></h2>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table class="module" role="module" data-type="text" border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;">
+    <tr>
+      <td style="padding:30px 45px 30px 45px;line-height:22px;text-align:inherit;"
+          height="100%"
+          valign="top"
+          bgcolor="">
+          <div style="text-align: center;"><span style="color:#333333;">
+            <p>Nós da <strong><%= store.name %></strong>, ficamos felizes com seu cadastro. Dê uma olhada em nossos produtos e aproveite as ofertas!</p>
+            </span></div>
+      </td>
+    </tr>
+  </table>
+
+  <table border="0" cellpadding="0" cellspacing="0" class="module" data-role="module-button" data-type="button" role="module" style="table-layout:fixed" width="100%"><tbody><tr><td align="center" class="outer-td" style="padding:10px 0px 45px 0px"><table border="0" cellpadding="0" cellspacing="0" class="button-css__deep-table___2OZyb wrapper-mobile" style="text-align:center"><tbody><tr><td align="center" bgcolor="<%= store.brand_colors.primary %>" class="inner-td" style="border-radius:6px;font-size:16px;text-align:center;background-color:inherit"><a style="background-color:<%= store.brand_colors.primary %>;border:1px solid #333333;border-color:#FFFFFF;border-radius:3px;border-width:1px;color:#FFFFFF;display:inline-block;font-family:arial,helvetica,sans-serif;font-size:16px;font-weight:normal;letter-spacing:0px;line-height:16px;padding:12px 70px 12px 70px;text-align:center;text-decoration:none" href="<%= store.homepage %>" target="_blank">IR PARA LOJA</a></td></tr></tbody></table></td></tr></tbody></table>
+
+  <table class="module"
+         role="module"
+         data-type="divider"
+         border="0"
+         cellpadding="0"
+         cellspacing="0"
+         width="100%"
+         style="table-layout: fixed;">
+    <tr>
+      <td style="padding:0px 0px 0px 0px;"
+          role="module-content"
+          height="100%"
+          valign="top"
+          bgcolor="">
+        <table border="0"
+               cellpadding="0"
+               cellspacing="0"
+               align="center"
+               width="100%"
+               height="5px"
+               style="line-height:5px; font-size:5px;">
+          <tr>
+            <td
+              style="padding: 0px 0px 5px 0px;"
+              bgcolor="#ebebeb"></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+
+
+<div data-role="module-unsubscribe" class="module unsubscribe-css__unsubscribe___2CDlR" role="module" data-type="unsubscribe" style="background-color:#ebebeb;color:#7a7a7a;font-size:11px;line-height:20px;padding:30px 0px 30px 0px;text-align:center"><div class="Unsubscribe--addressLine"><p class="Unsubscribe--senderName" style="font-family:;font-size:11px;line-height:20px"><%= store.corporate_name %></p><p style="font-family:;font-size:11px;line-height:20px"><span class="Unsubscribe--senderAddress"><%= store.address %></span></p></div><p style="font-family:;font-size:11px;line-height:20px"><a class="Unsubscribe--unsubscribeLink" href="" style="color:#2277ee">Desinscrever</a></p></div>
+
+
+                            </td>
+                          </tr>
+                        </table>
+                        </td></tr></table>
+                        </center>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </center>
+
+
+
   </body>
 </html>
