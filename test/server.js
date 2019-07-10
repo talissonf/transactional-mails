@@ -2,9 +2,12 @@
 
 // load the lib object
 const { welcome } = require('./../src/')
+const { abandonned_cart } = require('./../src/')
 // sample JSON data
 const store = require('./data/store.json')
 const customer = require('./data/customer.json')
+const cart = require('./data/cart.json')
+const order = require('./data/order.json')
 // setup dev server with BrowserSync
 const browserSync = require('browser-sync').create()
 
@@ -15,6 +18,14 @@ browserSync.init({
       route: '/welcome',
       handle (req, res, next) {
         welcome(store, customer)
+          .then(html => res.end(html))
+          .catch(err => console.error(err))
+      }
+    },
+    {
+      route: '/abandonned_cart',
+      handle (req, res, next) {
+        abandonned_cart(store, customer, cart)
           .then(html => res.end(html))
           .catch(err => console.error(err))
       }
