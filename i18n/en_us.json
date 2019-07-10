@@ -1,3 +1,11 @@
 {
-  "hello_world": "Hello World!"
+  "welcome": "Boas vindas",
+  "hello": "Olá",
+  "we_from": "Nós da",
+  "welcome_text": "ficamos felizes com seu cadastro. Dê uma olhada em nossos produtos e aproveite as ofertas!",
+  "welcome_cta": "IR PARA LOJA",
+  "cart_title": "Você esqueceu seus produtos!",
+  "cart_text": "estamos só esperando o pagamento ser aprovado para te enviar os produtos abaixo:",
+  "cart_cta": "FINALIZAR COMPRA"
+
 }

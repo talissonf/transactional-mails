@@ -1,3 +1,6 @@
 {
-  "boas_vindas": "Boas vindas <%= customer.name.given_name %>!"
+  "welcome": "Boas vindas",
+  "hello": "Olá",
+  "we_from": "Nós da",
+  "welcome_text": "ficamos felizes com seu cadastro. Dê uma olhada em nossos produtos e aproveite as ofertas!"
 }
