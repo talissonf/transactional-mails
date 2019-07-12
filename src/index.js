@@ -40,7 +40,27 @@ module.exports = {
   abandonned_cart (store, customer, cart, lang, themeColor) {
     const data = { store, customer, cart }
     return render('abandonned_cart', data, lang, themeColor)
-  }
+  },
+
+  new_order (store, customer, order, lang, themeColor) {
+    const data = { store, customer, order }
+    return render('new_order', data, lang, themeColor)
+  },
+
+  delivered (store, customer, order, lang, themeColor) {
+    const data = { store, customer, order }
+    return render('delivered', data, lang, themeColor)
+  },
+
+  payment (store, customer, order, lang, themeColor) {
+    const data = { store, customer, order }
+    return render('payment', data, lang, themeColor)
+  },
+
+  shipped (store, customer, order, lang, themeColor) {
+    const data = { store, customer, order }
+    return render('shipped', data, lang, themeColor)
+  },
 
 }
 
