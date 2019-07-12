@@ -1,11 +1,11 @@
 {
-  "welcome": "Boas vindas",
-  "hello": "Olá",
-  "we_from": "Nós da",
-  "welcome_text": "ficamos felizes com seu cadastro. Dê uma olhada em nossos produtos e aproveite as ofertas!",
-  "welcome_cta": "IR PARA LOJA",
-  "cart_title": "Você esqueceu seus produtos!",
-  "cart_text": "estamos só esperando o pagamento ser aprovado para te enviar os produtos abaixo:",
-  "cart_cta": "FINALIZAR COMPRA"
-
+  "unsub": "unsubscribe",
+  "welcome": "Welcome",
+  "hello": "Hello",
+  "we_from": "We from",
+  "welcome_text": "are happy with your subscription. Take a look at our products and sales!",
+  "welcome_cta": "GO TO STORE",
+  "cart_title": "You forgot your cart!",
+  "cart_text": "are just waiting the payment to send you the following products:",
+  "cart_cta": "BUY"
 }
