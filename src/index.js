@@ -25,6 +25,8 @@ module.exports = {
    * @description Returns HTML markup for customer welcome email.
    * @param {object} store - Store body object
    * @param {object} customer - Customer body object
+   * @param {object} cart - Customer body object
+   * @param {object} order - Customer body object
    * @param {string} [lang='en_us'] - Snake case language code, eg.: 'en_us', 'pt_br'
    * @param {string} [themeColor] - RGB color string
    * @returns {Promise}
@@ -33,7 +35,32 @@ module.exports = {
   welcome (store, customer, lang, themeColor) {
     const data = { store, customer }
     return render('welcome', data, lang, themeColor)
-  }
+  },
+
+  abandonned_cart (store, customer, cart, lang, themeColor) {
+    const data = { store, customer, cart }
+    return render('abandonned_cart', data, lang, themeColor)
+  },
+
+  new_order (store, customer, order, lang, themeColor) {
+    const data = { store, customer, order }
+    return render('new_order', data, lang, themeColor)
+  },
+
+  delivered (store, customer, order, lang, themeColor) {
+    const data = { store, customer, order }
+    return render('delivered', data, lang, themeColor)
+  },
+
+  payment (store, customer, order, lang, themeColor) {
+    const data = { store, customer, order }
+    return render('payment', data, lang, themeColor)
+  },
+
+  shipped (store, customer, order, lang, themeColor) {
+    const data = { store, customer, order }
+    return render('shipped', data, lang, themeColor)
+  },
 
 }
 

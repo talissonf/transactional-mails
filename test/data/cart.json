@@ -1,0 +1,108 @@
+{
+    "staff_signature": true,
+    "available": true,
+    "other_customers": true,
+    "completed": false,
+    "permalink": "https://storefront-demo.e-com.plus/app/#/cart/5c6b159ec626be23430d4e87",
+    "items": [
+        {
+            "_id": "522670155664601572300000",
+            "sku": "SJO5315",
+            "product_id": "5c7698adc626be23430d509c",
+            "price": 255.9,
+            "quantity": 1,
+            "name": "Smartphone Alcatel Pixi 4 4034E Lite 4\" Desbloqueado Preto",
+            "picture": {
+                "zoom": {
+                    "url": "https://ecom-ptqgjveg.nyc3.digitaloceanspaces.com/@1551275607131-smartphone-alcatel-pixi-4-dual-chip-4-4034e-preto-pricipal.jpg",
+                    "size": "410x410",
+                    "alt": "smartphone-alcatel-pixi-4-dual-chip-4-4034e-preto-pricipal"
+                },
+                "small": {
+                    "url": "https://ecom-ptqgjveg.nyc3.digitaloceanspaces.com/imgs/100px/@1551275607131-smartphone-alcatel-pixi-4-dual-chip-4-4034e-preto-pricipal.jpg",
+                    "size": "100x100",
+                    "alt": "smartphone-alcatel-pixi-4-dual-chip-4-4034e-preto-pricipal"
+                },
+                "normal": {
+                    "url": "https://ecom-ptqgjveg.nyc3.digitaloceanspaces.com/imgs/400px/@1551275607131-smartphone-alcatel-pixi-4-dual-chip-4-4034e-preto-pricipal.jpg",
+                    "size": "400x400",
+                    "alt": "smartphone-alcatel-pixi-4-dual-chip-4-4034e-preto-pricipal"
+                },
+                "big": {
+                    "url": "https://ecom-ptqgjveg.nyc3.digitaloceanspaces.com/imgs/700px/@1551275607131-smartphone-alcatel-pixi-4-dual-chip-4-4034e-preto-pricipal.jpg",
+                    "size": "700x700",
+                    "alt": "smartphone-alcatel-pixi-4-dual-chip-4-4034e-preto-pricipal"
+                }
+            },
+            "keep_item_quantity": false,
+            "currency_id": "BRL",
+            "currency_symbol": "R$",
+            "keep_item_price": false
+        },
+        {
+            "_id": "923700156279494484100000",
+            "sku": "cd-acl-9965",
+            "product_id": "5c702e1cc626be23430d500e",
+            "price": 676.99,
+            "quantity": 2,
+            "name": "Cadeira Gamer Aerocool Profissional AC60C Vermelho",
+            "picture": {
+                "zoom": {
+                    "url": "https://ecom-ptqgjveg.nyc3.digitaloceanspaces.com/@1550855319331-cadeira-gamer-aerocool-air-ac60c-vermelho.jpg",
+                    "size": "410x410",
+                    "alt": "cadeira-gamer-aerocool-air-ac60c-vermelho"
+                },
+                "small": {
+                    "url": "https://ecom-ptqgjveg.nyc3.digitaloceanspaces.com/imgs/100px/@1550855319331-cadeira-gamer-aerocool-air-ac60c-vermelho.jpg",
+                    "size": "100x100",
+                    "alt": "cadeira-gamer-aerocool-air-ac60c-vermelho"
+                },
+                "normal": {
+                    "url": "https://ecom-ptqgjveg.nyc3.digitaloceanspaces.com/imgs/400px/@1550855319331-cadeira-gamer-aerocool-air-ac60c-vermelho.jpg",
+                    "size": "400x400",
+                    "alt": "cadeira-gamer-aerocool-air-ac60c-vermelho"
+                },
+                "big": {
+                    "url": "https://ecom-ptqgjveg.nyc3.digitaloceanspaces.com/imgs/700px/@1550855319331-cadeira-gamer-aerocool-air-ac60c-vermelho.jpg",
+                    "size": "700x700",
+                    "alt": "cadeira-gamer-aerocool-air-ac60c-vermelho"
+                }
+            }
+        },
+        {
+            "_id": "313080156279496334900000",
+            "sku": "nb-apl-154",
+            "product_id": "5c703e79c626be23430d5038",
+            "price": 16005.51,
+            "quantity": 1,
+            "name": "Macbook Apple Pro 15.4\" Intel Core i7 2.6GHz RAM 16GB SSD 512GB MR972LL/A Prata",
+            "picture": {
+                "zoom": {
+                    "url": "https://ecom-ptqgjveg.nyc3.digitaloceanspaces.com/@1550859372026-teclas-macbook-apple-pro-tela-15-4-ssd-512gb-mr972ll-a-prata.jpg",
+                    "size": "410x410",
+                    "alt": "teclas-macbook-apple-pro-tela-15-4-ssd-512gb-mr972ll-a-prata"
+                },
+                "small": {
+                    "url": "https://ecom-ptqgjveg.nyc3.digitaloceanspaces.com/imgs/100px/@1550859372026-teclas-macbook-apple-pro-tela-15-4-ssd-512gb-mr972ll-a-prata.jpg",
+                    "size": "100x100",
+                    "alt": "teclas-macbook-apple-pro-tela-15-4-ssd-512gb-mr972ll-a-prata"
+                },
+                "normal": {
+                    "url": "https://ecom-ptqgjveg.nyc3.digitaloceanspaces.com/imgs/400px/@1550859372026-teclas-macbook-apple-pro-tela-15-4-ssd-512gb-mr972ll-a-prata.jpg",
+                    "size": "400x400",
+                    "alt": "teclas-macbook-apple-pro-tela-15-4-ssd-512gb-mr972ll-a-prata"
+                },
+                "big": {
+                    "url": "https://ecom-ptqgjveg.nyc3.digitaloceanspaces.com/imgs/700px/@1550859372026-teclas-macbook-apple-pro-tela-15-4-ssd-512gb-mr972ll-a-prata.jpg",
+                    "size": "700x700",
+                    "alt": "teclas-macbook-apple-pro-tela-15-4-ssd-512gb-mr972ll-a-prata"
+                }
+            }
+        }
+    ],
+    "subtotal": 17615.39,
+    "status": "Em produção",
+    "utm": {
+        "source": "Instagram"
+    }
+}

@@ -1,0 +1,220 @@
+{   "status_link": "https://storefront-demo.e-com.plus/app/#/account/orders/5851",
+    "buyers": [
+        {
+            "_id": "5c0fff6918b7b27aad73632f",
+            "main_email": "talissonft@me.com",
+            "display_name": "Talisson",
+            "name": {
+                "given_name": "Talisson",
+                "family_name": "Ferreira"
+            },
+            "gender": "x",
+            "photos": [
+                "https://platform-lookaside.fbsbx.com/platform/profilepic/?asid=10215141816277207&height=50&width=50&ext=1547144295&hash=AeSeZCc2lFDGnNVj"
+            ],
+            "phones": [
+                {
+                    "number": "31999665477"
+                }
+            ],
+            "registry_type": "p",
+            "doc_number": "11605468606"
+        }
+    ],
+    "items": [
+        {
+            "quantity": 2,
+            "product_id": "5c700d88c626be23430d4fa0",
+            "picture": {
+                "zoom": {
+                    "url": "https://ecom-ptqgjveg.nyc3.digitaloceanspaces.com/@1550847221620-frontal-teclado-logitech-com-fio-usb-abnt2-k120-preto.jpg",
+                    "size": "410x410",
+                    "alt": "frontal-teclado-logitech-com-fio-usb-abnt2-k120-preto"
+                },
+                "small": {
+                    "url": "https://ecom-ptqgjveg.nyc3.digitaloceanspaces.com/imgs/100px/@1550847221620-frontal-teclado-logitech-com-fio-usb-abnt2-k120-preto.jpg",
+                    "size": "100x100",
+                    "alt": "frontal-teclado-logitech-com-fio-usb-abnt2-k120-preto"
+                },
+                "normal": {
+                    "url": "https://ecom-ptqgjveg.nyc3.digitaloceanspaces.com/imgs/400px/@1550847221620-frontal-teclado-logitech-com-fio-usb-abnt2-k120-preto.jpg",
+                    "size": "400x400",
+                    "alt": "frontal-teclado-logitech-com-fio-usb-abnt2-k120-preto"
+                },
+                "big": {
+                    "url": "https://ecom-ptqgjveg.nyc3.digitaloceanspaces.com/imgs/700px/@1550847221620-frontal-teclado-logitech-com-fio-usb-abnt2-k120-preto.jpg",
+                    "size": "700x700",
+                    "alt": "frontal-teclado-logitech-com-fio-usb-abnt2-k120-preto"
+                }
+            },
+            "sku": "tcl-lgt-7350",
+            "name": "Teclado Logitech com Fio USB ABNT2 K120 Preto",
+            "price": 43,
+            "final_price": 43,
+            "_id": "e15620979355131111111111"
+        },
+        {
+            "product_id": "5c701c8ac626be23430d4fe5",
+            "variation_id": "899480155085081630400046",
+            "picture": {
+                "zoom": {
+                    "url": "https://ecom-ptqgjveg.nyc3.digitaloceanspaces.com/@1550850821727-embalagem-headset-gamer-corsair-raptor-hs40.jpg",
+                    "size": "410x410",
+                    "alt": "embalagem-headset-gamer-corsair-raptor-hs40"
+                },
+                "small": {
+                    "url": "https://ecom-ptqgjveg.nyc3.digitaloceanspaces.com/imgs/100px/@1550850821727-embalagem-headset-gamer-corsair-raptor-hs40.jpg",
+                    "size": "100x100",
+                    "alt": "embalagem-headset-gamer-corsair-raptor-hs40"
+                },
+                "normal": {
+                    "url": "https://ecom-ptqgjveg.nyc3.digitaloceanspaces.com/imgs/400px/@1550850821727-embalagem-headset-gamer-corsair-raptor-hs40.jpg",
+                    "size": "400x400",
+                    "alt": "embalagem-headset-gamer-corsair-raptor-hs40"
+                },
+                "big": {
+                    "url": "https://ecom-ptqgjveg.nyc3.digitaloceanspaces.com/imgs/700px/@1550850821727-embalagem-headset-gamer-corsair-raptor-hs40.jpg",
+                    "size": "700x700",
+                    "alt": "embalagem-headset-gamer-corsair-raptor-hs40"
+                }
+            },
+            "quantity": 1,
+            "sku": "hd-csr-303-692-18",
+            "name": "Headset Gamer Corsair HS40 Raptor CA-9011122-NA(AP) Vinho / 2 / Branco / P2",
+            "price": 232,
+            "final_price": 232,
+            "_id": "e15620979354771111111111"
+        }
+    ],
+    "amount": {
+        "total": 287.34,
+        "subtotal": 318,
+        "discount": 47.7,
+        "freight": 17.04
+    },
+    "shipping_lines": [
+        {
+            "_id": "e15620979360211111111111",
+            "app": {
+                "_id": "5d0d059f6a3fa57d5fd30faa",
+                "label": "EXPRESSO",
+                "carrier": "Correios",
+                "service_name": "EXPRESSO",
+                "service_code": "ME 2",
+                "icon": "https://sandbox.melhorenvio.com.br/images/shipping-companies/correios.png"
+            },
+            "package": {
+                "dimensions": {
+                    "width": {
+                        "value": 15,
+                        "unit": "cm"
+                    },
+                    "height": {
+                        "value": 4,
+                        "unit": "cm"
+                    },
+                    "length": {
+                        "value": 45,
+                        "unit": "cm"
+                    }
+                },
+                "weight": {
+                    "value": 1.2,
+                    "unit": "g"
+                }
+            },
+            "from": {
+                "zip": "31920310",
+                "street": "Rua Célia",
+                "number": 228
+            },
+            "to": {
+                "zip": "31920-310",
+                "name": "Talisson Ferreira",
+                "street": "Rua Célia",
+                "number": 228,
+                "borough": "Penha",
+                "city": "Belo Horizonte",
+                "province_code": "MG"
+            },
+            "discount": 0,
+            "posting_deadline": {
+                "days": 5,
+                "working_days": true,
+                "after_approval": true
+            },
+            "delivery_time": {
+                "days": 2,
+                "working_days": true
+            },
+            "price": 17.04,
+            "total_price": 17.04,
+            "custom_fields": [
+                {
+                    "field": "by_melhor_envio",
+                    "value": "true"
+                },
+                {
+                    "field": "jadlog_agency",
+                    "value": "undefined"
+                }
+            ],
+            "own_hand": false,
+            "receipt": false
+        }
+    ],
+    "shipping_method_label": "EXPRESSO",
+    "payment_method_label": "Boleto bancário",
+    "staff_signature": false,
+    "source_name": "Web",
+    "channel_type": "ecommerce",
+    "status": "open",
+    "currency_id": "BRL",
+    "currency_symbol": "R$",
+    "budget_only": false,
+    "number": 5923,
+    "transactions": [
+        {
+            "payment_link": "https://www.paghiper.com/checkout/boleto/128605b95cf1e248d9e43f0a4bb26a6003686f14ebf14dafaa9bcde2b4e15e3f233210093b268cb68c7d7db339d63a71973ac666527e074269cb1ec32cb44a44/KG9AZ668URKY6D3K/91306765",
+            "intermediator": {
+                "transaction_id": "KG9AZ668URKY6D3K",
+                "transaction_code": "KG9AZ668URKY6D3K",
+                "transaction_reference": "5923"
+            },
+            "banking_billet": {
+                "code": "03399.87836 48900.000919 30676.501015 4 79430000028734",
+                "link": "https://www.paghiper.com/checkout/boleto/128605b95cf1e248d9e43f0a4bb26a6003686f14ebf14dafaa9bcde2b4e15e3f233210093b268cb68c7d7db339d63a71973ac666527e074269cb1ec32cb44a44/KG9AZ668URKY6D3K/91306765/pdf",
+                "valid_thru": "2019-07-07T00:00:00.000Z"
+            },
+            "amount": 287.34,
+            "type": "payment",
+            "payment_method": {
+                "code": "banking_billet",
+                "name": "Boleto bancário - PagHiper"
+            },
+            "app": {
+                "_id": "5d11024a6a3fa57d5fd31040",
+                "label": "Boleto bancário",
+                "intermediator": {
+                    "name": "PagHiper",
+                    "link": "https://www.paghiper.com/",
+                    "code": "paghiper"
+                }
+            },
+            "_id": "5d1bb9126a3fa57d5fd34a45"
+        }
+    ],
+    "payments_history": [
+        {
+            "date_time": "2019-07-02T20:06:02.971Z",
+            "status": "pending",
+            "notification_code": "YDI13SDYOSWEMOZ2Y925FAZ6UYC81XC0AU2DNFCC88QUXQWWZZ1F91L4ZYD0WP06",
+            "customer_notified": false,
+            "_id": "5d1bb92b6a3fa57d5fd34a4b"
+        }
+    ],
+    "financial_status": {
+        "updated_at": "2019-07-02T20:07:15.911Z",
+        "current": "pending"
+    }
+}

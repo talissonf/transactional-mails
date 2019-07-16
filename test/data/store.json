@@ -1,3 +1,45 @@
 {
-  "name": "Demo store"
+  "_id": "5b1abe30a4d4531b8fe40725",
+  "address": "Av Amazonas, 78, Belo Horizonte, MG",
+  "brand_colors":{
+    "primary": "#e83e8c"
+  },
+  "name": "Loja Modelo",
+  "homepage": "https://storefront-demo.e-com.plus/",
+  "segment_id": 23,
+  "doc_type": "CPF",
+  "corporate_name": "Loja Modelo Inc",
+  "doc_number": "11835602657",
+  "financial_email": "vitor@e-com.club",
+  "store_id": 1011,
+  "created_at": "2018-06-08T17:34:40.294Z",
+  "resources": {},
+  "logo": {
+      "url": "https://i.imgur.com/J4HzO5k.png"
+  },
+  "updated_at": "2018-10-02T20:10:18.452Z",
+  "description": "A E-Com Club é uma plataforma de lojas virtuais versátil, completa e intuitiva, destinada a médias e pequenas empresas.",
+  "contact_email": "email@contato.com",
+  "$main": {
+      "id": 1011,
+      "store_object_id": "5b1abe30a4d4531b8fe40725",
+      "status": "active",
+      "total_moved": "0",
+      "total_billed": "0",
+      "creation_date": "2018-06-08T17:34:40.000Z",
+      "counted_logins": 0,
+      "credits": 0,
+      "renewal_day": 1,
+      "plan": 1,
+      "plan_value": 59,
+      "products_limit": 300,
+      "remaining_products": 0,
+      "users_limit": 1,
+      "remaining_users": 0,
+      "orders_limit": 100,
+      "remaining_orders": 0,
+      "additional_channels": 0,
+      "additional_channels_cost": 29,
+      "extra_costs": 0
+  }
 }

@@ -1,3 +1,109 @@
 {
-  
+    "_id": "5c51af16807fd83062ab670d",
+    "state": "invited",
+    "oauth_providers": [
+        {
+            "_id": "100000000000000000000000",
+            "provider": "facebook",
+            "user_id": "1801235723222553"
+        }
+    ],
+    "main_email": "vitorrggm@gmail.com",
+    "emails": [
+        {
+            "address": "vitorrggm@gmail.com",
+            "verified": true
+        }
+    ],
+    "name": {
+        "given_name": "Vitor",
+        "family_name": "Gonçalves",
+        "middle_name": "Rocha"
+    },
+    "display_name": "Vitor",
+    "photos": [
+        "https://platform-lookaside.fbsbx.com/platform/profilepic/?asid=1801235723222553&height=50&width=50&ext=1551449108&hash=AeTJmxPpl24VD6A7"
+    ],
+    "staff_signature": false,
+    "enabled": true,
+    "login": true,
+    "accepts_marketing": false,
+    "tax_exempt": true,
+    "currency_id": "BRL",
+    "currency_symbol": "R$",
+    "birth_date": {
+        "year": 1995,
+        "month": 3,
+        "day": 26
+    },
+    "doc_number": "11835602657",
+    "phones": [
+        {
+            "number": "31992980551"
+        }
+    ],
+    "registry_type": "p",
+    "orders": [
+        {
+            "_id": "5c99117c6d0a665f892a252f",
+            "amount": {
+                "total": 767.52,
+                "subtotal": 820.14,
+                "discount": 82.014,
+                "freight": 29.39
+            },
+            "shipping_method_label": ".Com",
+            "payment_method_label": "Boleto Bancário",
+            "currency_id": "BRL",
+            "currency_symbol": "R$",
+            "number": 5851,
+            "created_at": "2019-03-25T17:37:54.243Z"
+        },
+        {
+            "_id": "5ca260816d0a665f892a3982",
+            "amount": {
+                "total": 767.516,
+                "subtotal": 820.14,
+                "discount": 82.014,
+                "freight": 29.39
+            },
+            "shipping_method_label": ".Com",
+            "payment_method_label": "Boleto Bancário",
+            "currency_id": "BRL",
+            "currency_symbol": "R$",
+            "created_at": "2019-04-01T19:03:29.521Z",
+            "number": 5860
+        }
+    ],
+    "orders_count": 2,
+    "orders_total_value": 1535,
+    "total_cancelled": 0,
+    "total_spent": 0,
+    "addresses": [
+        {
+            "_id": "388360155536027971600000",
+            "zip": "30140-072",
+            "street": "Nelson Clayton Linon",
+            "number": 38,
+            "complement": "Casa",
+            "borough": "Santa Helena (Barreiro)",
+            "near_to": "Barreiro de Baixo",
+            "city": "Belo Horizonte",
+            "province_code": "MG",
+            "default": true
+        },
+        {
+            "_id": "959050155553028148800000",
+            "zip": "31520-460",
+            "street": "Santa Maria Bertilla",
+            "number": 38,
+            "borough": "São João Batista",
+            "default": false
+        }
+    ],
+    "gender": "f",
+    "staff_notes": "123456789",
+    "updated_at": "2019-06-17T20:12:53.946Z",
+    "created_at": "2019-04-17T19:45:42.791Z",
+    "store_id": 1011
 }

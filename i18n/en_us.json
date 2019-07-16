@@ -1,3 +1,11 @@
 {
-  "hello_world": "Hello World!"
+  "unsub": "unsubscribe",
+  "welcome": "Welcome",
+  "hello": "Hello",
+  "we_from": "We from",
+  "welcome_text": "are happy with your subscription. Take a look at our products and sales!",
+  "welcome_cta": "GO TO STORE",
+  "cart_title": "You forgot your cart!",
+  "cart_text": "are just waiting the payment to send you the following products:",
+  "cart_cta": "BUY"
 }
