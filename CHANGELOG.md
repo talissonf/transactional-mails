@@ -2,6 +2,34 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.4.0](https://github.com/ecomclub/transactional-mails/compare/v0.3.0...v0.4.0) (2019-07-17)
+
+
+### Bug Fixes
+
+* renaming methods to camelCase ([8494850](https://github.com/ecomclub/transactional-mails/commit/8494850))
+* **abandoned-cart:** adding element classes to 'abandoned-cart' template ([55d6108](https://github.com/ecomclub/transactional-mails/commit/55d6108))
+* **delivered:** adding element classes to 'delivered' template ([ae4dcbb](https://github.com/ecomclub/transactional-mails/commit/ae4dcbb))
+* **new-order:** adding element classes to 'new-order' template ([ca7371b](https://github.com/ecomclub/transactional-mails/commit/ca7371b))
+* **payment:** adding element classes to 'payment' template ([d5fa7fa](https://github.com/ecomclub/transactional-mails/commit/d5fa7fa))
+* **render:** handle 'includePaths' node-sass option ([ec207df](https://github.com/ecomclub/transactional-mails/commit/ec207df))
+* **render:** using only one 'styles.scss' file ([6448cd1](https://github.com/ecomclub/transactional-mails/commit/6448cd1))
+* **scss:** fix styles, some hardcodes with 'important' ([2b4487c](https://github.com/ecomclub/transactional-mails/commit/2b4487c))
+* **shipped:** adding 'btn' and 'main' classes to respective elements ([e9a1ce7](https://github.com/ecomclub/transactional-mails/commit/e9a1ce7))
+* **welcome:** inline style fixes on 'welcome' template ([d6aca60](https://github.com/ecomclub/transactional-mails/commit/d6aca60))
+
+
+### Tests
+
+* **server:** fix server script ([7a28dde](https://github.com/ecomclub/transactional-mails/commit/7a28dde))
+
+
+### BREAKING CHANGES
+
+* some old methods not workign (renamed)
+
+
+
 ## [0.3.0](https://github.com/ecomclub/transactional-mails/compare/v0.2.0...v0.3.0) (2019-07-08)
 
 
