@@ -1,17 +1,21 @@
 'use strict'
 
 // load the lib object
-const { welcome } = require('./../src/')
-const { new_order } = require('./../src/')
-const { abandonned_cart } = require('./../src/')
-const { delivered } = require('./../src/')
-const { payment } = require('./../src/')
-const { shipped } = require('./../src/')
+const {
+  welcome,
+  newOrder,
+  abandonedCart,
+  delivered,
+  payment,
+  shipped
+} = require('./../src/')
+
 // sample JSON data
 const store = require('./data/store.json')
 const customer = require('./data/customer.json')
 const cart = require('./data/cart.json')
 const order = require('./data/order.json')
+
 // setup dev server with BrowserSync
 const browserSync = require('browser-sync').create()
 
@@ -27,17 +31,17 @@ browserSync.init({
       }
     },
     {
-      route: '/abandonned_cart',
+      route: '/abandoned-cart',
       handle (req, res, next) {
-        abandonned_cart(store, customer, cart, 'pt_br')
+        abandonedCart(store, customer, cart, 'pt_br')
           .then(html => res.end(html))
           .catch(err => console.error(err))
       }
     },
     {
-      route: '/new_order',
+      route: '/new-order',
       handle (req, res, next) {
-        new_order(store, customer, order, 'pt_br')
+        newOrder(store, customer, order, 'pt_br')
           .then(html => res.end(html))
           .catch(err => console.error(err))
       }
