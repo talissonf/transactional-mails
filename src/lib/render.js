@@ -39,7 +39,10 @@ module.exports = (template, data = {}, lang = 'en_us', themeColor = '#6c757d') =
         // merge SCSS file content with theme color variable
         const scssString = `$theme-color: ${themeColor};\n${contents}`
         // render Sass
-        sass.render({ data: scssString }, (err, result) => {
+        sass.render({
+          data: scssString,
+          includePaths: [ path.join(process.cwd(), 'scss') ]
+        }, (err, result) => {
           if (err) {
             // SCSS error
             return reject(err)
