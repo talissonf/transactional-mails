@@ -13,7 +13,19 @@ const sass = require('node-sass')
 // https://developers.e-com.plus/ecomplus-utils/
 const ecomUtils = require('@ecomplus/utils')
 
-module.exports = (template, data = {}, lang = 'en_us', themeColor = '#6c757d') => {
+module.exports = (template, data = {}, store, lang) => {
+  // try to set lang and theme color from store object
+  // https://developers.e-com.plus/docs/api/#/store/stores
+  lang = lang || (store.languages && store.languages[0]) || ecomUtils._config.get('lang')
+  ecomUtils._config.set('lang', lang)
+  const themeColor = (store.brand_colors && store.brand_colors.primary) || '#6c757d'
+
+  // handle default currency by lang
+  if (lang === 'pt_br') {
+    ecomUtils._config.set('currency', 'BRL')
+    ecomUtils._config.set('currency_symbol', 'R$')
+  }
+
   return new Promise((resolve, reject) => {
     // setup dictionary object first
     const i18n = path.join(process.cwd(), `i18n/${lang}.json`)
