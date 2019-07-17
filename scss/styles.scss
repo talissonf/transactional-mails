@@ -1,59 +1,100 @@
-body, p, div {
-  font-family: arial;
+@import 'variables';
+@import 'functions';
+
+body {
+  padding: 20px;
+  margin: 0;
+  background: $gray;
+}
+
+body,
+p,
+div {
+  font-family: -apple-system,BlinkMacSystemFont,Roboto,Helvetica,Arial,NotoSans,sans-serif;
   font-size: 14px;
 }
+
 body {
-  color: #000000;
+  color: $dark;
 }
+
 body a {
-  color: $theme-color;
+  color: $primary;
   text-decoration: none;
 }
-p { margin: 0; padding: 0; }
+
+.btn {
+  background: $theme-color;
+  color: color-yiq($theme-color);
+  border: none;
+  border-radius: 3px;
+  display: inline-block;
+  font-size: 16px;
+  line-height: 16px;
+  padding: 12px 70px 12px 70px;
+  text-align: center;
+  text-decoration: none;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
 table.wrapper {
-  width:100% !important;
+  width: 100% !important;
   table-layout: fixed;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
 }
+
 img.max-width {
   max-width: 100% !important;
 }
+
 .column.of-2 {
   width: 50%;
 }
+
 .column.of-3 {
   width: 33.333%;
 }
+
 .column.of-4 {
   width: 25%;
 }
+
 @media screen and (max-width:480px) {
   .preheader .rightColumnContent,
   .footer .rightColumnContent {
-      text-align: left !important;
+    text-align: left !important;
   }
+
   .preheader .rightColumnContent div,
   .preheader .rightColumnContent span,
   .footer .rightColumnContent div,
   .footer .rightColumnContent span {
     text-align: left !important;
   }
+
   .preheader .rightColumnContent,
   .preheader .leftColumnContent {
     font-size: 80% !important;
     padding: 5px 0;
   }
+
   table.wrapper-mobile {
     width: 100% !important;
     table-layout: fixed;
   }
+
   img.max-width {
     height: auto !important;
     max-width: 480px !important;
   }
+
   a.bulletproof-button {
     display: block !important;
     width: auto !important;
@@ -61,9 +102,11 @@ img.max-width {
     padding-left: 0 !important;
     padding-right: 0 !important;
   }
+
   .columns {
     width: 100% !important;
   }
+
   .column {
     display: block !important;
     width: 100% !important;
@@ -72,6 +115,7 @@ img.max-width {
     margin-left: 0 !important;
     margin-right: 0 !important;
   }
+
   .total_spacer {
     padding:0px 0px 0px 0px;
   }

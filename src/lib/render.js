@@ -30,7 +30,7 @@ module.exports = (template, data = {}, lang = 'en_us', themeColor = '#6c757d') =
       }
 
       // render Sass to CSS with theme color
-      const scss = path.join(process.cwd(), `scss/${template}.scss`)
+      const scss = path.join(process.cwd(), `scss/styles.scss`)
       fs.readFile(scss, 'utf8', (err, contents) => {
         if (err) {
           return reject(err)
