@@ -37,12 +37,12 @@ module.exports = {
     return render('welcome', data, lang, themeColor)
   },
 
-  abandonned_cart (store, customer, cart, lang, themeColor) {
+  abandonedCart (store, customer, cart, lang, themeColor) {
     const data = { store, customer, cart }
     return render('abandoned-cart', data, lang, themeColor)
   },
 
-  new_order (store, customer, order, lang, themeColor) {
+  newOrder (store, customer, order, lang, themeColor) {
     const data = { store, customer, order }
     return render('new-order', data, lang, themeColor)
   },
