@@ -79,10 +79,26 @@
                                 </tbody>
                               </table>
 
+                              <table border="0" cellpadding="0" cellspacing="10" class="module" data-role="module-button" data-type="button" role="module" style="table-layout:fixed" width="100%"><tbody><tr><td align="center" class="outer-td" style="padding:10px 0px 15px 0px"><table border="0" cellpadding="0" cellspacing="0" class="button-css__deep-table___2OZyb wrapper-mobile" style="text-align:center"><tbody><tr>
+                                <td align="center" bgcolor="<%= themeColor %>" class="inner-td" style="border-radius:6px;font-size:16px;text-align:center;background-color:inherit"><a class="btn" style="background-color:<%= themeColor %>;border:1px solid #333333;border-color:#FFFFFF;border-radius:3px;border-width:1px;color:#FFFFFF;display:inline-block;font-family:arial,helvetica,sans-serif;font-size:16px;font-weight:normal;letter-spacing:0px;line-height:16px;padding:12px 10px 12px 10px;text-align:center;text-decoration:none" href="<%= order.permalink %>" target="_blank"><%= i18n.order_cta %></a></td>
+                                </tr>
+                                <tr>
+                                  <td style="padding: 30px 45px 0px 45px;line-height:22px;text-align:inherit;"
+                                      height="100%"
+                                      valign="top"
+                                      bgcolor="">
+                                      <div style="text-align: center;"><span style="color:#333333;">
+                                        <p><%= i18n.or %> <a href="<%= store.homepage %>/app/#/account/orders"><%= i18n.visit_store %></a> </p>
+
+                                        </span></div>
+                                  </td>
+                                </tr>
+                                </tbody></table></td></tr></tbody></table>
+
                               <table class="module" role="module" data-type="text" border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;">
                                 <tbody>
                                   <tr>
-                                    <td style="padding:0px 20px 25px 20px;line-height:20px;text-align:inherit;" height="100%" valign="top" bgcolor="">
+                                    <td style="padding:30px 20px 25px 20px;line-height:20px;text-align:inherit;" height="100%" valign="top" bgcolor="">
                                         <h2 style="text-align: center;"><span style="color:#333333;"><%= i18n.shipping_data %></span></h2>
                                     </td>
                                   </tr>
@@ -94,7 +110,7 @@
                                   <td height="100%" valign="top">
                                     <div>
 
-                                        <table align="center" cellpadding="0" cellspacing="0" style="width:95%;border-collapse:collapse;">
+                                        <table align="center" cellpadding="0" cellspacing="0" style="width:85%;border-collapse:collapse;">
                                       <tbody>
                                       <% order.items.forEach(item => { %>
                                         <tr style="border-top-width:1px;border-top-color:#e5e5e5;border-top-style:solid">
@@ -173,24 +189,6 @@
                                   </td>
                                 </tr>
                               </tbody></table>
-
-                              <table class="module" role="module" data-type="text" border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;">
-                                <tr>
-                                  <td style="padding:30px 45px 30px 45px;line-height:22px;text-align:inherit;"
-                                      height="100%"
-                                      valign="top"
-                                      bgcolor="">
-                                      <div style="text-align: center;"><span style="color:#333333;">
-                                        <p><%= i18n.info %> <a href="<%= store.homepage %>/app/#/account/orders"><%= i18n.my_acc %></a> <%= i18n.contact_us %> </p>
-
-                                        </span></div>
-                                  </td>
-                                </tr>
-                              </table>
-
-
-
-                              <table border="0" cellpadding="0" cellspacing="10" class="module" data-role="module-button" data-type="button" role="module" style="table-layout:fixed" width="100%"><tbody><tr><td align="center" class="outer-td" style="padding:10px 0px 45px 0px"><table border="0" cellpadding="0" cellspacing="0" class="button-css__deep-table___2OZyb wrapper-mobile" style="text-align:center"><tbody><tr><td align="center" bgcolor="<%= themeColor %>" class="inner-td" style="border-radius:6px;font-size:16px;text-align:center;background-color:inherit"><a class="btn" style="background-color:<%= themeColor %>;border:1px solid #333333;border-color:#FFFFFF;border-radius:3px;border-width:1px;color:#FFFFFF;display:inline-block;font-family:arial,helvetica,sans-serif;font-size:16px;font-weight:normal;letter-spacing:0px;line-height:16px;padding:12px 70px 12px 70px;text-align:center;text-decoration:none" href="<%= order.permalink %>" target="_blank"><%= i18n.order_cta %></a></td></tr></tbody></table></td></tr></tbody></table>
 
                               <table class="module"
                                      role="module"
