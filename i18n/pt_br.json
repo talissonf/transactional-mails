@@ -35,5 +35,7 @@
   "shipped_title": "seu pedido está a caminho!",
   "shipped_text": "Seu pacote já foi entregue para a transportadora. Para acompanhar o andamento da entrega acesse a página",
   "delivered_title": "sua compra foi entregue!",
-  "delivered_text": "Esperamos que tenha gostado da experiência de compra e em breve visite novamente nosso site. O pedido foi entregue no endereço abaixo:"
+  "delivered_text": "Esperamos que tenha gostado da experiência de compra e em breve visite novamente nosso site. O pedido foi entregue no endereço abaixo:",
+  "or": "Ou",
+  "visit_store": "visite nossa loja"
 }
