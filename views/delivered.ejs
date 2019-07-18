@@ -77,10 +77,10 @@
                                 </tbody>
                               </table>
 
-                              <table class="module" role="module" data-type="text" border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;">
+                              <table class="module" role="module" data-type="text" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;">
                                 <tbody>
                                   <tr>
-                                    <td style="padding:0px 20px 25px 20px;line-height:20px;text-align:inherit;" height="100%" valign="top" bgcolor="">
+                                    <td style="padding:30px 20px 25px 20px;line-height:20px;text-align:inherit;" height="100%" valign="top" bgcolor="">
                                         <h2 style="text-align: center;"><span style="color:#333333;"><%= i18n.shipping_data %></span></h2>
                                     </td>
                                   </tr>
@@ -92,20 +92,21 @@
                                   <td height="100%" valign="top">
                                     <div>
 
-                                        <table align="center" border="0" cellpadding="0" cellspacing="0" style="width:95%;">
+                                        <table align="center" cellpadding="0" cellspacing="0" style="width:95%;border-collapse:collapse;">
                                       <tbody>
                                       <% order.items.forEach(item => { %>
-                                        <tr>
-                                          <td style="width:400px;max-width:33.333%;padding:10px; "><img class="max-width" border="0" style="display:block;color:#000000;text-decoration:none;font-family:Helvetica, arial, sans-serif;font-size:16px;max-width:100% !important;width:50%;height:auto !important;" src="<%= item.picture.small.url %>" alt="" width="100"></td>
+                                        <tr style="border-top-width:1px;border-top-color:#e5e5e5;border-top-style:solid">
+                                          <td style="width:400px;max-width:33.333%;padding:10px; "><img class="max-width" border="0" style="display:block;color:#000000;text-decoration:none;font-family:Helvetica, arial, sans-serif;font-size:16px;max-width:100% !important;width:50%;height:auto !important;" src="<%= item.picture.small.url %>" alt="" width="200"></td>
                                           <td style="width:400px;max-width:33.333%;padding:10px;"><div style="text-align: center;"><%= ecomUtils.name(item) %></div></td>
                                           <td style="width:50px;max-width:10%;"><div style="text-align: center;">x <%= item.quantity %></div></td>
-                                          <td style="width:50px;max-width:10%;"><div style="text-align: center;"><%= ecomUtils.formatMoney(ecomUtils.price(item) * item.quantity, 'BRL', 'pt_br') %></div></td>
+                                          <td style="width:50px;max-width:10%;"><div style="text-align: center;"> <strong> <%= ecomUtils.formatMoney(ecomUtils.price(item) * item.quantity, order.currency_id) %></strong></div></td>
                                         </tr>
                                         <% }) %>
-                                        <tr>
+                                        <tr style="border-top-width:1px;border-top-color:#e5e5e5;border-top-style:solid">
                                           <td style="width:200px;max-width:33.333%;">&nbsp;</td>
                                           <td style="width:200px;max-width:33.333%;">&nbsp;</td>
-                                          <td style="width:200px;max-width:33.333%;">&nbsp;</td>
+                                          <td style="width:50px;max-width:33.333%;">&nbsp;</td>
+                                          <td style="width:50px;max-width:33.333%;">&nbsp;</td>
                                         </tr>
 
                                         <% if (order.amount.discount) { %>
@@ -113,7 +114,7 @@
                                           <td style="width:200px;max-width:40%;">&nbsp;</td>
                                           <td style="width:200px;max-width:40%;">&nbsp;</td>
                                           <td style="width:50px;max-width:20%;padding:5px;"><div style="text-align: center;"><%= i18n.discount %></div></td>
-                                          <td style="width:50px;max-width:20%; font-size:16px;padding:5px;"><div style="text-align: center;"><%= ecomUtils.formatMoney(order.amount.discount, 'BRL', 'pt_br') %></div></td>
+                                          <td style="width:50px;max-width:20%; font-size:16px;padding:5px;"><div style="text-align: center;"><strong><%= ecomUtils.formatMoney(order.amount.discount, order.currency_id) %></strong></div></td>
                                         </tr>
 
                                         <% } %>
@@ -122,7 +123,7 @@
                                           <td style="width:200px;max-width:40%;">&nbsp;</td>
                                           <td style="width:200px;max-width:40%;">&nbsp;</td>
                                           <td style="width:50px;max-width:20%;padding:5px;"><div style="text-align: center;"><%= i18n.subtotal %></div></td>
-                                          <td style="width:50px;max-width:20%; font-size:16px;padding:5px;"><div style="text-align: center;"><%= ecomUtils.formatMoney(order.amount.subtotal, 'BRL', 'pt_br') %></div></td>
+                                          <td style="width:50px;max-width:20%; font-size:16px;padding:5px;"><div style="text-align: center;"><strong><%= ecomUtils.formatMoney(order.amount.subtotal, order.currency_id) %></strong></div></td>
                                         </tr>
                                         <% } %>
 
@@ -131,7 +132,7 @@
                                           <td style="width:200px;max-width:40%;">&nbsp;</td>
                                           <td style="width:200px;max-width:40%;">&nbsp;</td>
                                           <td style="width:50px;max-width:20%;padding:5px;"><div style="text-align: center;"><%= i18n.freight %></div></td>
-                                          <td style="width:50px;max-width:20%; font-size:16px;padding:5px;"><div style="text-align: center;"><%= ecomUtils.formatMoney(order.amount.freight, 'BRL', 'pt_br') %></div></td>
+                                          <td style="width:50px;max-width:20%; font-size:16px;padding:5px;"><div style="text-align: center;"><strong><%= ecomUtils.formatMoney(order.amount.freight, order.currency_id) %></strong></div></td>
                                         </tr>
                                         <% } %>
                                         <% if (order.amount.tax) { %>
@@ -139,7 +140,7 @@
                                           <td style="width:200px;max-width:40%;">&nbsp;</td>
                                           <td style="width:200px;max-width:40%;">&nbsp;</td>
                                           <td style="width:50px;max-width:20%;padding:5px;"><div style="text-align: center;"><%= i18n.tax %></div></td>
-                                          <td style="width:50px;max-width:20%; font-size:16px;padding:5px;"><div style="text-align: center;"><%= ecomUtils.formatMoney(order.amount.tax, 'BRL', 'pt_br') %></div></td>
+                                          <td style="width:50px;max-width:20%; font-size:16px;padding:5px;"><div style="text-align: center;"><strong><%= ecomUtils.formatMoney(order.amount.tax, order.currency_id) %></strong></div></td>
                                         </tr>
                                         <% } %>
                                         <% if (order.amount.extra) { %>
@@ -147,15 +148,15 @@
                                           <td style="width:200px;max-width:40%;">&nbsp;</td>
                                           <td style="width:200px;max-width:40%;">&nbsp;</td>
                                           <td style="width:50px;max-width:20%;padding:5px;"><div style="text-align: center;"><%= i18n.extra %></div></td>
-                                          <td style="width:50px;max-width:20%; font-size:16px;padding:5px;"><div style="text-align: center;"><%= ecomUtils.formatMoney(order.amount.extra, 'BRL', 'pt_br') %></div></td>
+                                          <td style="width:50px;max-width:20%; font-size:16px;padding:5px;"><div style="text-align: center;"><strong><%= ecomUtils.formatMoney(order.amount.extra, order.currency_id) %></strong></div></td>
                                         </tr>
                                         <% } %>
                                         <% if (order.amount.total) { %>
                                         <tr>
                                           <td style="width:200px;max-width:40%;">&nbsp;</td>
                                           <td style="width:200px;max-width:40%;">&nbsp;</td>
-                                          <td style="width:50px;max-width:20%;padding:10px;"><div style="text-align: center;"><strong style="font-size:20px;"><%= i18n.total %></strong></div></td>
-                                          <td style="width:50px;max-width:20%; font-size:16px;padding:10px;"><div style="text-align: center;"><strong style="font-size:20px;"><%= ecomUtils.formatMoney(order.amount.total, 'BRL', 'pt_br') %></strong></div></td>
+                                          <td style="width:50px;max-width:20%;padding:10px;border-top-width:1px;border-top-color:#e5e5e5;border-top-style:solid"><div style="text-align: center;"><strong style="font-size:20px;"><%= i18n.total %></strong></div></td>
+                                          <td style="width:50px;max-width:20%; font-size:16px;padding:10px;border-top-width:1px;border-top-color:#e5e5e5;border-top-style:solid"><div style="text-align: center;"><strong style="font-size:20px;"><%= ecomUtils.formatMoney(order.amount.total, order.currency_id) %></strong></div></td>
                                         </tr>
                                         <% } %>
                                         <tr>
@@ -185,7 +186,12 @@
                                 </tr>
                               </table>
 
-                              <table border="0" cellpadding="0" cellspacing="10" class="module" data-role="module-button" data-type="button" role="module" style="table-layout:fixed" width="100%"><tbody><tr><td align="center" class="outer-td" style="padding:10px 0px 45px 0px"><table border="0" cellpadding="0" cellspacing="0" class="button-css__deep-table___2OZyb wrapper-mobile" style="text-align:center"><tbody><tr><td align="center" bgcolor="<%= themeColor %>" class="inner-td" style="border-radius:6px;font-size:16px;text-align:center;background-color:inherit"><a class="btn" style="background-color:<%= themeColor %>;border:1px solid #333333;border-color:#FFFFFF;border-radius:3px;border-width:1px;color:#FFFFFF;display:inline-block;font-family:arial,helvetica,sans-serif;font-size:16px;font-weight:normal;letter-spacing:0px;line-height:16px;padding:12px 70px 12px 70px;text-align:center;text-decoration:none" href="<%= order.permalink %>" target="_blank"><%= i18n.order_cta %></a></td></tr></tbody></table></td></tr></tbody></table>
+                              <table border="0" cellpadding="0" cellspacing="10" class="module" data-role="module-button" data-type="button" role="module" style="table-layout:fixed" width="100%"><tbody><tr><td align="center" class="outer-td" style="padding:10px 0px 45px 0px"><table border="0" cellpadding="0" cellspacing="0" class="button-css__deep-table___2OZyb wrapper-mobile" style="text-align:center"><tbody><tr>
+                                <td align="center" bgcolor="<%= themeColor %>" class="inner-td" style="border-radius:6px;font-size:16px;text-align:center;background-color:inherit"><a class="btn" style="background-color:<%= themeColor %>;border:1px solid #333333;border-color:#FFFFFF;border-radius:3px;border-width:1px;color:#FFFFFF;display:inline-block;font-family:arial,helvetica,sans-serif;font-size:16px;font-weight:normal;letter-spacing:0px;line-height:16px;padding:12px 10px 12px 10px;text-align:center;text-decoration:none" href="<%= order.permalink %>" target="_blank"><%= i18n.order_cta %></a></td>
+                                </tr>
+                                </tbody></table></td></tr></tbody></table>
+
+
 
                               <table class="module"
                                      role="module"
