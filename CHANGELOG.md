@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.4.2](https://github.com/ecomclub/transactional-mails/compare/v0.4.1...v0.4.2) (2019-07-19)
+
+
+### Bug Fixes
+
+* **new-order:** fix handling format money (stop forcing BRL/pt_br) ([6e735e9](https://github.com/ecomclub/transactional-mails/commit/6e735e9))
+
+
+
 ### [0.4.1](https://github.com/ecomclub/transactional-mails/compare/v0.4.0...v0.4.1) (2019-07-17)
 
 
