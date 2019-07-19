@@ -4,7 +4,7 @@
   "hello": "Olá",
   "we_from": "Nós da",
   "welcome_text": "ficamos felizes com seu cadastro. Dê uma olhada em nossos produtos e aproveite as ofertas!",
-  "welcome_cta": "IR PARA LOJA",
+  "welcome_cta": "Ir para loja",
   "cart_title": "você não finalizou sua compra!",
   "cart_details": "Detalhes do carrinho",
   "cart_text": "Você pode concluí-la agora, enquanto ocarrinho ainda está disponível. Não perca essa chance!",
@@ -37,6 +37,6 @@
   "shipped_text": "Seu pacote já foi entregue para a transportadora. Para acompanhar o andamento da entrega acesse a página",
   "delivered_title": "sua compra foi entregue!",
   "delivered_text": "Esperamos que tenha gostado da experiência de compra e em breve visite novamente nosso site. O pedido foi entregue no endereço abaixo:",
-  "visit_store": "visite nossa loja",
-  "or": "ou"
+  "or": "Ou",
+  "visit_store": "visite nossa loja"
 }
