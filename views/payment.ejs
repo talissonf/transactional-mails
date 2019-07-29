@@ -61,7 +61,16 @@
 
                                     <td style="padding:0px 10px 30px 10px;line-height:22px;text-align:inherit;" height="100%" valign="top" bgcolor="">
 
+                                    <div style="padding:0px 45px 0px 45px;text-align: center;"><font color="#333333">
+                                    <% if (shipping.posting_deadline) { %>
                                         <div style="text-align: center;"><font color="#333333"><%= i18n.posting_in %> <strong>  <%= shipping.posting_deadline.days %> <% if (shipping.posting_deadline.working_days) { %> <%= i18n.working_days %> <% } else{ %> <%= i18n.days %> <% } %></strong> <%= i18n.following_address %> </font></div>
+                                        <% } else{ %>
+                                         <%= i18n.delivering_in %> <strong> <%= shipping.delivery_time.days %> <% if (shipping.delivery_time.working_days) { %> <%= i18n.working_days %> <% } else{ %> <%= i18n.days %> <% } %></strong> <%= i18n.on_following_address %>
+                                    <% } %>
+
+                                    </font></div>
+
+
 
                                         <br>
 
