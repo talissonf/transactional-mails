@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.4.3](https://github.com/ecomclub/transactional-mails/compare/v0.4.2...v0.4.3) (2019-07-29)
+
+
+### Bug Fixes
+
+* **render:** fix path for scss and views files ([5c83dc2](https://github.com/ecomclub/transactional-mails/commit/5c83dc2))
+
+
+
 ### [0.4.2](https://github.com/ecomclub/transactional-mails/compare/v0.4.1...v0.4.2) (2019-07-19)
 
 
