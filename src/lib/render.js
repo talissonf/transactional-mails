@@ -28,7 +28,7 @@ module.exports = (template, data = {}, store, lang) => {
 
   return new Promise((resolve, reject) => {
     // setup dictionary object first
-    const i18n = path.join(process.cwd(), `i18n/${lang}.json`)
+    const i18n = path.join(__dirname, `../../i18n/${lang}.json`)
     fs.readFile(i18n, 'utf8', (err, contents) => {
       if (err) {
         return reject(err)
@@ -42,7 +42,7 @@ module.exports = (template, data = {}, store, lang) => {
       }
 
       // render Sass to CSS with theme color
-      const scss = path.join(process.cwd(), `scss/styles.scss`)
+      const scss = path.join(__dirname, `../../scss/styles.scss`)
       fs.readFile(scss, 'utf8', (err, contents) => {
         if (err) {
           return reject(err)
@@ -53,7 +53,7 @@ module.exports = (template, data = {}, store, lang) => {
         // render Sass
         sass.render({
           data: scssString,
-          includePaths: [ path.join(process.cwd(), 'scss') ]
+          includePaths: [ path.join(__dirname, '../../scss') ]
         }, (err, result) => {
           if (err) {
             // SCSS error
@@ -66,7 +66,7 @@ module.exports = (template, data = {}, store, lang) => {
           Object.assign(data, { themeColor, ecomUtils })
 
           // render EJS file to HTML
-          const view = path.join(process.cwd(), `views/${template}.ejs`)
+          const view = path.join(__dirname, `../../views/${template}.ejs`)
           ejs.renderFile(view, data, null, (err, html) => {
             if (err) {
               reject(err)
