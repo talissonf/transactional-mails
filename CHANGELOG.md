@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.5.0](https://github.com/ecomclub/transactional-mails/compare/v0.4.3...v0.5.0) (2019-07-29)
+
+
+### Bug Fixes
+
+* **views:** checking if there is posting_deadline before using it ([2e176a0](https://github.com/ecomclub/transactional-mails/commit/2e176a0))
+
+
+### Features
+
+* **i18n:** adding english translation ([3ef67a4](https://github.com/ecomclub/transactional-mails/commit/3ef67a4))
+
+
+
 ### [0.4.3](https://github.com/ecomclub/transactional-mails/compare/v0.4.2...v0.4.3) (2019-07-29)
 
 
