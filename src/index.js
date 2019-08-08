@@ -154,6 +154,16 @@ transactionalMails.shipped(store, customer, order, 'pt_br')
   shipped (store, customer, order, lang) {
     const data = { store, customer, order }
     return render('shipped', data, store, lang)
+  },
+
+  denied (store, customer, order, lang) {
+    const data = { store, customer, order }
+    return render('denied', data, store, lang)
+  },
+
+  canceled (store, customer, order, lang) {
+    const data = { store, customer, order }
+    return render('canceled', data, store, lang)
   }
 
 }
