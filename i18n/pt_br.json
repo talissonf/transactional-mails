@@ -37,6 +37,10 @@
   "shipped_text": "Seu pacote já foi entregue para a transportadora. Para acompanhar o andamento da entrega acesse a página",
   "delivered_title": "sua compra foi entregue!",
   "delivered_text": "Esperamos que tenha gostado da experiência de compra e em breve visite novamente nosso site. O pedido foi entregue no endereço abaixo:",
+  "denied_title": "não foi possível processar seu pagamento.",
+  "denied_text": "Você adicionou itens ao seu carrinho de compras, mas o pagamento não foi aprovado. Visite seu pedido e tente comprar novamente.",
+  "canceled_title": "seu pedido foi cancelado",
+  "canceled_text": "Seu pedido foi cancelado conforme sua solicitação, não houve nenhum pagamento efetivado.",
   "or": "Ou",
   "visit_store": "visite nossa loja"
 }

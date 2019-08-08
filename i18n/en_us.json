@@ -37,6 +37,10 @@
   "shipped_text": "your package is now with the carrier. To track the delivery progress, go to ",
   "delivered_title": "your package was delivered!",
   "delivered_text": "We hope you have enjoyed shopping with us and will soon visit our website again. The order was delivered to the address below:",
+  "denied_title": "your payment wasn't approved.",
+  "denied_text": "You added products to your cart, but your product was not approved. Visit our store and try to buy it again.",
+  "canceled_title": "your order was cancelled",
+  "canceled_text": "your order was cancelled, you were not charged.",
   "or": "Or",
   "visit_store": "Visit our store"
 }
