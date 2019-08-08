@@ -7,7 +7,9 @@ const {
   abandonedCart,
   delivered,
   payment,
-  shipped
+  shipped,
+  denied,
+  canceled
 } = require('./../src/')
 
 // sample JSON data
@@ -66,6 +68,22 @@ browserSync.init({
       route: '/shipped',
       handle (req, res, next) {
         shipped(store, customer, order, 'pt_br')
+          .then(html => res.end(html))
+          .catch(err => console.error(err))
+      }
+    },
+    {
+      route: '/denied',
+      handle (req, res, next) {
+        denied(store, customer, order, 'pt_br')
+          .then(html => res.end(html))
+          .catch(err => console.error(err))
+      }
+    },
+    {
+      route: '/canceled',
+      handle (req, res, next) {
+        canceled(store, customer, order, 'pt_br')
           .then(html => res.end(html))
           .catch(err => console.error(err))
       }

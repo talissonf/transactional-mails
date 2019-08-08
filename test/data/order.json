@@ -1,5 +1,4 @@
-{   "status_link": "https://storefront-demo.e-com.plus/app/#/account/orders/5851",
-    "buyers": [
+{   "buyers": [
         {
             "_id": "5c0fff6918b7b27aad73632f",
             "main_email": "talissonft@me.com",
@@ -48,7 +47,7 @@
                 }
             },
             "sku": "tcl-lgt-7350",
-            "name": "Teclado Logitech com Fio USB ABNT2 K120 Preto",
+            "name": "Teclado Logitech com Fio USB",
             "price": 43,
             "final_price": 43,
             "_id": "e15620979355131111111111"
@@ -138,11 +137,7 @@
                 "province_code": "MG"
             },
             "discount": 0,
-            "posting_deadline": {
-                "days": 5,
-                "working_days": true,
-                "after_approval": true
-            },
+
             "delivery_time": {
                 "days": 2,
                 "working_days": true
