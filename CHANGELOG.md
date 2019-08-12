@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.6.0](https://github.com/ecomclub/transactional-mails/compare/v0.5.1...v0.6.0) (2019-08-12)
+
+
+### Features
+
+* **canceled:** creating canceled mail ([6e12f5e](https://github.com/ecomclub/transactional-mails/commit/6e12f5e))
+* **denied:** creating denied payment mail ([8463499](https://github.com/ecomclub/transactional-mails/commit/8463499))
+* **i18n:** adding texts of denied and canceled mails ([02d0443](https://github.com/ecomclub/transactional-mails/commit/02d0443))
+* **src:** adding denied and canceled to server ([9feae49](https://github.com/ecomclub/transactional-mails/commit/9feae49))
+* **test:** updating test enviroment ([8707afb](https://github.com/ecomclub/transactional-mails/commit/8707afb))
+
+
+
 ### [0.5.1](https://github.com/ecomclub/transactional-mails/compare/v0.5.0...v0.5.1) (2019-07-29)
 
 
