@@ -156,10 +156,46 @@ transactionalMails.shipped(store, customer, order, 'pt_br')
     return render('shipped', data, store, lang)
   },
 
+  /**
+   * @method
+   * @memberof transactionalMails
+   * @description Returns HTML markup for payment denied email.
+   * @param {object} store - Store body object
+   * @param {object} customer - Customer body object
+   * @param {object} order - Order body object
+   * @param {string} [lang='en_us'] - Snake case language code, eg.: 'en_us', 'pt_br'
+   * @returns {Promise}
+   *
+   * @example
+
+transactionalMails.denied(store, customer, order, 'pt_br')
+  .then(html => sendEmail(html, options))
+  .catch(err => console.error(err))
+
+   */
+
   denied (store, customer, order, lang) {
     const data = { store, customer, order }
     return render('denied', data, store, lang)
   },
+
+  /**
+   * @method
+   * @memberof transactionalMails
+   * @description Returns HTML markup for order canceled email.
+   * @param {object} store - Store body object
+   * @param {object} customer - Customer body object
+   * @param {object} order - Order body object
+   * @param {string} [lang='en_us'] - Snake case language code, eg.: 'en_us', 'pt_br'
+   * @returns {Promise}
+   *
+   * @example
+
+transactionalMails.canceled(store, customer, order, 'pt_br')
+  .then(html => sendEmail(html, options))
+  .catch(err => console.error(err))
+
+   */
 
   canceled (store, customer, order, lang) {
     const data = { store, customer, order }
