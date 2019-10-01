@@ -3,13 +3,28 @@
 // load the lib object
 const {
   welcome,
-  newOrder,
+  pending,
   abandonedCart,
   delivered,
-  payment,
+  authorized,
   shipped,
-  denied,
-  canceled
+  unauthorized,
+  voided,
+  underAnalysis,
+  partiallyPaid,
+  paid,
+  inDispute,
+  partiallyRefunded,
+  refunded,
+  invoice_issued,
+  inProduction,
+  inSeparation,
+  readyForShipping,
+  partiallyShipped,
+  partiallyDelivered,
+  returnedForExchange,
+  receivedForExchange,
+  returned
 } = require('./../src/')
 
 // sample JSON data
@@ -41,9 +56,9 @@ browserSync.init({
       }
     },
     {
-      route: '/new-order',
+      route: '/pending',
       handle (req, res, next) {
-        newOrder(store, customer, order, 'pt_br')
+        pending(store, customer, order, 'pt_br')
           .then(html => res.end(html))
           .catch(err => console.error(err))
       }
@@ -57,9 +72,9 @@ browserSync.init({
       }
     },
     {
-      route: '/payment',
+      route: '/authorized',
       handle (req, res, next) {
-        payment(store, customer, order, 'pt_br')
+        authorized(store, customer, order, 'pt_br')
           .then(html => res.end(html))
           .catch(err => console.error(err))
       }
@@ -73,21 +88,141 @@ browserSync.init({
       }
     },
     {
-      route: '/denied',
+      route: '/unauthorized',
       handle (req, res, next) {
-        denied(store, customer, order, 'pt_br')
+        unauthorized(store, customer, order, 'pt_br')
           .then(html => res.end(html))
           .catch(err => console.error(err))
       }
     },
     {
-      route: '/canceled',
+      route: '/voided',
       handle (req, res, next) {
-        canceled(store, customer, order, 'pt_br')
+        voided(store, customer, order, 'pt_br')
           .then(html => res.end(html))
           .catch(err => console.error(err))
       }
-    }
+    },
+    {
+      route: '/under_analysis',
+      handle (req, res, next) {
+        underAnalysis(store, customer, order, 'pt_br')
+          .then(html => res.end(html))
+          .catch(err => console.error(err))
+      }
+    },
+    {
+      route: '/partially_paid',
+      handle (req, res, next) {
+        partiallyPaid(store, customer, order, 'pt_br')
+          .then(html => res.end(html))
+          .catch(err => console.error(err))
+      }
+    },
+    {
+      route: '/paid',
+      handle (req, res, next) {
+        paid(store, customer, order, 'pt_br')
+          .then(html => res.end(html))
+          .catch(err => console.error(err))
+      }
+    },
+    {
+      route: '/in_dispute',
+      handle (req, res, next) {
+        inDispute(store, customer, order, 'pt_br')
+          .then(html => res.end(html))
+          .catch(err => console.error(err))
+      }
+    },
+    {
+      route: '/partially_refunded',
+      handle (req, res, next) {
+        partiallyRefunded(store, customer, order, 'pt_br')
+          .then(html => res.end(html))
+          .catch(err => console.error(err))
+      }
+    },
+    {
+      route: '/refunded',
+      handle (req, res, next) {
+        refunded(store, customer, order, 'pt_br')
+          .then(html => res.end(html))
+          .catch(err => console.error(err))
+      }
+    },
+    {
+      route: '/invoice_issued',
+      handle (req, res, next) {
+        invoice_issued(store, customer, order, 'pt_br')
+          .then(html => res.end(html))
+          .catch(err => console.error(err))
+      }
+    },
+    {
+      route: '/in_production',
+      handle (req, res, next) {
+        inProduction(store, customer, order, 'pt_br')
+          .then(html => res.end(html))
+          .catch(err => console.error(err))
+      }
+    },
+    {
+      route: '/in_separation',
+      handle (req, res, next) {
+        inSeparation(store, customer, order, 'pt_br')
+          .then(html => res.end(html))
+          .catch(err => console.error(err))
+      }
+    },
+    {
+      route: '/ready_for_shipping',
+      handle (req, res, next) {
+        readyForShipping(store, customer, order, 'pt_br')
+          .then(html => res.end(html))
+          .catch(err => console.error(err))
+      }
+    },
+    {
+      route: '/partially_shipped',
+      handle (req, res, next) {
+        partiallyShipped(store, customer, order, 'pt_br')
+          .then(html => res.end(html))
+          .catch(err => console.error(err))
+      }
+    },
+    {
+      route: '/partially_delivered',
+      handle (req, res, next) {
+        partiallyDelivered(store, customer, order, 'pt_br')
+          .then(html => res.end(html))
+          .catch(err => console.error(err))
+      }
+    },
+    {
+      route: '/returned_for_exchange',
+      handle (req, res, next) {
+        returnedForExchange(store, customer, order, 'pt_br')
+          .then(html => res.end(html))
+          .catch(err => console.error(err))
+      }
+    },
+    {
+      route: '/received_for_exchange',
+      handle (req, res, next) {
+        receivedForExchange(store, customer, order, 'pt_br')
+          .then(html => res.end(html))
+          .catch(err => console.error(err))
+      }
+    },
+    {
+      route: '/returned',
+      handle (req, res, next) {
+        returned(store, customer, order, 'pt_br')
+          .then(html => res.end(html))
+          .catch(err => console.error(err))
+      }
+    },
   ],
 
   // watch template source files and reload local server

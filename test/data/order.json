@@ -155,7 +155,23 @@
                 }
             ],
             "own_hand": false,
-            "receipt": false
+            "receipt": false,
+            "invoices": [
+              {
+                "issuer": {
+                    "doc_number":"777888999",
+                    "inscription_type": "state",
+                    "inscription_number": "798456asdads",
+                    "corporate_name": "loja demo LTDA EIRELI"
+                },
+                "number": "984131invoicenumber",
+                "serial_number": "Serial89645312",
+                "issued_at": "2019-07-02T20:06:02.971Z",
+                "link": "https://nfe.prefeitura.sp.gov.br/contribuinte/notaprint.aspx?ccm=10691090&nf=39850&cod=NQXGX2DC",
+                "access_key": "877878a",
+                "link_danfe": "http://nfe-static.dafiti.com.br/nfe/31190911200418000673550010183981031379451765.pdf"
+            }
+          ]
         }
     ],
     "shipping_method_label": "EXPRESSO",
