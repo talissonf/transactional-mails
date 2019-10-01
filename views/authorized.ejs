@@ -48,7 +48,7 @@
                               <table class="module" style="padding:0px 10px 30px 10px;" role="module" data-type="text" border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;">
                                   <tbody><tr>
                                     <td style="padding:25px 20px 0px 20px;line-height:20px;text-align:center;" height="100%" valign="top" bgcolor="">
-                                        <h2><span style="color:#333333;"><%= i18n.payment_title %></span></h2>
+                                        <h2><span style="color:#333333;"><%= i18n.hello %> <%= customer.name.given_name %>, <%= i18n.authorized_title %></span></h2>
                                     </td>
                                   </tr>
                                 </tbody>
@@ -57,15 +57,19 @@
                               <table class="module" role="module" data-type="text" border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;">
                                   <tbody><tr>
 
+                                    <div style="padding:0px 45px 20px 45px;text-align: center;"><font color="#333333">
+                                        <div style="text-align: center;"><font color="#333333"><%= i18n.authorized_text %></font></div>
+                                    </font></div>
+
                                   <% order.shipping_lines.forEach(shipping => { %>
 
                                     <td style="padding:0px 10px 30px 10px;line-height:22px;text-align:inherit;" height="100%" valign="top" bgcolor="">
 
                                     <div style="padding:0px 45px 0px 45px;text-align: center;"><font color="#333333">
                                     <% if (shipping.posting_deadline) { %>
-                                        <div style="text-align: center;"><font color="#333333"><%= i18n.posting_in %> <strong>  <%= shipping.posting_deadline.days %> <% if (shipping.posting_deadline.working_days) { %> <%= i18n.working_days %> <% } else{ %> <%= i18n.days %> <% } %></strong> <%= i18n.following_address %> </font></div>
+                                        <div style="text-align: center;"><font color="#333333"><%= i18n.posting_in %> <strong>  <%= shipping.posting_deadline.days %> <% if (shipping.posting_deadline.working_days) { %> <%= i18n.working_days %> <% } else{ %> <%= i18n.days %> <% } %></strong> <%= i18n.after_payment %> <%= i18n.following_address %> </font></div>
                                         <% } else{ %>
-                                         <%= i18n.delivering_in %> <strong> <%= shipping.delivery_time.days %> <% if (shipping.delivery_time.working_days) { %> <%= i18n.working_days %> <% } else{ %> <%= i18n.days %> <% } %></strong> <%= i18n.on_following_address %>
+                                         <%= i18n.delivering_in %> <strong> <%= shipping.delivery_time.days %> <% if (shipping.delivery_time.working_days) { %> <%= i18n.working_days %> <% } else{ %> <%= i18n.days %> <% } %></strong> <%= i18n.after_payment %> <%= i18n.on_following_address %>
                                     <% } %>
 
                                     </font></div>
