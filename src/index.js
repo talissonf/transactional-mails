@@ -82,9 +82,9 @@ transactionalMails.newOrder(store, customer, order, 'pt_br')
 
    */
 
-  newOrder (store, customer, order, lang) {
+  pending (store, customer, order, lang) {
     const data = { store, customer, order }
-    return render('new-order', data, store, lang)
+    return render('pending', data, store, lang)
   },
 
   /**
@@ -159,7 +159,7 @@ transactionalMails.shipped(store, customer, order, 'pt_br')
   /**
    * @method
    * @memberof transactionalMails
-   * @description Returns HTML markup for payment denied email.
+   * @description Returns HTML markup for payment unauthorized email.
    * @param {object} store - Store body object
    * @param {object} customer - Customer body object
    * @param {object} order - Order body object
@@ -168,21 +168,21 @@ transactionalMails.shipped(store, customer, order, 'pt_br')
    *
    * @example
 
-transactionalMails.denied(store, customer, order, 'pt_br')
+transactionalMails.unauthorized(store, customer, order, 'pt_br')
   .then(html => sendEmail(html, options))
   .catch(err => console.error(err))
 
    */
 
-  denied (store, customer, order, lang) {
+  unauthorized (store, customer, order, lang) {
     const data = { store, customer, order }
-    return render('denied', data, store, lang)
+    return render('unauthorized', data, store, lang)
   },
 
   /**
    * @method
    * @memberof transactionalMails
-   * @description Returns HTML markup for order canceled email.
+   * @description Returns HTML markup for order voided email.
    * @param {object} store - Store body object
    * @param {object} customer - Customer body object
    * @param {object} order - Order body object
@@ -191,16 +191,415 @@ transactionalMails.denied(store, customer, order, 'pt_br')
    *
    * @example
 
-transactionalMails.canceled(store, customer, order, 'pt_br')
+transactionalMails.voided(store, customer, order, 'pt_br')
   .then(html => sendEmail(html, options))
   .catch(err => console.error(err))
 
    */
 
-  canceled (store, customer, order, lang) {
+  voided (store, customer, order, lang) {
     const data = { store, customer, order }
-    return render('canceled', data, store, lang)
-  }
+    return render('voided', data, store, lang)
+  },
+
+
+    /**
+     * @method
+     * @memberof transactionalMails
+     * @description Returns HTML markup for new order email.
+     * @param {object} store - Store body object
+     * @param {object} customer - Customer body object
+     * @param {object} order - Order body object
+     * @param {string} [lang='en_us'] - Snake case language code, eg.: 'en_us', 'pt_br'
+     * @returns {Promise}
+     *
+     * @example
+
+  transactionalMails.newOrder(store, customer, order, 'pt_br')
+    .then(html => sendEmail(html, options))
+    .catch(err => console.error(err))
+
+     */
+
+
+  underAnalysis (store, customer, order, lang) {
+    const data = { store, customer, order }
+    return render('under_analysis', data, store, lang)
+  },
+
+
+    /**
+     * @method
+     * @memberof transactionalMails
+     * @description Returns HTML markup for new order email.
+     * @param {object} store - Store body object
+     * @param {object} customer - Customer body object
+     * @param {object} order - Order body object
+     * @param {string} [lang='en_us'] - Snake case language code, eg.: 'en_us', 'pt_br'
+     * @returns {Promise}
+     *
+     * @example
+
+  transactionalMails.newOrder(store, customer, order, 'pt_br')
+    .then(html => sendEmail(html, options))
+    .catch(err => console.error(err))
+
+     */
+
+
+  partiallyPaid (store, customer, order, lang) {
+    const data = { store, customer, order }
+    return render('partially_paid', data, store, lang)
+  },
+
+
+    /**
+     * @method
+     * @memberof transactionalMails
+     * @description Returns HTML markup for new order email.
+     * @param {object} store - Store body object
+     * @param {object} customer - Customer body object
+     * @param {object} order - Order body object
+     * @param {string} [lang='en_us'] - Snake case language code, eg.: 'en_us', 'pt_br'
+     * @returns {Promise}
+     *
+     * @example
+
+  transactionalMails.newOrder(store, customer, order, 'pt_br')
+    .then(html => sendEmail(html, options))
+    .catch(err => console.error(err))
+
+     */
+
+
+  paid (store, customer, order, lang) {
+    const data = { store, customer, order }
+    return render('paid', data, store, lang)
+  },
+
+
+    /**
+     * @method
+     * @memberof transactionalMails
+     * @description Returns HTML markup for new order email.
+     * @param {object} store - Store body object
+     * @param {object} customer - Customer body object
+     * @param {object} order - Order body object
+     * @param {string} [lang='en_us'] - Snake case language code, eg.: 'en_us', 'pt_br'
+     * @returns {Promise}
+     *
+     * @example
+
+  transactionalMails.inDispute(store, customer, order, 'pt_br')
+    .then(html => sendEmail(html, options))
+    .catch(err => console.error(err))
+
+     */
+
+
+  inDispute (store, customer, order, lang) {
+    const data = { store, customer, order }
+    return render('in_dispute', data, store, lang)
+  },
+
+
+    /**
+     * @method
+     * @memberof transactionalMails
+     * @description Returns HTML markup for new order email.
+     * @param {object} store - Store body object
+     * @param {object} customer - Customer body object
+     * @param {object} order - Order body object
+     * @param {string} [lang='en_us'] - Snake case language code, eg.: 'en_us', 'pt_br'
+     * @returns {Promise}
+     *
+     * @example
+
+  transactionalMails.newOrder(store, customer, order, 'pt_br')
+    .then(html => sendEmail(html, options))
+    .catch(err => console.error(err))
+
+     */
+
+
+  partiallyRefunded (store, customer, order, lang) {
+    const data = { store, customer, order }
+    return render('partially_refunded', data, store, lang)
+  },
+
+
+    /**
+     * @method
+     * @memberof transactionalMails
+     * @description Returns HTML markup for new order email.
+     * @param {object} store - Store body object
+     * @param {object} customer - Customer body object
+     * @param {object} order - Order body object
+     * @param {string} [lang='en_us'] - Snake case language code, eg.: 'en_us', 'pt_br'
+     * @returns {Promise}
+     *
+     * @example
+
+  transactionalMails.newOrder(store, customer, order, 'pt_br')
+    .then(html => sendEmail(html, options))
+    .catch(err => console.error(err))
+
+     */
+
+
+  refunded (store, customer, order, lang) {
+    const data = { store, customer, order }
+    return render('refunded', data, store, lang)
+  },
+
+
+    /**
+     * @method
+     * @memberof transactionalMails
+     * @description Returns HTML markup for new order email.
+     * @param {object} store - Store body object
+     * @param {object} customer - Customer body object
+     * @param {object} order - Order body object
+     * @param {string} [lang='en_us'] - Snake case language code, eg.: 'en_us', 'pt_br'
+     * @returns {Promise}
+     *
+     * @example
+
+  transactionalMails.newOrder(store, customer, order, 'pt_br')
+    .then(html => sendEmail(html, options))
+    .catch(err => console.error(err))
+
+     */
+
+
+  invoice_issued (store, customer, order, lang) {
+    const data = { store, customer, order }
+    return render('invoice_issued', data, store, lang)
+  },
+
+
+    /**
+     * @method
+     * @memberof transactionalMails
+     * @description Returns HTML markup for new order email.
+     * @param {object} store - Store body object
+     * @param {object} customer - Customer body object
+     * @param {object} order - Order body object
+     * @param {string} [lang='en_us'] - Snake case language code, eg.: 'en_us', 'pt_br'
+     * @returns {Promise}
+     *
+     * @example
+
+  transactionalMails.newOrder(store, customer, order, 'pt_br')
+    .then(html => sendEmail(html, options))
+    .catch(err => console.error(err))
+
+     */
+
+
+  inProduction (store, customer, order, lang) {
+    const data = { store, customer, order }
+    return render('in_production', data, store, lang)
+  },
+
+
+    /**
+     * @method
+     * @memberof transactionalMails
+     * @description Returns HTML markup for new order email.
+     * @param {object} store - Store body object
+     * @param {object} customer - Customer body object
+     * @param {object} order - Order body object
+     * @param {string} [lang='en_us'] - Snake case language code, eg.: 'en_us', 'pt_br'
+     * @returns {Promise}
+     *
+     * @example
+
+  transactionalMails.newOrder(store, customer, order, 'pt_br')
+    .then(html => sendEmail(html, options))
+    .catch(err => console.error(err))
+
+     */
+
+
+  inSeparation (store, customer, order, lang) {
+    const data = { store, customer, order }
+    return render('in_separation', data, store, lang)
+  },
+
+
+    /**
+     * @method
+     * @memberof transactionalMails
+     * @description Returns HTML markup for new order email.
+     * @param {object} store - Store body object
+     * @param {object} customer - Customer body object
+     * @param {object} order - Order body object
+     * @param {string} [lang='en_us'] - Snake case language code, eg.: 'en_us', 'pt_br'
+     * @returns {Promise}
+     *
+     * @example
+
+  transactionalMails.newOrder(store, customer, order, 'pt_br')
+    .then(html => sendEmail(html, options))
+    .catch(err => console.error(err))
+
+     */
+
+
+  readyForShipping (store, customer, order, lang) {
+    const data = { store, customer, order }
+    return render('ready_for_shipping', data, store, lang)
+  },
+
+
+    /**
+     * @method
+     * @memberof transactionalMails
+     * @description Returns HTML markup for new order email.
+     * @param {object} store - Store body object
+     * @param {object} customer - Customer body object
+     * @param {object} order - Order body object
+     * @param {string} [lang='en_us'] - Snake case language code, eg.: 'en_us', 'pt_br'
+     * @returns {Promise}
+     *
+     * @example
+
+  transactionalMails.newOrder(store, customer, order, 'pt_br')
+    .then(html => sendEmail(html, options))
+    .catch(err => console.error(err))
+
+     */
+
+
+  partiallyShipped (store, customer, order, lang) {
+    const data = { store, customer, order }
+    return render('partially_shipped', data, store, lang)
+  },
+
+
+    /**
+     * @method
+     * @memberof transactionalMails
+     * @description Returns HTML markup for new order email.
+     * @param {object} store - Store body object
+     * @param {object} customer - Customer body object
+     * @param {object} order - Order body object
+     * @param {string} [lang='en_us'] - Snake case language code, eg.: 'en_us', 'pt_br'
+     * @returns {Promise}
+     *
+     * @example
+
+  transactionalMails.newOrder(store, customer, order, 'pt_br')
+    .then(html => sendEmail(html, options))
+    .catch(err => console.error(err))
+
+     */
+
+
+  partiallyDelivered (store, customer, order, lang) {
+    const data = { store, customer, order }
+    return render('partially_delivered', data, store, lang)
+  },
+
+
+    /**
+     * @method
+     * @memberof transactionalMails
+     * @description Returns HTML markup for new order email.
+     * @param {object} store - Store body object
+     * @param {object} customer - Customer body object
+     * @param {object} order - Order body object
+     * @param {string} [lang='en_us'] - Snake case language code, eg.: 'en_us', 'pt_br'
+     * @returns {Promise}
+     *
+     * @example
+
+  transactionalMails.newOrder(store, customer, order, 'pt_br')
+    .then(html => sendEmail(html, options))
+    .catch(err => console.error(err))
+
+     */
+
+
+  returnedForExchange (store, customer, order, lang) {
+    const data = { store, customer, order }
+    return render('returned_for_exchange', data, store, lang)
+  },
+
+
+    /**
+     * @method
+     * @memberof transactionalMails
+     * @description Returns HTML markup for new order email.
+     * @param {object} store - Store body object
+     * @param {object} customer - Customer body object
+     * @param {object} order - Order body object
+     * @param {string} [lang='en_us'] - Snake case language code, eg.: 'en_us', 'pt_br'
+     * @returns {Promise}
+     *
+     * @example
+
+  transactionalMails.newOrder(store, customer, order, 'pt_br')
+    .then(html => sendEmail(html, options))
+    .catch(err => console.error(err))
+
+     */
+
+
+  receivedForExchange (store, customer, order, lang) {
+    const data = { store, customer, order }
+    return render('received_for_exchange', data, store, lang)
+  },
+
+
+    /**
+     * @method
+     * @memberof transactionalMails
+     * @description Returns HTML markup for new order email.
+     * @param {object} store - Store body object
+     * @param {object} customer - Customer body object
+     * @param {object} order - Order body object
+     * @param {string} [lang='en_us'] - Snake case language code, eg.: 'en_us', 'pt_br'
+     * @returns {Promise}
+     *
+     * @example
+
+  transactionalMails.newOrder(store, customer, order, 'pt_br')
+    .then(html => sendEmail(html, options))
+    .catch(err => console.error(err))
+
+     */
+
+  returned (store, customer, order, lang) {
+    const data = { store, customer, order }
+    return render('returned', data, store, lang)
+  },
+
+  /**
+   * @method
+   * @memberof transactionalMails
+   * @description Returns HTML markup for new order email.
+   * @param {object} store - Store body object
+   * @param {object} customer - Customer body object
+   * @param {object} order - Order body object
+   * @param {string} [lang='en_us'] - Snake case language code, eg.: 'en_us', 'pt_br'
+   * @returns {Promise}
+   *
+   * @example
+
+transactionalMails.newOrder(store, customer, order, 'pt_br')
+  .then(html => sendEmail(html, options))
+  .catch(err => console.error(err))
+
+   */
+
+authorized (store, customer, order, lang) {
+  const data = { store, customer, order }
+  return render('authorized', data, store, lang)
+},
+
+
 
 }
 
