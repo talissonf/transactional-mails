@@ -67,7 +67,7 @@ transactionalMails.abandonedCart(store, customer, cart, 'pt_br')
   /**
    * @method
    * @memberof transactionalMails
-   * @description Returns HTML markup for new order email.
+   * @description Returns HTML markup for pending payment email.
    * @param {object} store - Store body object
    * @param {object} customer - Customer body object
    * @param {object} order - Order body object
@@ -76,7 +76,7 @@ transactionalMails.abandonedCart(store, customer, cart, 'pt_br')
    *
    * @example
 
-transactionalMails.newOrder(store, customer, order, 'pt_br')
+transactionalMails.pending(store, customer, order, 'pt_br')
   .then(html => sendEmail(html, options))
   .catch(err => console.error(err))
 
@@ -108,29 +108,6 @@ transactionalMails.delivered(store, customer, order, 'pt_br')
   delivered (store, customer, order, lang) {
     const data = { store, customer, order }
     return render('delivered', data, store, lang)
-  },
-
-  /**
-   * @method
-   * @memberof transactionalMails
-   * @description Returns HTML markup for payment received email.
-   * @param {object} store - Store body object
-   * @param {object} customer - Customer body object
-   * @param {object} order - Order body object
-   * @param {string} [lang='en_us'] - Snake case language code, eg.: 'en_us', 'pt_br'
-   * @returns {Promise}
-   *
-   * @example
-
-transactionalMails.payment(store, customer, order, 'pt_br')
-  .then(html => sendEmail(html, options))
-  .catch(err => console.error(err))
-
-   */
-
-  payment (store, customer, order, lang) {
-    const data = { store, customer, order }
-    return render('payment', data, store, lang)
   },
 
   /**
@@ -215,7 +192,7 @@ transactionalMails.voided(store, customer, order, 'pt_br')
      *
      * @example
 
-  transactionalMails.newOrder(store, customer, order, 'pt_br')
+  transactionalMails.underAnalysis(store, customer, order, 'pt_br')
     .then(html => sendEmail(html, options))
     .catch(err => console.error(err))
 
@@ -231,7 +208,7 @@ transactionalMails.voided(store, customer, order, 'pt_br')
     /**
      * @method
      * @memberof transactionalMails
-     * @description Returns HTML markup for new order email.
+     * @description Returns HTML markup for partially paid order email.
      * @param {object} store - Store body object
      * @param {object} customer - Customer body object
      * @param {object} order - Order body object
@@ -240,7 +217,7 @@ transactionalMails.voided(store, customer, order, 'pt_br')
      *
      * @example
 
-  transactionalMails.newOrder(store, customer, order, 'pt_br')
+  transactionalMails.partiallyPaid(store, customer, order, 'pt_br')
     .then(html => sendEmail(html, options))
     .catch(err => console.error(err))
 
@@ -256,7 +233,7 @@ transactionalMails.voided(store, customer, order, 'pt_br')
     /**
      * @method
      * @memberof transactionalMails
-     * @description Returns HTML markup for new order email.
+     * @description Returns HTML markup for paid order email.
      * @param {object} store - Store body object
      * @param {object} customer - Customer body object
      * @param {object} order - Order body object
@@ -265,7 +242,7 @@ transactionalMails.voided(store, customer, order, 'pt_br')
      *
      * @example
 
-  transactionalMails.newOrder(store, customer, order, 'pt_br')
+  transactionalMails.paid(store, customer, order, 'pt_br')
     .then(html => sendEmail(html, options))
     .catch(err => console.error(err))
 
@@ -281,7 +258,7 @@ transactionalMails.voided(store, customer, order, 'pt_br')
     /**
      * @method
      * @memberof transactionalMails
-     * @description Returns HTML markup for new order email.
+     * @description Returns HTML markup for order in dispute email.
      * @param {object} store - Store body object
      * @param {object} customer - Customer body object
      * @param {object} order - Order body object
@@ -306,7 +283,7 @@ transactionalMails.voided(store, customer, order, 'pt_br')
     /**
      * @method
      * @memberof transactionalMails
-     * @description Returns HTML markup for new order email.
+     * @description Returns HTML markup for partially refunded email.
      * @param {object} store - Store body object
      * @param {object} customer - Customer body object
      * @param {object} order - Order body object
@@ -315,7 +292,7 @@ transactionalMails.voided(store, customer, order, 'pt_br')
      *
      * @example
 
-  transactionalMails.newOrder(store, customer, order, 'pt_br')
+  transactionalMails.partiallyRefunded(store, customer, order, 'pt_br')
     .then(html => sendEmail(html, options))
     .catch(err => console.error(err))
 
@@ -331,7 +308,7 @@ transactionalMails.voided(store, customer, order, 'pt_br')
     /**
      * @method
      * @memberof transactionalMails
-     * @description Returns HTML markup for new order email.
+     * @description Returns HTML markup for refunded order email.
      * @param {object} store - Store body object
      * @param {object} customer - Customer body object
      * @param {object} order - Order body object
@@ -340,7 +317,7 @@ transactionalMails.voided(store, customer, order, 'pt_br')
      *
      * @example
 
-  transactionalMails.newOrder(store, customer, order, 'pt_br')
+  transactionalMails.refunded(store, customer, order, 'pt_br')
     .then(html => sendEmail(html, options))
     .catch(err => console.error(err))
 
@@ -356,7 +333,7 @@ transactionalMails.voided(store, customer, order, 'pt_br')
     /**
      * @method
      * @memberof transactionalMails
-     * @description Returns HTML markup for new order email.
+     * @description Returns HTML markup for order invoice issued email.
      * @param {object} store - Store body object
      * @param {object} customer - Customer body object
      * @param {object} order - Order body object
@@ -365,14 +342,14 @@ transactionalMails.voided(store, customer, order, 'pt_br')
      *
      * @example
 
-  transactionalMails.newOrder(store, customer, order, 'pt_br')
+  transactionalMails.invoiceIssued(store, customer, order, 'pt_br')
     .then(html => sendEmail(html, options))
     .catch(err => console.error(err))
 
      */
 
 
-  invoice_issued (store, customer, order, lang) {
+  invoiceIssued (store, customer, order, lang) {
     const data = { store, customer, order }
     return render('invoice_issued', data, store, lang)
   },
@@ -381,7 +358,7 @@ transactionalMails.voided(store, customer, order, 'pt_br')
     /**
      * @method
      * @memberof transactionalMails
-     * @description Returns HTML markup for new order email.
+     * @description Returns HTML markup for order in production email.
      * @param {object} store - Store body object
      * @param {object} customer - Customer body object
      * @param {object} order - Order body object
@@ -390,7 +367,7 @@ transactionalMails.voided(store, customer, order, 'pt_br')
      *
      * @example
 
-  transactionalMails.newOrder(store, customer, order, 'pt_br')
+  transactionalMails.inProduction(store, customer, order, 'pt_br')
     .then(html => sendEmail(html, options))
     .catch(err => console.error(err))
 
@@ -406,7 +383,7 @@ transactionalMails.voided(store, customer, order, 'pt_br')
     /**
      * @method
      * @memberof transactionalMails
-     * @description Returns HTML markup for new order email.
+     * @description Returns HTML markup for order in separation email.
      * @param {object} store - Store body object
      * @param {object} customer - Customer body object
      * @param {object} order - Order body object
@@ -415,7 +392,7 @@ transactionalMails.voided(store, customer, order, 'pt_br')
      *
      * @example
 
-  transactionalMails.newOrder(store, customer, order, 'pt_br')
+  transactionalMails.inSeparation(store, customer, order, 'pt_br')
     .then(html => sendEmail(html, options))
     .catch(err => console.error(err))
 
@@ -431,7 +408,7 @@ transactionalMails.voided(store, customer, order, 'pt_br')
     /**
      * @method
      * @memberof transactionalMails
-     * @description Returns HTML markup for new order email.
+     * @description Returns HTML markup for order ready for shipping email.
      * @param {object} store - Store body object
      * @param {object} customer - Customer body object
      * @param {object} order - Order body object
@@ -440,7 +417,7 @@ transactionalMails.voided(store, customer, order, 'pt_br')
      *
      * @example
 
-  transactionalMails.newOrder(store, customer, order, 'pt_br')
+  transactionalMails.readyForShipping(store, customer, order, 'pt_br')
     .then(html => sendEmail(html, options))
     .catch(err => console.error(err))
 
@@ -456,7 +433,7 @@ transactionalMails.voided(store, customer, order, 'pt_br')
     /**
      * @method
      * @memberof transactionalMails
-     * @description Returns HTML markup for new order email.
+     * @description Returns HTML markup for partially shipped order email.
      * @param {object} store - Store body object
      * @param {object} customer - Customer body object
      * @param {object} order - Order body object
@@ -465,7 +442,7 @@ transactionalMails.voided(store, customer, order, 'pt_br')
      *
      * @example
 
-  transactionalMails.newOrder(store, customer, order, 'pt_br')
+  transactionalMails.partiallyShipped(store, customer, order, 'pt_br')
     .then(html => sendEmail(html, options))
     .catch(err => console.error(err))
 
@@ -481,7 +458,7 @@ transactionalMails.voided(store, customer, order, 'pt_br')
     /**
      * @method
      * @memberof transactionalMails
-     * @description Returns HTML markup for new order email.
+     * @description Returns HTML markup for partially delivered order email.
      * @param {object} store - Store body object
      * @param {object} customer - Customer body object
      * @param {object} order - Order body object
@@ -490,7 +467,7 @@ transactionalMails.voided(store, customer, order, 'pt_br')
      *
      * @example
 
-  transactionalMails.newOrder(store, customer, order, 'pt_br')
+  transactionalMails.partiallyDelivered(store, customer, order, 'pt_br')
     .then(html => sendEmail(html, options))
     .catch(err => console.error(err))
 
@@ -506,7 +483,7 @@ transactionalMails.voided(store, customer, order, 'pt_br')
     /**
      * @method
      * @memberof transactionalMails
-     * @description Returns HTML markup for new order email.
+     * @description Returns HTML markup for order returned for exchange email.
      * @param {object} store - Store body object
      * @param {object} customer - Customer body object
      * @param {object} order - Order body object
@@ -515,7 +492,7 @@ transactionalMails.voided(store, customer, order, 'pt_br')
      *
      * @example
 
-  transactionalMails.newOrder(store, customer, order, 'pt_br')
+  transactionalMails.returnedForExchange(store, customer, order, 'pt_br')
     .then(html => sendEmail(html, options))
     .catch(err => console.error(err))
 
@@ -531,7 +508,7 @@ transactionalMails.voided(store, customer, order, 'pt_br')
     /**
      * @method
      * @memberof transactionalMails
-     * @description Returns HTML markup for new order email.
+     * @description Returns HTML markup for order received for exchange email.
      * @param {object} store - Store body object
      * @param {object} customer - Customer body object
      * @param {object} order - Order body object
@@ -540,7 +517,7 @@ transactionalMails.voided(store, customer, order, 'pt_br')
      *
      * @example
 
-  transactionalMails.newOrder(store, customer, order, 'pt_br')
+  transactionalMails.receivedForExchange(store, customer, order, 'pt_br')
     .then(html => sendEmail(html, options))
     .catch(err => console.error(err))
 
@@ -556,7 +533,7 @@ transactionalMails.voided(store, customer, order, 'pt_br')
     /**
      * @method
      * @memberof transactionalMails
-     * @description Returns HTML markup for new order email.
+     * @description Returns HTML markup for returned order email.
      * @param {object} store - Store body object
      * @param {object} customer - Customer body object
      * @param {object} order - Order body object
@@ -565,7 +542,7 @@ transactionalMails.voided(store, customer, order, 'pt_br')
      *
      * @example
 
-  transactionalMails.newOrder(store, customer, order, 'pt_br')
+  transactionalMails.returned(store, customer, order, 'pt_br')
     .then(html => sendEmail(html, options))
     .catch(err => console.error(err))
 
@@ -579,7 +556,7 @@ transactionalMails.voided(store, customer, order, 'pt_br')
   /**
    * @method
    * @memberof transactionalMails
-   * @description Returns HTML markup for new order email.
+   * @description Returns HTML markup for authorized payment email.
    * @param {object} store - Store body object
    * @param {object} customer - Customer body object
    * @param {object} order - Order body object
@@ -588,16 +565,16 @@ transactionalMails.voided(store, customer, order, 'pt_br')
    *
    * @example
 
-transactionalMails.newOrder(store, customer, order, 'pt_br')
-  .then(html => sendEmail(html, options))
-  .catch(err => console.error(err))
+  transactionalMails.authorized(store, customer, order, 'pt_br')
+    .then(html => sendEmail(html, options))
+    .catch(err => console.error(err))
 
-   */
+     */
 
-authorized (store, customer, order, lang) {
-  const data = { store, customer, order }
-  return render('authorized', data, store, lang)
-},
+  authorized (store, customer, order, lang) {
+    const data = { store, customer, order }
+    return render('authorized', data, store, lang)
+  },
 
 
 
