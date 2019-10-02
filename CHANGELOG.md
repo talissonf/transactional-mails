@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.7.0](https://github.com/ecomclub/transactional-mails/compare/v0.6.0...v0.7.0) (2019-10-02)
+
+
+### Features
+
+* **i18n:** adding new mails texts ([9fc7659](https://github.com/ecomclub/transactional-mails/commit/9fc7659))
+* **src:** adding new mails to indexjs ([eab1f8a](https://github.com/ecomclub/transactional-mails/commit/eab1f8a))
+* **test:** changing test server variables and index ([2cacd73](https://github.com/ecomclub/transactional-mails/commit/2cacd73))
+* **views:** setting views for new mails ([ddedebf](https://github.com/ecomclub/transactional-mails/commit/ddedebf))
+
+
+
 ## [0.6.0](https://github.com/ecomclub/transactional-mails/compare/v0.5.1...v0.6.0) (2019-08-12)
 
 
