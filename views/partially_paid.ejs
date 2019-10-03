@@ -55,9 +55,18 @@
 
                               <table class="module" role="module" data-type="text" border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;">
                                   <tbody><tr>
+                                    <td style="line-height:20px;text-align:center;" height="100%" valign="top" bgcolor="">
                                     <div style="padding:0px 45px 20px 45px;text-align: center;"><font color="#333333">
                                         <div style="text-align: center;"><font color="#333333"><%= i18n.partially_paid_text %></font></div>
                                     </font></div>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+
+                              <table class="module" role="module" data-type="text" border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;">
+                                  <tbody><tr>
+
                                   <% order.shipping_lines.forEach(shipping => { %>
 
                                     <td style="padding:0px 10px 30px 10px;line-height:22px;text-align:inherit;" height="100%" valign="top" bgcolor="">
