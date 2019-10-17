@@ -74,5 +74,7 @@
   "returned_title": "recebemos seu pacote.",
   "returned_text": "Prepararemos um novo pacote, que em breveve será entregue para a transportadora.",
   "under_analysis_title": "seu pagamento está em análise!",
-  "under_analysis_text": "Assim que o pagamento for aprovado começamremos a preparar seu pacote."
+  "under_analysis_text": "Assim que o pagamento for aprovado começamremos a preparar seu pacote.",
+  "new_order_title": "agradecemos por comprar conosco!",
+  "new_order_text": "As soon as the payment is approved we will start to prepare your package."
 }
