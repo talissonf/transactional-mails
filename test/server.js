@@ -24,7 +24,8 @@ const {
   partiallyDelivered,
   returnedForExchange,
   receivedForExchange,
-  returned
+  returned,
+  new_order
 } = require('./../src/')
 
 // sample JSON data
@@ -39,6 +40,14 @@ const browserSync = require('browser-sync').create()
 browserSync.init({
   server: './test/',
   middleware: [
+    {
+      route: '/new_order',
+      handle (req, res, next) {
+        new_order(store, customer, order, 'pt_br')
+          .then(html => res.end(html))
+          .catch(err => console.error(err))
+      }
+    },
     {
       route: '/welcome',
       handle (req, res, next) {
@@ -227,5 +236,5 @@ browserSync.init({
 
   // watch template source files and reload local server
   watch: true,
-  files: [ 'views/*.ejs', 'scss/*.scss', 'i18n/*.json' ]
+  files: [ 'partials/*.ejs', 'views/*.ejs', 'scss/*.scss', 'i18n/*.json' ]
 })
