@@ -576,6 +576,29 @@ transactionalMails.voided(store, customer, order, 'pt_br')
     return render('authorized', data, store, lang)
   },
 
+  /**
+   * @method
+   * @memberof transactionalMails
+   * @description Returns HTML markup for new order email.
+   * @param {object} store - Store body object
+   * @param {object} customer - Customer body object
+   * @param {object} order - Order body object
+   * @param {string} [lang='en_us'] - Snake case language code, eg.: 'en_us', 'pt_br'
+   * @returns {Promise}
+   *
+   * @example
+
+  transactionalMails.authorized(store, customer, order, 'pt_br')
+    .then(html => sendEmail(html, options))
+    .catch(err => console.error(err))
+
+     */
+
+  new_order (store, customer, order, lang) {
+    const data = { store, customer, order }
+    return render('new_order', data, store, lang)
+  },
+
 
 
 }

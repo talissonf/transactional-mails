@@ -1,6 +1,12 @@
 @import 'variables';
 @import 'functions';
 
+@media only screen and (max-device-width: 480px) {
+  .desktop-only {
+     display:none;
+  }
+}
+
 body {
   padding: 20px;
   margin: 0;
