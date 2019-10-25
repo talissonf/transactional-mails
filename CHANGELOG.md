@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.7.5](https://github.com/ecomclub/transactional-mails/compare/v0.7.4...v0.7.5) (2019-10-25)
+
+
+### Tests
+
+* **lang:** testing formatMoney lang in_production mail table ([b38ff90](https://github.com/ecomclub/transactional-mails/commit/b38ff90))
+
+
+
 ### [0.7.4](https://github.com/ecomclub/transactional-mails/compare/v0.7.3...v0.7.4) (2019-10-24)
 
 
