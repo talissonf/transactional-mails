@@ -27,6 +27,8 @@
   "dependencies": {
     "@ecomplus/utils": "^1.1.1",
     "ejs": "^2.7.4",
+    "intl": "^1.2.5",
+    "intl-locales-supported": "^1.8.2",
     "node-sass": "^4.13.0"
   },
   "devDependencies": {
