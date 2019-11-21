@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.1](https://github.com/ecomclub/transactional-mails/compare/v1.0.0...v1.0.1) (2019-11-21)
+
+
+### Bug Fixes
+
+* **intl:** require locale data mannualy once ([5b19783](https://github.com/ecomclub/transactional-mails/commit/5b19783))
+
+
+
 ## [1.0.0](https://github.com/ecomclub/transactional-mails/compare/v0.7.6...v1.0.0) (2019-11-21)
 
 
