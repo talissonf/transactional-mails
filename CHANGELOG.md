@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.7.6](https://github.com/ecomclub/transactional-mails/compare/v0.7.5...v0.7.6) (2019-11-21)
+
+
+### Bug Fixes
+
+* **intl:** add intl polyfill to support pt-BR locale ([d16dd06](https://github.com/ecomclub/transactional-mails/commit/d16dd06))
+
+
+
 ### [0.7.5](https://github.com/ecomclub/transactional-mails/compare/v0.7.4...v0.7.5) (2019-10-25)
 
 
