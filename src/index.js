@@ -6,6 +6,9 @@
 
 'use strict'
 
+// Node.js i18n support
+require('./intl')
+
 // template render function
 const render = require('./lib/render')
 
