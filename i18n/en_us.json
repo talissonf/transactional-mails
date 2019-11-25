@@ -76,5 +76,7 @@
   "under_analysis_title": "your payment is under analysis!",
   "under_analysis_text": "Once the payment is approved we will begin preparing your package.",
   "new_order_title": "Thanks for your purchase!",
-  "new_order_text": "As soon as the payment is approved we will start to prepare your package."
+  "new_order_text": "As soon as the payment is approved we will start to prepare your package.",
+  "denied_title": "your order has not benn completed",
+  "denied_text": "your order was cancelled, and the payment voided. Try buying again in our store."
 }

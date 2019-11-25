@@ -77,5 +77,7 @@
   "under_analysis_title": "seu pagamento está em análise!",
   "under_analysis_text": "Assim que o pagamento for aprovado começaremos a preparar seu pacote.",
   "new_order_title": "agradecemos por comprar conosco!",
-  "new_order_text": "As soon as the payment is approved we will start to prepare your package."
+  "new_order_text": "As soon as the payment is approved we will start to prepare your package.",
+  "denied_title": "seu pagamento não foi concluído",
+  "denied_text": "Seu pagamento não foi concluído e nenhum valor foi cobrado. Para tentar comprar novamente, visualize o pedido em nossa loja."
 }
