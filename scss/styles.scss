@@ -54,6 +54,17 @@ body a {
   text-decoration: none !important;
 }
 
+.sbtn {
+  background: $theme-color !important;
+  color: color-yiq($theme-color) !important;
+  display: inline-block !important;
+  font-size: 16px !important;
+  line-height: 20px !important;
+  padding: 20px 20px 12px 20px !important;
+  text-align: center !important;
+  text-decoration: none !important;
+}
+
 table.wrapper {
   width: 100% !important;
   table-layout: fixed;
