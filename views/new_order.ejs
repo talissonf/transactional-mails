@@ -185,30 +185,20 @@
                                     <td style="padding:10px 50px 10px 50px;line-height:22px;text-align:inherit;" height="100%" valign="top" bgcolor="">
                                         <div style="text-align: center;">
                                           <font color="#333333">
-                                            <%= i18n.new_order_text %> <%= i18n.financial_status %>
-                                            <strong>
+                                            <%= i18n.new_order_text %>
+
                                             <% if ( order.financial_status.current == 'under_analysis') { %>
-                                              <%= i18n.under_analysis %>
+                                              <%= i18n.financial_status %>
+                                              <strong><%= i18n.under_analysis %> </strong>
                                             <% } %>
                                             <% if ( order.financial_status.current == 'authorized') { %>
-                                              <%= i18n.authorized %>
+                                              <%= i18n.financial_status %>
+                                              <strong><%= i18n.authorized %> </strong>
                                             <% } %>
                                             <% if ( order.financial_status.current == 'partially_paid') { %>
-                                              <%= i18n.partially_paid %>
+                                              <%= i18n.financial_status %>
+                                              <strong><%= i18n.partially_paid %> </strong>
                                             <% } %>
-                                            <% if ( order.financial_status.current == 'in_dispute') { %>
-                                              <%= i18n.in_dispute %>
-                                            <% } %>
-                                            <% if ( order.financial_status.current == 'partially_refunded') { %>
-                                              <%= i18n.partially_refunded %>
-                                            <% } %>
-                                            <% if ( order.financial_status.current == 'refunded') { %>
-                                              <%= i18n.refunded %>
-                                            <% } %>
-                                            <% if ( order.financial_status.current == 'unknown') { %>
-                                              <%= i18n.unknown %>
-                                            <% } %>
-                                            </strong>
                                           </font>
                                         </div>
                                     </td>
