@@ -69,7 +69,8 @@
                                 </table>
 
                                 <table border="0" cellpadding="0" cellspacing="10" class="module" data-role="module-button" data-type="button" role="module" style="table-layout:fixed" width="100%"><tbody><tr><td align="center" class="outer-td" style="padding:10px 0px 15px 0px"><table border="0" cellpadding="0" cellspacing="0" class="button-css__deep-table___2OZyb wrapper-mobile" style="text-align:center"><tbody><tr>
-                                  <td align="center" bgcolor="<%= themeColor %>" class="inner-td" style="border-radius:6px;font-size:16px;text-align:center;background-color:inherit"><a class="btn" style="background-color:<%= themeColor %>;border:1px solid #333333;border-color:#FFFFFF;border-radius:3px;border-width:1px;color:#FFFFFF;display:inline-block;font-family:arial,helvetica,sans-serif;font-size:16px;font-weight:normal;letter-spacing:0px;line-height:16px;padding:12px 10px 12px 10px;text-align:center;text-decoration:none" href="<% if (order.status_link) { %> <%= order.status_link %> <% } else{ %> <% if (store.homepage) { %> <%= store.homepage %>/app/#/account/orders/<%= order.number %> <% } else{ %> https://<%= store.domain %>/app/#/account/orders/<%= order.number %> <% } %> <% } %>" target="_blank"><%= i18n.order_cta %></a></td>
+                                  <td align="center" bgcolor="<%= themeColor %>" class="inner-td" style="border-radius:6px;font-size:16px;text-align:center;background-color:inherit">
+                                  <a class="btn" style="background-color:<%= themeColor %>;border:1px solid #333333;border-color:#FFFFFF;border-radius:3px;border-width:1px;color:#FFFFFF;display:inline-block;font-family:arial,helvetica,sans-serif;font-size:16px;font-weight:normal;letter-spacing:0px;line-height:16px;padding:12px 10px 12px 10px;text-align:center;text-decoration:none" href="<% if (store.homepage) { %> <%= store.homepage %> <% } else{ %> https://<%= store.domain %> <% } %>" target="_blank"><%= i18n.go_to_store %></a></td>
                                   </tr>
                                   <tr>
                                     <td style="padding: 30px 45px 0px 45px;line-height:22px;text-align:inherit;"
@@ -77,7 +78,7 @@
                                         valign="top"
                                         bgcolor="">
                                         <div style="text-align: center;"><span style="color:#333333;">
-                                          <p><%= i18n.or %> <a href="<% if (store.homepage) { %> <%= store.homepage %> <% } else{ %> https://<%= store.domain %> <% } %>"><%= i18n.visit_store %></a> </p>
+                                          <p><%= i18n.or %> <a href="<% if (order.status_link) { %> <%= order.status_link %> <% } else{ %> <% if (store.homepage) { %> <%= store.homepage %>/app/#/account/orders/<%= order.number %> <% } else{ %> https://<%= store.domain %>/app/#/account/orders/<%= order.number %> <% } %> <% } %>"><%= i18n.view_order %></a> </p>
 
                                           </span></div>
                                     </td>
@@ -85,7 +86,90 @@
                                   </tbody></table></td></tr></tbody></table>
 
 
-                              <% } else { %>
+                              <% } else { if ( order.financial_status.current == 'pending') { %>
+
+                                <table class="module" style="padding:0px 10px 30px 10px;" role="module" data-type="text" border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;">
+                                    <tbody><tr>
+                                      <td style="padding:25px 20px 0px 20px;line-height:20px;text-align:center;" height="100%" valign="top" bgcolor="">
+                                          <h2><span style="color:#333333;"><%= i18n.hello %> <%= customer.name.given_name %>, <%= i18n.new_order_title %></span></h2>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+
+                                <% order.transactions.forEach(transaction => { %>
+
+                                   <% if ( transaction.payment_method.code == 'banking_billet' ) { %>
+                                     <table class="module" role="module" data-type="text" border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;">
+                                         <tbody><tr>
+                                           <td style="padding:10px 50px 10px 50px;line-height:22px;text-align:inherit;" height="100%" valign="top" bgcolor="">
+                                               <div style="text-align: center;">
+                                                 <font color="#333333">
+                                                   <%= i18n.banking_billet_text %> <% if ( transaction.banking_billet.code ) { %> <%= i18n.banking_billet_code %> <% } %>
+                                                 </font>
+                                               </div>
+                                           </td>
+                                         </tr>
+                                       </tbody>
+                                     </table>
+
+                                     <table class="module" style="padding:20px 30px 30px 30px;" role="module" data-type="text" border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;">
+                                         <tbody><tr>
+                                         <% if ( transaction.banking_billet.code ) { %>
+                                           <td style="padding:0px 10px 0px 10px;line-height:20px;text-align:center;" bgcolor="#F4F4F4">
+                                               <h3><span style="color:#333333;"><%= transaction.banking_billet.code %></span></h3>
+                                           </td>
+                                           <% } %>
+                                           <% if (transaction.banking_billet.link) { %>
+                                             <td align="center" bgcolor="<%= themeColor %>" class="inner-td" style="font-size:16px;text-align:center;background-color:inherit"><a height="100%" class="sbtn" style="background-color:<%= themeColor %>;border:1px solid #333333;border-color:#FFFFFF;border-radius:3px;border-width:1px;color:#FFFFFF;display:inline-block;font-family:arial,helvetica,sans-serif;font-size:16px;font-weight:normal;letter-spacing:0px;text-align:center;text-decoration:none" href="<%= transaction.banking_billet.link %>" target="_blank"><%= i18n.banking_billet_print %></a></td>
+                                           <% } %>
+                                         </tr>
+                                       </tbody>
+                                     </table>
+
+                                     <% } else { %>
+
+                                       <table class="module" role="module" data-type="text" border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;">
+                                           <tbody><tr>
+                                             <td style="padding:10px 50px 10px 50px;line-height:22px;text-align:inherit;" height="100%" valign="top" bgcolor="">
+                                                 <div style="text-align: center;">
+                                                   <font color="#333333">
+                                                     <%= i18n.new_order_text %>
+                                                   </font>
+                                                 </div>
+                                             </td>
+                                           </tr>
+                                         </tbody>
+                                       </table>
+
+                                      <% } %>
+                                    <% }) %>
+
+                                  <% } else { if ( order.financial_status.current == 'paid') { %>
+
+                                    <table class="module" style="padding:0px 10px 30px 10px;" role="module" data-type="text" border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;">
+                                        <tbody><tr>
+                                          <td style="padding:25px 20px 0px 20px;line-height:20px;text-align:center;" height="100%" valign="top" bgcolor="">
+                                              <h2><span style="color:#333333;"><%= i18n.hello %> <%= customer.name.given_name %>, <%= i18n.new_order_title %></span></h2>
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+
+                                    <table class="module" role="module" data-type="text" border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;">
+                                        <tbody><tr>
+                                          <td style="padding:10px 50px 10px 50px;line-height:22px;text-align:inherit;" height="100%" valign="top" bgcolor="">
+                                              <div style="text-align: center;">
+                                                <font color="#333333">
+                                                  <%= i18n.paid_text_new %>
+                                                </font>
+                                              </div>
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+
+                                  <% } else { %>
 
                               <table class="module" style="padding:0px 10px 30px 10px;" role="module" data-type="text" border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;">
                                   <tbody><tr>
@@ -98,14 +182,53 @@
 
                               <table class="module" role="module" data-type="text" border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;">
                                   <tbody><tr>
+                                    <td style="padding:10px 50px 10px 50px;line-height:22px;text-align:inherit;" height="100%" valign="top" bgcolor="">
+                                        <div style="text-align: center;">
+                                          <font color="#333333">
+                                            <%= i18n.new_order_text %> <%= i18n.financial_status %>
+                                            <strong>
+                                            <% if ( order.financial_status.current == 'under_analysis') { %>
+                                              <%= i18n.under_analysis %>
+                                            <% } %>
+                                            <% if ( order.financial_status.current == 'authorized') { %>
+                                              <%= i18n.authorized %>
+                                            <% } %>
+                                            <% if ( order.financial_status.current == 'partially_paid') { %>
+                                              <%= i18n.partially_paid %>
+                                            <% } %>
+                                            <% if ( order.financial_status.current == 'in_dispute') { %>
+                                              <%= i18n.in_dispute %>
+                                            <% } %>
+                                            <% if ( order.financial_status.current == 'partially_refunded') { %>
+                                              <%= i18n.partially_refunded %>
+                                            <% } %>
+                                            <% if ( order.financial_status.current == 'refunded') { %>
+                                              <%= i18n.refunded %>
+                                            <% } %>
+                                            <% if ( order.financial_status.current == 'unknown') { %>
+                                              <%= i18n.unknown %>
+                                            <% } %>
+                                            </strong>
+                                          </font>
+                                        </div>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+
+                              <% } %>
+                              <% } %>
+
+                              <table class="module" role="module" data-type="text" border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;">
+                                  <tbody><tr>
                                   <% order.shipping_lines.forEach(shipping => { %>
                                     <td style="padding:10px 50px 10px 50px;line-height:22px;text-align:inherit;" height="100%" valign="top" bgcolor="">
                                         <div style="text-align: center;">
                                           <font color="#333333">
                                           <% if (shipping.posting_deadline) { %>
-                                            <%= i18n.order %> <a href="<% if (order.status_link) { %> <%= order.status_link %> <% } else{ %> <% if (store.homepage) { %> <%= store.homepage %>/app/#/account/orders/<%= order.number %> <% } else{ %> https://<%= store.domain %>/app/#/account/orders/<%= order.number %> <% } %> <% } %>">#<%= order.number %></a> <%= i18n.posting_in %> <strong>  <%= shipping.posting_deadline.days %> <% if (shipping.posting_deadline.working_days) { %> <%= i18n.working_days %> <% } else{ %> <%= i18n.days %> <% } %></strong> <%= i18n.following_address %>
+                                            <%= i18n.order %> <a href="<% if (order.status_link) { %> <%= order.status_link %> <% } else{ %> <% if (store.homepage) { %> <%= store.homepage %>/app/#/account/orders/<%= order.number %> <% } else{ %> https://<%= store.domain %>/app/#/account/orders/<%= order.number %> <% } %> <% } %>">#<%= order.number %></a> <%= i18n.posting_in %> <strong>  <%= shipping.posting_deadline.days %> <% if (shipping.posting_deadline.working_days) { %> <%= i18n.working_days %> <% } else{ %> <%= i18n.days %> <% } %></strong> <% if ( order.financial_status.current !== 'paid') { %> <%= i18n.after_payment %> <% } %><%= i18n.following_address %>
                                             <% } else{ %>
-                                            <%= i18n.order %> <a href="<% if (order.status_link) { %> <%= order.status_link %> <% } else{ %> <% if (store.homepage) { %> <%= store.homepage %>/app/#/account/orders/<%= order.number %> <% } else{ %> https://<%= store.domain %>/app/#/account/orders/<%= order.number %> <% } %> <% } %>">#<%= order.number %></a> <%= i18n.delivering_in %> <strong> <%= shipping.delivery_time.days %> <% if (shipping.delivery_time.working_days) { %> <%= i18n.working_days %> <% } else{ %> <%= i18n.days %> <% } %></strong> <%= i18n.on_following_address %>
+                                            <%= i18n.order %> <a href="<% if (order.status_link) { %> <%= order.status_link %> <% } else{ %> <% if (store.homepage) { %> <%= store.homepage %>/app/#/account/orders/<%= order.number %> <% } else{ %> https://<%= store.domain %>/app/#/account/orders/<%= order.number %> <% } %> <% } %>">#<%= order.number %></a> <%= i18n.delivering_in %> <strong> <%= shipping.delivery_time.days %> <% if (shipping.delivery_time.working_days) { %> <%= i18n.working_days %> <% } else{ %> <%= i18n.days %> <% } %></strong> <% if ( order.financial_status.current !== 'paid') { %> <%= i18n.after_payment %> <% } %> <%= i18n.on_following_address %>
                                            <% } %>
                                           </font>
                                         </div>
@@ -118,7 +241,6 @@
                                   </tr>
                                 </tbody>
                               </table>
-
                               <table border="0" cellpadding="0" cellspacing="10" class="module" data-role="module-button" data-type="button" role="module" style="table-layout:fixed" width="100%"><tbody><tr><td align="center" class="outer-td" style="padding:10px 0px 15px 0px"><table border="0" cellpadding="0" cellspacing="0" class="button-css__deep-table___2OZyb wrapper-mobile" style="text-align:center"><tbody><tr>
                                 <td align="center" bgcolor="<%= themeColor %>" class="inner-td" style="border-radius:6px;font-size:16px;text-align:center;background-color:inherit"><a class="btn" style="background-color:<%= themeColor %>;border:1px solid #333333;border-color:#FFFFFF;border-radius:3px;border-width:1px;color:#FFFFFF;display:inline-block;font-family:arial,helvetica,sans-serif;font-size:16px;font-weight:normal;letter-spacing:0px;line-height:16px;padding:12px 10px 12px 10px;text-align:center;text-decoration:none" href="<% if (order.status_link) { %> <%= order.status_link %> <% } else{ %> <% if (store.homepage) { %> <%= store.homepage %>/app/#/account/orders/<%= order.number %> <% } else{ %> https://<%= store.domain %>/app/#/account/orders/<%= order.number %> <% } %> <% } %>" target="_blank"><%= i18n.order_cta %></a></td>
                                 </tr>
@@ -293,13 +415,14 @@
                                       bgcolor="">
                                       <div style="text-align: center;"><span style="color:#333333;">
                                         <p><%= i18n.info %> <a href="https://<%= store.domain %>/app/#/account/orders"><%= i18n.my_acc %></a> <%= i18n.contact_us %> </p>
-
                                         </span></div>
                                   </td>
                                 </tr>
                               </table>
 
                               <% } %>
+
+
 
 
                               <table class="module"
