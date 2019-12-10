@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/ecomclub/transactional-mails/compare/v1.0.2...v1.1.0) (2019-12-10)
+
+
+### Features
+
+* **i18n:** adding new terms to dictionary ([5797dbb](https://github.com/ecomclub/transactional-mails/commit/5797dbb))
+* **new_order:** making new order mail more adaptable ([b846b8e](https://github.com/ecomclub/transactional-mails/commit/b846b8e))
+* **styles:** inserting new button style ([ca74146](https://github.com/ecomclub/transactional-mails/commit/ca74146))
+* **views:** changing neworder messag with order finantial status ([31f4431](https://github.com/ecomclub/transactional-mails/commit/31f4431))
+
+
+
 ### [1.0.2](https://github.com/ecomclub/transactional-mails/compare/v1.0.1...v1.0.2) (2019-11-21)
 
 
