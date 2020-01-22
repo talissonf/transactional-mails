@@ -13,6 +13,21 @@ const sass = require('node-sass')
 // https://developers.e-com.plus/ecomplus-utils/
 const ecomUtils = require('@ecomplus/utils')
 
+const intl = require('intl')
+
+if (global.Intl) {
+    // Determine if the built-in `Intl` has the locale data we need.
+
+        // `Intl` exists, but it doesn't have the data we need, so load the
+        // polyfill and patch the constructors we need with the polyfill's.
+        var IntlPolyfill    = require('intl');
+        Intl.NumberFormat   = IntlPolyfill.NumberFormat;
+        Intl.DateTimeFormat = IntlPolyfill.DateTimeFormat;
+} else {
+    // No `Intl`, so use and load the polyfill.
+    global.Intl = require('intl');
+}
+
 module.exports = (template, data = {}, store, lang) => {
   // try to set lang and theme color from store object
   // https://developers.e-com.plus/docs/api/#/store/stores

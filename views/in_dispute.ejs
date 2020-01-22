@@ -40,9 +40,8 @@
                                 </tr>
                               </table>
                               <%# comment %>
-                              <table align="center" border="0" cellpadding="0" cellspacing="0" class="module" data-role="module-button" data-type="button" role="module" style="table-layout:fixed; padding:15px;" width="40%"><tbody><tr><td align="center" class="outer-td"><table border="0" cellpadding="0" cellspacing="0" class="button-css__deep-table___2OZyb wrapper-mobile" style="text-align:center"><tbody><tr><td align="center" bgcolor="#FFFFFF" class="inner-td" style="border-radius:6px;font-size:16px;text-align:center;background-color:inherit">
-                                <a href="<% if (store.homepage) { %> <%= store.homepage %> <% } else{ %> https://<%= store.domain %> <% } %>"><img class="max-width" border="0" style="display:block;color:#000000;text-decoration:none;font-family:Helvetica, arial, sans-serif;font-size:16px;max-width:100% !important;width:100%;height:auto !important;"  src="<%= store.logo.url %>" alt="" width="200"></a>
-                              </td></tr></tbody></table></td></tr></tbody></table>
+
+                              <%- include('partials/logo') %>
 
 
                               <table class="module" style="padding:0px 10px 30px 10px;" role="module" data-type="text" border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;">

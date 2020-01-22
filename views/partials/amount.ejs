@@ -1,0 +1,51 @@
+<table align="center" class="module mobile-only" role="module" style="table-layout: fixed; width:95%;" cellspacing="0">
+
+    <% if (order.amount.discount) { %>
+    <tr>
+      <td style="width:0%;">&nbsp;</td>
+      <td style="width:60%;padding:5px;"><div style="text-align: right;"><%= i18n.discount %></div></td>
+      <td style="width:40%; font-size:16px;padding:5px;"><div style="text-align: right;"><strong><%= ecomUtils.formatMoney(order.amount.discount) %></strong></div></td>
+    </tr>
+
+    <% } %>
+    <% if (order.amount.subtotal) { %>
+    <tr style="padding:10px;">
+      <td style="width:10%;">&nbsp;</td>
+      <td style="width:30%;padding:5px;"><div style="text-align: right;"><%= i18n.subtotal %></div></td>
+      <td style="width:30%; font-size:16px;padding:5px;"><div style="text-align: right;"><strong><%= ecomUtils.formatMoney(order.amount.subtotal) %></strong></div></td>
+    </tr>
+    <% } %>
+
+    <% if (order.amount.freight) { %>
+    <tr style=>
+      <td style="width:10%;">&nbsp;</td>
+      <td style="width:30%;padding:5px;"><div style="text-align: right;"><%= i18n.freight %></div></td>
+      <td style="width:30%; font-size:16px;padding:5px;"><div style="text-align: right;"><strong><%= ecomUtils.formatMoney(order.amount.freight) %></strong></div></td>
+    </tr>
+    <% } %>
+    <% if (order.amount.tax) { %>
+    <tr>
+      <td style="width:10%;">&nbsp;</td>
+      <td style="width:30%;padding:5px;"><div style="text-align: right;"><%= i18n.tax %></div></td>
+      <td style="width:30%; font-size:16px;padding:5px;"><div style="text-align: right;"><strong><%= ecomUtils.formatMoney(order.amount.tax) %></strong></div></td>
+    </tr>
+    <% } %>
+    <% if (order.amount.extra) { %>
+    <tr>
+      <td style="width:10%;">&nbsp;</td>
+      <td style="width:30%;padding:5px;"><div style="text-align: right;"><%= i18n.extra %></div></td>
+      <td style="width:30%; font-size:16px;padding:5px;"><div style="text-align: right;"><strong><%= ecomUtils.formatMoney(order.amount.extra) %></strong></div></td>
+    </tr>
+    <% } %>
+    <% if (order.amount.total) { %>
+    <tr>
+      <td style="width:10%;">&nbsp;</td>
+      <td style="width:30%;padding:5px;"><div style="text-align: right;"><strong style="font-size:20px;"><%= i18n.total %></strong></div></td>
+      <td style="width:30%; font-size:16px;padding:5px"><div style="font-size:20px; text-align: right;"><strong ><%= ecomUtils.formatMoney(order.amount.total) %></strong></div></td>
+    </tr>
+    <% } %>
+      <td style="width:10%max-width:33.333%;">&nbsp;</td>
+      <td style="width:30%max-width:33.333%;">&nbsp;</td>
+      <td style="width:30%max-width:33.333%;">&nbsp;</td>
+    </tr>
+</table>

@@ -40,10 +40,8 @@
                                 </tr>
                               </table>
                               <%# comment %>
-                              <table align="center" border="0" cellpadding="0" cellspacing="0" class="module" data-role="module-button" data-type="button" role="module" style="table-layout:fixed; padding:15px;" width="40%"><tbody><tr><td align="center" class="outer-td"><table border="0" cellpadding="0" cellspacing="0" class="button-css__deep-table___2OZyb wrapper-mobile" style="text-align:center"><tbody><tr><td align="center" bgcolor="#FFFFFF" class="inner-td" style="border-radius:6px;font-size:16px;text-align:center;background-color:inherit">
-                                <a href="<% if (store.homepage) { %> <%= store.homepage %> <% } else{ %> https://<%= store.domain %> <% } %>"><img class="max-width" border="0" style="display:block;color:#000000;text-decoration:none;font-family:Helvetica, arial, sans-serif;font-size:16px;max-width:100% !important;width:100%;height:auto !important;"  src="<%= store.logo.url %>" alt="" width="200"></a>
-                              </td></tr></tbody></table></td></tr></tbody></table>
 
+                              <%- include('partials/logo') %>
 
                               <table class="module" style="padding:0px 10px 30px 10px;" role="module" data-type="text" border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;">
                                   <tbody><tr>
@@ -108,200 +106,17 @@
                                 <tbody>
                                   <tr>
                                     <td style="padding:30px 20px 25px 20px;line-height:20px;text-align:inherit;" height="100%" valign="top" bgcolor="">
-                                        <h2 style="text-align: center;"><span style="color:#333333;"><%= i18n.shipping_data %></span></h2>
+                                        <h2 style="text-align: center;"><span style="color:#333333;"><%= i18n.details %></span></h2>
                                     </td>
                                   </tr>
                                 </tbody>
                               </table>
 
-                              <table align="center" class="module desktop-only" role="module" style="table-layout: fixed; width:95%;" cellspacing="0">
-                                <% order.items.forEach(item => { %>
-                                  <tr style="border-collapse:collapse;">
-                                    <td style="border-top-width:1px;border-top-color:#e5e5e5;border-top-style:solid;width:20%;padding:10px;"><img class="max-width" border="0" style="display:block;color:#000000;text-decoration:none;font-family:Helvetica, arial, sans-serif;font-size:16px;max-width:100% !important;width:50%;height:auto !important;" src="<%= item.picture.small.url %>" alt="" width="200"></td>
-                                    <td style="border-top-width:1px;border-top-color:#e5e5e5;border-top-style:solid;width:40%;padding:10px;"><div style="text-align: center;"><%= ecomUtils.name(item) %></div></td>
-                                    <td style="border-top-width:1px;border-top-color:#e5e5e5;border-top-style:solid;width:15%;"><div style="text-align: center;">x <%= item.quantity %></div></td>
-                                    <td style="border-top-width:1px;border-top-color:#e5e5e5;border-top-style:solid;width:25%;"><div style="text-align: center;"> <strong> x <%= ecomUtils.formatMoney(ecomUtils.price(item) * item.quantity,) %></strong></div></td>
-                                  </tr>
-                                  <% }) %>
-                                  <tr>
-                                    <td style="border-top-width:1px;border-top-color:#e5e5e5;border-top-style:solid;width:20%;">&nbsp;</td>
-                                    <td style="border-top-width:1px;border-top-color:#e5e5e5;border-top-style:solid;width:40%;">&nbsp;</td>
-                                    <td style="border-top-width:1px;border-top-color:#e5e5e5;border-top-style:solid;width:10%;">&nbsp;</td>
-                                    <td style="border-top-width:1px;border-top-color:#e5e5e5;border-top-style:solid;width:30%;">&nbsp;</td>
-                                  </tr>
+                              <%- include('partials/items') %>
 
-                                  <% if (order.amount.discount) { %>
-                                  <tr>
-                                    <td style="width:20%;">&nbsp;</td>
-                                    <td style="width:40%;">&nbsp;</td>
-                                    <td style="width:15%;padding:5px;"><div style="text-align: center;"><%= i18n.discount %></div></td>
-                                    <td style="width:25%; font-size:16px;padding:5px;"><div style="text-align: center;"><strong><%= ecomUtils.formatMoney(order.amount.discount) %></strong></div></td>
-                                  </tr>
+                              <%- include('partials/amount') %>
 
-                                  <% } %>
-                                  <% if (order.amount.subtotal) { %>
-                                  <tr style="padding:10px;">
-                                    <td style="width:20%;">&nbsp;</td>
-                                    <td style="width:40%;">&nbsp;</td>
-                                    <td style="width:15%;padding:5px;"><div style="text-align: center;"><%= i18n.subtotal %></div></td>
-                                    <td style="width:25%; font-size:16px;padding:5px;"><div style="text-align: center;"><strong><%= ecomUtils.formatMoney(order.amount.subtotal) %></strong></div></td>
-                                  </tr>
-                                  <% } %>
-
-                                  <% if (order.amount.freight) { %>
-                                  <tr style=>
-                                    <td style="width:20%;">&nbsp;</td>
-                                    <td style="width:40%;">&nbsp;</td>
-                                    <td style="width:15%;padding:5px;"><div style="text-align: center;"><%= i18n.freight %></div></td>
-                                    <td style="width:25%; font-size:16px;padding:5px;"><div style="text-align: center;"><strong><%= ecomUtils.formatMoney(order.amount.freight) %></strong></div></td>
-                                  </tr>
-                                  <% } %>
-                                  <% if (order.amount.tax) { %>
-                                  <tr>
-                                    <td style="width:20%;">&nbsp;</td>
-                                    <td style="width:40%;">&nbsp;</td>
-                                    <td style="width:15%;padding:5px;"><div style="text-align: center;"><%= i18n.tax %></div></td>
-                                    <td style="width:25%; font-size:16px;padding:5px;"><div style="text-align: center;"><strong><%= ecomUtils.formatMoney(order.amount.tax) %></strong></div></td>
-                                  </tr>
-                                  <% } %>
-                                  <% if (order.amount.extra) { %>
-                                  <tr>
-                                    <td style="width:20%;">&nbsp;</td>
-                                    <td style="width:40%;">&nbsp;</td>
-                                    <td style="width:10%;padding:5px;"><div style="text-align: center;"><%= i18n.extra %></div></td>
-                                    <td style="width:30%; font-size:16px;padding:5px;"><div style="text-align: center;"><strong><%= ecomUtils.formatMoney(order.amount.extra) %></strong></div></td>
-                                  </tr>
-                                  <% } %>
-                                  <% if (order.amount.total) { %>
-                                  <tr>
-                                    <td style="width:20%;">&nbsp;</td>
-                                    <td style="width:40%;">&nbsp;</td>
-                                    <td style="width:15%;padding:10px;border-top-width:1px;border-top-color:#e5e5e5;border-top-style:solid"><div style="text-align: center;"><strong style="font-size:20px;"><%= i18n.total %></strong></div></td>
-                                    <td style="width:25%; font-size:16px;padding:10px;border-top-width:1px;border-top-color:#e5e5e5;border-top-style:solid"><div style="text-align: center;"><strong style="font-size:20px;"><%= ecomUtils.formatMoney(order.amount.total) %></strong></div></td>
-                                  </tr>
-                                  <% } %>
-                                    <td style="width:40%max-width:33.333%;">&nbsp;</td>
-                                    <td style="width:10%max-width:33.333%;">&nbsp;</td>
-                                    <td style="width:30%max-width:33.333%;">&nbsp;</td>
-                                  </tr>
-                              </table>
-
-                              <table align="center" class="module mobile-only" role="module" style="table-layout: fixed; width:95%;" cellspacing="0">
-                                <% order.items.forEach(item => { %>
-                                  <tr style="border-collapse:collapse;">
-                                    <td style="border-top-width:1px;border-top-color:#e5e5e5;border-top-style:solid;width:60%;padding:10px;"><div style="text-align: center;"><%= ecomUtils.name(item) %></div></td>
-                                    <td style="border-top-width:1px;border-top-color:#e5e5e5;border-top-style:solid;width:10%;"><div style="text-align: center;">x <%= item.quantity %></div></td>
-                                    <td style="border-top-width:1px;border-top-color:#e5e5e5;border-top-style:solid;width:30%;"><div style="text-align: center;"> <strong> <%= ecomUtils.formatMoney(ecomUtils.price(item) * item.quantity) %></strong></div></td>
-                                  </tr>
-                                  <% }) %>
-                                  <tr>
-                                    <td style="border-top-width:1px;border-top-color:#e5e5e5;border-top-style:solid;width:40%;">&nbsp;</td>
-                                    <td style="border-top-width:1px;border-top-color:#e5e5e5;border-top-style:solid;width:10%;">&nbsp;</td>
-                                    <td style="border-top-width:1px;border-top-color:#e5e5e5;border-top-style:solid;width:30%;">&nbsp;</td>
-                                  </tr>
-
-                              </table>
-                              <table align="center" class="module mobile-only" role="module" style="table-layout: fixed; width:95%;" cellspacing="0">
-
-                                  <% if (order.amount.discount) { %>
-                                  <tr>
-                                    <td style="width:0%;">&nbsp;</td>
-                                    <td style="width:60%;padding:5px;"><div style="text-align: right;"><%= i18n.discount %></div></td>
-                                    <td style="width:40%; font-size:16px;padding:5px;"><div style="text-align: right;"><strong><%= ecomUtils.formatMoney(order.amount.discount) %></strong></div></td>
-                                  </tr>
-
-                                  <% } %>
-                                  <% if (order.amount.subtotal) { %>
-                                  <tr style="padding:10px;">
-                                    <td style="width:10%;">&nbsp;</td>
-                                    <td style="width:30%;padding:5px;"><div style="text-align: right;"><%= i18n.subtotal %></div></td>
-                                    <td style="width:30%; font-size:16px;padding:5px;"><div style="text-align: right;"><strong><%= ecomUtils.formatMoney(order.amount.subtotal) %></strong></div></td>
-                                  </tr>
-                                  <% } %>
-
-                                  <% if (order.amount.freight) { %>
-                                  <tr style=>
-                                    <td style="width:10%;">&nbsp;</td>
-                                    <td style="width:30%;padding:5px;"><div style="text-align: right;"><%= i18n.freight %></div></td>
-                                    <td style="width:30%; font-size:16px;padding:5px;"><div style="text-align: right;"><strong><%= ecomUtils.formatMoney(order.amount.freight) %></strong></div></td>
-                                  </tr>
-                                  <% } %>
-                                  <% if (order.amount.tax) { %>
-                                  <tr>
-                                    <td style="width:10%;">&nbsp;</td>
-                                    <td style="width:30%;padding:5px;"><div style="text-align: right;"><%= i18n.tax %></div></td>
-                                    <td style="width:30%; font-size:16px;padding:5px;"><div style="text-align: right;"><strong><%= ecomUtils.formatMoney(order.amount.tax) %></strong></div></td>
-                                  </tr>
-                                  <% } %>
-                                  <% if (order.amount.extra) { %>
-                                  <tr>
-                                    <td style="width:10%;">&nbsp;</td>
-                                    <td style="width:30%;padding:5px;"><div style="text-align: right;"><%= i18n.extra %></div></td>
-                                    <td style="width:30%; font-size:16px;padding:5px;"><div style="text-align: right;"><strong><%= ecomUtils.formatMoney(order.amount.extra) %></strong></div></td>
-                                  </tr>
-                                  <% } %>
-                                  <% if (order.amount.total) { %>
-                                  <tr>
-                                    <td style="width:10%;">&nbsp;</td>
-                                    <td style="width:30%;padding:5px;"><div style="text-align: right;"><strong style="font-size:20px;"><%= i18n.total %></strong></div></td>
-                                    <td style="width:30%; font-size:16px;padding:5px"><div style="font-size:20px; text-align: right;"><strong ><%= ecomUtils.formatMoney(order.amount.total) %></strong></div></td>
-                                  </tr>
-                                  <% } %>
-                                    <td style="width:10%max-width:33.333%;">&nbsp;</td>
-                                    <td style="width:30%max-width:33.333%;">&nbsp;</td>
-                                    <td style="width:30%max-width:33.333%;">&nbsp;</td>
-                                  </tr>
-                              </table>
-
-
-                              <table class="module" role="module" data-type="text" border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;">
-                                <tr>
-                                  <td style="padding:30px 45px 30px 45px;line-height:22px;text-align:inherit;"
-                                      height="100%"
-                                      valign="top"
-                                      bgcolor="">
-                                      <div style="text-align: center;"><span style="color:#333333;">
-                                        <p><%= i18n.info %> <a href="<%= store.domain %>/app/#/account/"><%= i18n.my_acc %></a> <%= i18n.contact_us %> </p>
-
-                                        </span></div>
-                                  </td>
-                                </tr>
-                              </table>
-
-
-
-
-                              <table class="module"
-                                     role="module"
-                                     data-type="divider"
-                                     border="0"
-                                     cellpadding="0"
-                                     cellspacing="0"
-                                     width="100%"
-                                     style="table-layout: fixed;">
-                                <tr>
-                                  <td style="padding:0px 0px 0px 0px;"
-                                      role="module-content"
-                                      height="100%"
-                                      valign="top"
-                                      bgcolor="">
-                                    <table border="0"
-                                           cellpadding="0"
-                                           cellspacing="0"
-                                           align="center"
-                                           width="100%"
-                                           height="5px"
-                                           style="line-height:5px; font-size:5px;">
-                                      <tr>
-                                        <td
-                                          style="padding: 0px 0px 5px 0px;"
-                                          bgcolor="#F7F7F7"></td>
-                                      </tr>
-                                    </table>
-                                  </td>
-                                </tr>
-                              </table>
-
+                              <%- include('partials/info') %>
 
                             <div data-role="module-unsubscribe" class="module unsubscribe-css__unsubscribe___2CDlR" role="module" data-type="unsubscribe" style="background-color:#F7F7F7;color:#7a7a7a;font-size:11px;line-height:20px;padding:30px 0px 30px 0px;text-align:center"><div class="Unsubscribe--addressLine"><p class="Unsubscribe--senderName" style="font-family:;font-size:11px;line-height:20px"><%= store.corporate_name %></p><p style="font-family:;font-size:11px;line-height:20px"><span class="Unsubscribe--senderAddress"><%= store.address %></span></p></div><p style="font-family:;font-size:11px;line-height:20px"><a class="Unsubscribe--unsubscribeLink" href="<%= store.unsubscribe %>" style="color:#2277ee"><%= i18n.unsub %></a></p></div>
 

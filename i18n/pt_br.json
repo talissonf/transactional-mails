@@ -17,7 +17,7 @@
   "tax": "Impostos",
   "extra": "Extra",
   "total": "Total",
-  "shipping_data": "Detalhes do pedido",
+  "details": "Detalhes do pedido",
   "shipped_by": "Entrega por:",
   "order_cta": "Visualizar seu pedido",
   "view_order": "visualize seu pedido",
