@@ -31,7 +31,7 @@ if (global.Intl) {
 module.exports = (template, data = {}, store, lang) => {
   // try to set lang and theme color from store object
   // https://developers.e-com.plus/docs/api/#/store/stores
-  lang = lang || (store.languages && store.languages[0]) || ecomUtils._config.get('lang')
+  lang = lang || (store.languages && store.languages[0]) || 'pt_br'
   ecomUtils._config.set('lang', lang)
   const themeColor = (store.brand_colors && store.brand_colors.primary) || '#6c757d'
 

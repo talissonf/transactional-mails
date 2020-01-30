@@ -1,6 +1,6 @@
 {
   "name": "@ecomplus/transactional-mails",
-  "version": "0.7.0",
+  "version": "1.2.1",
   "description": "Default transactional email templates for E-Com Plus stores",
   "main": "src/index.js",
   "scripts": {
@@ -25,19 +25,18 @@
   },
   "homepage": "https://github.com/ecomclub/transactional-mails#readme",
   "dependencies": {
-    "@ecomplus/i18n": "^0.1.2",
-    "@ecomplus/utils": "^1.1.0",
-    "ejs": "^2.7.1",
+    "@ecomplus/utils": "^1.2.8",
+    "ejs": "^2.7.4",
     "intl": "^1.2.5",
-    "intl-locales-supported": "^1.8.0",
-    "node-sass": "^4.12.0"
+    "intl-locales-supported": "^1.8.4",
+    "node-sass": "^4.13.1"
   },
   "devDependencies": {
-    "@commitlint/cli": "^8.1.0",
-    "@commitlint/config-conventional": "^8.1.0",
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
     "browser-sync": "^2.26.7",
     "docdash": "^1.1.1",
-    "husky": "^3.0.9",
+    "husky": "^3.1.0",
     "jsdoc": "^3.6.3",
     "standard": "^12.0.1",
     "standard-version": "^6.0.1"

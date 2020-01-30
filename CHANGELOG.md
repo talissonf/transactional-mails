@@ -2,6 +2,114 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.2.1](https://github.com/ecomclub/transactional-mails/compare/v1.2.0...v1.2.1) (2020-01-22)
+
+
+
+## [1.2.0](https://github.com/ecomclub/transactional-mails/compare/v1.1.3...v1.2.0) (2019-12-17)
+
+
+### Features
+
+* **neworder:** when there is no financial status sending as pending ([3537316](https://github.com/ecomclub/transactional-mails/commit/3537316))
+
+
+
+### [1.1.3](https://github.com/ecomclub/transactional-mails/compare/v1.1.2...v1.1.3) (2019-12-12)
+
+
+
+### [1.1.2](https://github.com/ecomclub/transactional-mails/compare/v1.1.1...v1.1.2) (2019-12-11)
+
+
+### Bug Fixes
+
+* **neworder:** testing if there is a financial_status ([857f1a2](https://github.com/ecomclub/transactional-mails/commit/857f1a2))
+
+
+
+### [1.1.1](https://github.com/ecomclub/transactional-mails/compare/v1.1.0...v1.1.1) (2019-12-11)
+
+
+
+## [1.1.0](https://github.com/ecomclub/transactional-mails/compare/v1.0.2...v1.1.0) (2019-12-10)
+
+
+### Features
+
+* **i18n:** adding new terms to dictionary ([5797dbb](https://github.com/ecomclub/transactional-mails/commit/5797dbb))
+* **new_order:** making new order mail more adaptable ([b846b8e](https://github.com/ecomclub/transactional-mails/commit/b846b8e))
+* **styles:** inserting new button style ([ca74146](https://github.com/ecomclub/transactional-mails/commit/ca74146))
+* **views:** changing neworder messag with order finantial status ([31f4431](https://github.com/ecomclub/transactional-mails/commit/31f4431))
+
+
+
+### [1.0.2](https://github.com/ecomclub/transactional-mails/compare/v1.0.1...v1.0.2) (2019-11-21)
+
+
+### Bug Fixes
+
+* **intl:** locale data must be required after intl polyfill ([5dabc39](https://github.com/ecomclub/transactional-mails/commit/5dabc39))
+
+
+
+### [1.0.1](https://github.com/ecomclub/transactional-mails/compare/v1.0.0...v1.0.1) (2019-11-21)
+
+
+### Bug Fixes
+
+* **intl:** require locale data mannualy once ([5b19783](https://github.com/ecomclub/transactional-mails/commit/5b19783))
+
+
+
+## [1.0.0](https://github.com/ecomclub/transactional-mails/compare/v0.7.6...v1.0.0) (2019-11-21)
+
+
+
+### [0.7.6](https://github.com/ecomclub/transactional-mails/compare/v0.7.5...v0.7.6) (2019-11-21)
+
+
+### Bug Fixes
+
+* **intl:** add intl polyfill to support pt-BR locale ([d16dd06](https://github.com/ecomclub/transactional-mails/commit/d16dd06))
+
+
+
+### [0.7.5](https://github.com/ecomclub/transactional-mails/compare/v0.7.4...v0.7.5) (2019-10-25)
+
+
+### Tests
+
+* **lang:** testing formatMoney lang in_production mail table ([b38ff90](https://github.com/ecomclub/transactional-mails/commit/b38ff90))
+
+
+
+### [0.7.4](https://github.com/ecomclub/transactional-mails/compare/v0.7.3...v0.7.4) (2019-10-24)
+
+
+### Bug Fixes
+
+* **lang:** set default lang to pt_br if no store.languages ([c25732a](https://github.com/ecomclub/transactional-mails/commit/c25732a))
+
+
+
+### [0.7.3](https://github.com/ecomclub/transactional-mails/compare/v0.7.2...v0.7.3) (2019-10-18)
+
+
+### Tests
+
+* **views:** trying to fix items table ([2f8eaf9](https://github.com/ecomclub/transactional-mails/commit/2f8eaf9))
+
+
+
+### [0.7.2](https://github.com/ecomclub/transactional-mails/compare/v0.7.1...v0.7.2) (2019-10-17)
+
+
+
+### [0.7.1](https://github.com/ecomclub/transactional-mails/compare/v0.7.0...v0.7.1) (2019-10-03)
+
+
+
 ## [0.7.0](https://github.com/ecomclub/transactional-mails/compare/v0.6.0...v0.7.0) (2019-10-02)
 
 
