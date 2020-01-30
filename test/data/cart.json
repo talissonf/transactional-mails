@@ -12,28 +12,6 @@
             "price": 255.9,
             "quantity": 1,
             "name": "Smartphone Alcatel Pixi 4 4034E Lite 4\" Desbloqueado Preto",
-            "picture": {
-                "zoom": {
-                    "url": "https://ecom-ptqgjveg.nyc3.digitaloceanspaces.com/@1551275607131-smartphone-alcatel-pixi-4-dual-chip-4-4034e-preto-pricipal.jpg",
-                    "size": "410x410",
-                    "alt": "smartphone-alcatel-pixi-4-dual-chip-4-4034e-preto-pricipal"
-                },
-                "small": {
-                    "url": "https://ecom-ptqgjveg.nyc3.digitaloceanspaces.com/imgs/100px/@1551275607131-smartphone-alcatel-pixi-4-dual-chip-4-4034e-preto-pricipal.jpg",
-                    "size": "100x100",
-                    "alt": "smartphone-alcatel-pixi-4-dual-chip-4-4034e-preto-pricipal"
-                },
-                "normal": {
-                    "url": "https://ecom-ptqgjveg.nyc3.digitaloceanspaces.com/imgs/400px/@1551275607131-smartphone-alcatel-pixi-4-dual-chip-4-4034e-preto-pricipal.jpg",
-                    "size": "400x400",
-                    "alt": "smartphone-alcatel-pixi-4-dual-chip-4-4034e-preto-pricipal"
-                },
-                "big": {
-                    "url": "https://ecom-ptqgjveg.nyc3.digitaloceanspaces.com/imgs/700px/@1551275607131-smartphone-alcatel-pixi-4-dual-chip-4-4034e-preto-pricipal.jpg",
-                    "size": "700x700",
-                    "alt": "smartphone-alcatel-pixi-4-dual-chip-4-4034e-preto-pricipal"
-                }
-            },
             "keep_item_quantity": false,
             "currency_id": "BRL",
             "currency_symbol": "R$",
