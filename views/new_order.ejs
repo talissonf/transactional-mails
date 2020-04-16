@@ -95,46 +95,17 @@
                                   </tbody>
                                 </table>
 
-                              <% if ( order.transactions.length > 0 ) { %>
+                                <% if ( order.transactions.length > 0 ) { %>
 
-                                <% order.transactions.forEach(transaction => { %>
+                                  <% order.transactions.forEach(transaction => { %>
 
-                                   <% if ( transaction.payment_method.code == 'banking_billet' ) { %>
-                                     <table class="module" role="module" data-type="text" border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;">
-                                         <tbody><tr>
-                                           <td style="padding:10px 50px 10px 50px;line-height:22px;text-align:inherit;" height="100%" valign="top" bgcolor="">
-                                               <div style="text-align: center;">
-                                                 <font color="#333333">
-                                                   <%= i18n.banking_billet_text %> <% if ( transaction.banking_billet.code ) { %> <%= i18n.banking_billet_code %> <% } %>
-                                                 </font>
-                                               </div>
-                                           </td>
-                                         </tr>
-                                       </tbody>
-                                     </table>
-
-                                     <table class="module" style="padding:20px 30px 30px 30px;" role="module" data-type="text" border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;">
-                                         <tbody><tr>
-                                         <% if ( transaction.banking_billet.code ) { %>
-                                           <td style="padding:0px 10px 0px 10px;line-height:20px;text-align:center;" bgcolor="#F4F4F4">
-                                               <h3><span style="color:#333333;"><%= transaction.banking_billet.code %></span></h3>
-                                           </td>
-                                           <% } %>
-                                           <% if (transaction.banking_billet.link) { %>
-                                             <td align="center" bgcolor="<%= themeColor %>" class="inner-td" style="font-size:16px;text-align:center;background-color:inherit"><a height="100%" class="sbtn" style="background-color:<%= themeColor %>;border:1px solid #333333;border-color:#FFFFFF;border-radius:3px;border-width:1px;color:#FFFFFF;display:inline-block;font-family:arial,helvetica,sans-serif;font-size:16px;font-weight:normal;letter-spacing:0px;text-align:center;text-decoration:none" href="<%= transaction.banking_billet.link %>" target="_blank"><%= i18n.banking_billet_print %></a></td>
-                                           <% } %>
-                                         </tr>
-                                       </tbody>
-                                     </table>
-
-                                     <% } else { %>
-
+                                     <% if ( transaction.payment_method.code == 'banking_billet' ) { %>
                                        <table class="module" role="module" data-type="text" border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;">
                                            <tbody><tr>
                                              <td style="padding:10px 50px 10px 50px;line-height:22px;text-align:inherit;" height="100%" valign="top" bgcolor="">
                                                  <div style="text-align: center;">
                                                    <font color="#333333">
-                                                     <%= i18n.new_order_text %>
+                                                     <%= i18n.banking_billet_text %> <% if ( transaction.banking_billet.code ) { %> <%= i18n.banking_billet_code %> <% } %>
                                                    </font>
                                                  </div>
                                              </td>
@@ -142,9 +113,38 @@
                                          </tbody>
                                        </table>
 
-                                      <% } %>
-                                    <% }) %>
-                                  <% } %>
+                                       <table class="module" style="padding:20px 30px 30px 30px;" role="module" data-type="text" border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;">
+                                           <tbody><tr>
+                                           <% if ( transaction.banking_billet.code ) { %>
+                                             <td style="padding:0px 10px 0px 10px;line-height:20px;text-align:center;" bgcolor="#F4F4F4">
+                                                 <h3><span style="color:#333333;"><%= transaction.banking_billet.code %></span></h3>
+                                             </td>
+                                             <% } %>
+                                             <% if (transaction.banking_billet.link) { %>
+                                               <td align="center" bgcolor="<%= themeColor %>" class="inner-td" style="font-size:16px;text-align:center;background-color:inherit"><a height="100%" class="sbtn" style="background-color:<%= themeColor %>;border:1px solid #333333;border-color:#FFFFFF;border-radius:3px;border-width:1px;color:#FFFFFF;display:inline-block;font-family:arial,helvetica,sans-serif;font-size:16px;font-weight:normal;letter-spacing:0px;text-align:center;text-decoration:none" href="<%= transaction.banking_billet.link %>" target="_blank"><%= i18n.banking_billet_print %></a></td>
+                                             <% } %>
+                                           </tr>
+                                         </tbody>
+                                       </table>
+
+                                       <% } else { %>
+
+                                         <table class="module" role="module" data-type="text" border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;">
+                                             <tbody><tr>
+                                               <td style="padding:10px 50px 10px 50px;line-height:22px;text-align:inherit;" height="100%" valign="top" bgcolor="">
+                                                   <div style="text-align: center;">
+                                                     <font color="#333333">
+                                                       <%= i18n.new_order_text %>
+                                                     </font>
+                                                   </div>
+                                               </td>
+                                             </tr>
+                                           </tbody>
+                                         </table>
+
+                                        <% } %>
+                                      <% }) %>
+                                    <% } %>
 
                                   <% } else { if ( order.financial_status.current == 'paid') { %>
 

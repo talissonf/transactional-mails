@@ -135,7 +135,7 @@
             "amount": 76,
             "type": "payment",
             "payment_method": {
-                "code": "banking_billet",
+                "code": "card",
                 "name": "Boleto bancário - PagHiper"
             },
             "app": {
@@ -180,6 +180,6 @@
     ],
     "financial_status": {
         "updated_at": "2019-12-13T15:50:47.561Z",
-        "current": "pending"
+        "current": "paid"
     }
 }
