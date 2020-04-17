@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.2.4](https://github.com/ecomplus/transactional-mails/compare/v1.2.3...v1.2.4) (2020-04-17)
+
+
+### Bug Fixes
+
+* **items:** fixing conditionals to show images ([5ca8569](https://github.com/ecomplus/transactional-mails/commit/5ca8569))
+
+
+
 ### [1.2.3](https://github.com/ecomplus/transactional-mails/compare/v1.2.2...v1.2.3) (2020-04-17)
 
 
