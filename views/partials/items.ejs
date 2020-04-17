@@ -1,7 +1,7 @@
 <table align="center" class="module desktop-only" role="module" style="table-layout: fixed; width:95%;" cellspacing="0">
   <% order.items.forEach(item => { %>
     <tr style="border-collapse:collapse;">
-      <td style="border-top-width:1px;border-top-color:#e5e5e5;border-top-style:solid;width:20%;padding:10px;"><img class="max-width" border="0" style="display:block;color:#000000;text-decoration:none;font-family:Helvetica, arial, sans-serif;font-size:16px;max-width:100% !important;width:50%;height:auto !important;" src="<% if (item.picture) { %> <%= item.picture.small.url %> <% } %>" alt="" width="200"></td>
+      <td style="border-top-width:1px;border-top-color:#e5e5e5;border-top-style:solid;width:20%;padding:10px;"><img class="max-width" border="0" style="display:block;color:#000000;text-decoration:none;font-family:Helvetica, arial, sans-serif;font-size:16px;max-width:100% !important;width:50%;height:auto !important;" src="<% if (item.picture && item.picture.small) { %> <%= item.picture.small.url %> <% } %>" alt="" width="200"></td>
       <td style="border-top-width:1px;border-top-color:#e5e5e5;border-top-style:solid;width:40%;padding:10px;"><div style="text-align: center;"><%= ecomUtils.name(item) %></div></td>
       <td style="border-top-width:1px;border-top-color:#e5e5e5;border-top-style:solid;width:15%;"><div style="text-align: center;">x <%= item.quantity %></div></td>
       <td style="border-top-width:1px;border-top-color:#e5e5e5;border-top-style:solid;width:25%;"><div style="text-align: center;"> <strong> x <%= ecomUtils.formatMoney(ecomUtils.price(item) * item.quantity,) %></strong></div></td>
