@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.2.3](https://github.com/ecomplus/transactional-mails/compare/v1.2.2...v1.2.3) (2020-04-17)
+
+
+
 ### [1.2.2](https://github.com/ecomclub/transactional-mails/compare/v1.2.1...v1.2.2) (2020-02-01)
 
 
