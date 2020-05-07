@@ -47,7 +47,11 @@
                                 <tbody>
                                   <tr>
                                     <td style="padding:25px 20px 0px 20px;line-height:20px;text-align:center;" height="100%" valign="top" bgcolor="">
+                                      <%if (custom_message) { %>
+                                        <h2><span style="color:#333333;"><%= custom_message.replace(/{name}/g, ecomUtils.nickname(customer)) %></span></h2>
+                                      <% } else { %>
                                         <h2><span style="color:#333333;"><%= customer.name.given_name %>, <%= i18n.cart_title %></span></h2>
+                                      <% } %>  
                                     </td>
                                   </tr>
                                 </tbody>

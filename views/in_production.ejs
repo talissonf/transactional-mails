@@ -47,7 +47,11 @@
                               <table class="module" style="padding:0px 10px 30px 10px;" role="module" data-type="text" border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;">
                                   <tbody><tr>
                                     <td style="padding:25px 20px 0px 20px;line-height:20px;text-align:center;" height="100%" valign="top" bgcolor="">
-                                        <h2><span style="color:#333333;"><%= i18n.hello %> <%= customer.name.given_name %>, <%= i18n.in_production_title %></span></h2>
+                                        <%if (custom_message) { %>
+                                          <h2><span style="color:#333333;"><%= custom_message.replace(/{name}/g, ecomUtils.nickname(customer)) %></span></h2>
+                                        <% } else { %>
+                                          <h2><span style="color:#333333;"><%= i18n.hello %> <%= customer.name.given_name %>, <%= i18n.in_production_title %></span></h2>
+                                        <% } %>
                                     </td>
                                   </tr>
                                 </tbody>

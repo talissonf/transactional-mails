@@ -39,8 +39,8 @@ transactionalMails.welcome(store, customer, 'pt_br')
 
    */
 
-  welcome (store, customer, lang) {
-    const data = { store, customer }
+  welcome (store, customer, lang, custom_message) {
+    const data = { store, customer, custom_message }
     return render('welcome', data, store, lang)
   },
 
@@ -62,8 +62,8 @@ transactionalMails.abandonedCart(store, customer, cart, 'pt_br')
 
    */
 
-  abandonedCart (store, customer, cart, lang) {
-    const data = { store, customer, cart }
+  abandonedCart (store, customer, cart, lang, custom_message) {
+    const data = { store, customer, cart, custom_message }
     return render('abandoned-cart', data, store, lang)
   },
 
@@ -85,8 +85,8 @@ transactionalMails.pending(store, customer, order, 'pt_br')
 
    */
 
-  pending (store, customer, order, lang) {
-    const data = { store, customer, order }
+  pending (store, customer, order, lang, custom_message) {
+    const data = { store, customer, order, custom_message }
     return render('pending', data, store, lang)
   },
 
@@ -108,8 +108,8 @@ transactionalMails.delivered(store, customer, order, 'pt_br')
 
    */
 
-  delivered (store, customer, order, lang) {
-    const data = { store, customer, order }
+  delivered (store, customer, order, lang, custom_message) {
+    const data = { store, customer, order, custom_message }
     return render('delivered', data, store, lang)
   },
 
@@ -131,8 +131,8 @@ transactionalMails.shipped(store, customer, order, 'pt_br')
 
    */
 
-  shipped (store, customer, order, lang) {
-    const data = { store, customer, order }
+  shipped (store, customer, order, lang, custom_message) {
+    const data = { store, customer, order, custom_message }
     return render('shipped', data, store, lang)
   },
 
@@ -154,8 +154,8 @@ transactionalMails.unauthorized(store, customer, order, 'pt_br')
 
    */
 
-  unauthorized (store, customer, order, lang) {
-    const data = { store, customer, order }
+  unauthorized (store, customer, order, lang, custom_message) {
+    const data = { store, customer, order, custom_message }
     return render('unauthorized', data, store, lang)
   },
 
@@ -177,8 +177,8 @@ transactionalMails.voided(store, customer, order, 'pt_br')
 
    */
 
-  voided (store, customer, order, lang) {
-    const data = { store, customer, order }
+  voided (store, customer, order, lang, custom_message) {
+    const data = { store, customer, order, custom_message }
     return render('voided', data, store, lang)
   },
 
@@ -200,8 +200,8 @@ transactionalMails.underAnalysis(store, customer, order, 'pt_br')
 
    */
 
-  underAnalysis (store, customer, order, lang) {
-    const data = { store, customer, order }
+  underAnalysis (store, customer, order, lang, custom_message) {
+    const data = { store, customer, order, custom_message }
     return render('under_analysis', data, store, lang)
   },
 
@@ -223,8 +223,8 @@ transactionalMails.partiallyPaid(store, customer, order, 'pt_br')
 
    */
 
-  partiallyPaid (store, customer, order, lang) {
-    const data = { store, customer, order }
+  partiallyPaid (store, customer, order, lang, custom_message) {
+    const data = { store, customer, order, custom_message }
     return render('partially_paid', data, store, lang)
   },
 
@@ -246,8 +246,8 @@ transactionalMails.paid(store, customer, order, 'pt_br')
 
    */
 
-  paid (store, customer, order, lang) {
-    const data = { store, customer, order }
+  paid (store, customer, order, lang, custom_message) {
+    const data = { store, customer, order, custom_message }
     return render('paid', data, store, lang)
   },
 
@@ -269,8 +269,8 @@ transactionalMails.inDispute(store, customer, order, 'pt_br')
 
    */
 
-  inDispute (store, customer, order, lang) {
-    const data = { store, customer, order }
+  inDispute (store, customer, order, lang, custom_message) {
+    const data = { store, customer, order, custom_message }
     return render('in_dispute', data, store, lang)
   },
 
@@ -292,8 +292,8 @@ transactionalMails.partiallyRefunded(store, customer, order, 'pt_br')
 
    */
 
-  partiallyRefunded (store, customer, order, lang) {
-    const data = { store, customer, order }
+  partiallyRefunded (store, customer, order, lang, custom_message) {
+    const data = { store, customer, order, custom_message }
     return render('partially_refunded', data, store, lang)
   },
 
@@ -315,8 +315,8 @@ transactionalMails.refunded(store, customer, order, 'pt_br')
 
    */
 
-  refunded (store, customer, order, lang) {
-    const data = { store, customer, order }
+  refunded (store, customer, order, lang, custom_message) {
+    const data = { store, customer, order, custom_message }
     return render('refunded', data, store, lang)
   },
 
@@ -338,8 +338,8 @@ transactionalMails.invoiceIssued(store, customer, order, 'pt_br')
 
    */
 
-  invoiceIssued (store, customer, order, lang) {
-    const data = { store, customer, order }
+  invoiceIssued (store, customer, order, lang, custom_message) {
+    const data = { store, customer, order, custom_message}
     return render('invoice_issued', data, store, lang)
   },
 
@@ -361,8 +361,8 @@ transactionalMails.inProduction(store, customer, order, 'pt_br')
 
    */
 
-  inProduction (store, customer, order, lang) {
-    const data = { store, customer, order }
+  inProduction (store, customer, order, lang, custom_message) {
+    const data = { store, customer, order, custom_message }
     return render('in_production', data, store, lang)
   },
 
@@ -384,8 +384,8 @@ transactionalMails.inSeparation(store, customer, order, 'pt_br')
 
    */
 
-  inSeparation (store, customer, order, lang) {
-    const data = { store, customer, order }
+  inSeparation (store, customer, order, lang, custom_message) {
+    const data = { store, customer, order, custom_message }
     return render('in_separation', data, store, lang)
   },
 
@@ -407,8 +407,8 @@ transactionalMails.readyForShipping(store, customer, order, 'pt_br')
 
    */
 
-  readyForShipping (store, customer, order, lang) {
-    const data = { store, customer, order }
+  readyForShipping (store, customer, order, lang, custom_message) {
+    const data = { store, customer, order, custom_message }
     return render('ready_for_shipping', data, store, lang)
   },
 
@@ -430,8 +430,8 @@ transactionalMails.partiallyShipped(store, customer, order, 'pt_br')
 
    */
 
-  partiallyShipped (store, customer, order, lang) {
-    const data = { store, customer, order }
+  partiallyShipped (store, customer, order, lang, custom_message) {
+    const data = { store, customer, order, custom_message }
     return render('partially_shipped', data, store, lang)
   },
 
@@ -453,8 +453,8 @@ transactionalMails.partiallyDelivered(store, customer, order, 'pt_br')
 
    */
 
-  partiallyDelivered (store, customer, order, lang) {
-    const data = { store, customer, order }
+  partiallyDelivered (store, customer, order, lang, custom_message) {
+    const data = { store, customer, order, custom_message }
     return render('partially_delivered', data, store, lang)
   },
 
@@ -476,8 +476,8 @@ transactionalMails.returnedForExchange(store, customer, order, 'pt_br')
 
    */
 
-  returnedForExchange (store, customer, order, lang) {
-    const data = { store, customer, order }
+  returnedForExchange (store, customer, order, lang, custom_message) {
+    const data = { store, customer, order, custom_message }
     return render('returned_for_exchange', data, store, lang)
   },
 
@@ -499,8 +499,8 @@ transactionalMails.receivedForExchange(store, customer, order, 'pt_br')
 
    */
 
-  receivedForExchange (store, customer, order, lang) {
-    const data = { store, customer, order }
+  receivedForExchange (store, customer, order, lang, custom_message) {
+    const data = { store, customer, order, custom_message }
     return render('received_for_exchange', data, store, lang)
   },
 
@@ -522,8 +522,8 @@ transactionalMails.returned(store, customer, order, 'pt_br')
 
    */
 
-  returned (store, customer, order, lang) {
-    const data = { store, customer, order }
+  returned (store, customer, order, lang, custom_message) {
+    const data = { store, customer, order, custom_message }
     return render('returned', data, store, lang)
   },
 
@@ -545,8 +545,8 @@ transactionalMails.returned(store, customer, order, 'pt_br')
 
      */
 
-  authorized (store, customer, order, lang) {
-    const data = { store, customer, order }
+  authorized (store, customer, order, lang, custom_message) {
+    const data = { store, customer, order, custom_message }
     return render('authorized', data, store, lang)
   },
 
@@ -568,8 +568,8 @@ transactionalMails.returned(store, customer, order, 'pt_br')
 
      */
 
-  new_order (store, customer, order, lang) {
-    const data = { store, customer, order }
+  new_order (store, customer, order, lang, custom_message) {
+    const data = { store, customer, order, custom_message }
     return render('new_order', data, store, lang)
   }
 }
